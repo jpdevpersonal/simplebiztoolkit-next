@@ -11,7 +11,8 @@
     "lint:fix": "eslint . --ext .ts,.tsx,.js --fix",
     "test": "vitest run --testTimeout=10000",
     "test:ui": "vitest --ui",
-    "test:ci": "vitest run --reporter=dot"
+    "test:ci": "vitest run --reporter=dot",
+    "resize-images": "node scripts/resize-images.js"
   },
   "dependencies": {
     "bootstrap": "^5.3.8",
@@ -39,6 +40,8 @@
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4",
-    "vitest": "^4.0.17"
+    "vitest": "^4.0.17",
+    "sharp": "^0.32.0"
   }
 }
+
