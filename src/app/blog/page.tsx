@@ -45,8 +45,23 @@ export default function BlogIndexPage() {
                 <div className="sb-muted mt-1">{p.description}</div>
 
                 <div className="mt-3">
-                  <Link className="btn sb-btn-primary" href={`/blog/${p.slug}`}>
-                    Read article
+                  <Link className="sb-article-link" href={`/blog/${p.slug}`}>
+                    <span>Read article</span>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M5 12h14M13 5l7 7-7 7"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
                   </Link>
                 </div>
               </div>

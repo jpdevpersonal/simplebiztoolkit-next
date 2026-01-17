@@ -180,6 +180,26 @@ h5 {
   box-shadow: var(--sb-shadow);
 }
 
+/* Inline article link with chevron */
+.sb-article-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--sb-green);
+  font-weight: 600;
+}
+.sb-article-link svg {
+  color: inherit;
+  opacity: 0.9;
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease;
+}
+.sb-article-link:hover svg {
+  transform: translateX(4px);
+  opacity: 1;
+}
+
 .sb-section {
   padding: 3.25rem 0;
 }
