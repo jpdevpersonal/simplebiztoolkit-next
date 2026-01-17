@@ -9,6 +9,8 @@ export default defineConfig([
     'dist',
     '.next',
     'out',
+    'next-env.d.ts',
+    '.next/types/**',
     'src/spa_app',
     'src/spa_pages',
     'src/test',
