@@ -14,11 +14,42 @@ type Product = {
 
 export default function ProductGrid({ products }: { products: Product[] }) {
   const [hoveredImage, setHoveredImage] = useState<string | null>(null);
+  const [availableMedium, setAvailableMedium] = useState<
+    Record<string, boolean>
+  >({});
 
   const handleImageClick = (e: React.MouseEvent, image: string) => {
     e.preventDefault();
     e.stopPropagation();
     setHoveredImage(image);
+  };
+
+  // Compute medium (resized) image path next to the original.
+  const mediumSrc = (src: string) => {
+    if (!src) return src;
+    const idx = src.lastIndexOf("/");
+    const filename = idx > -1 ? src.slice(idx + 1) : src;
+    const dot = filename.lastIndexOf(".");
+    const base = dot > -1 ? filename.slice(0, dot) : filename;
+    const dir = idx > -1 ? src.slice(0, idx + 1) : "";
+    return `${dir}${base}-md.webp`;
+  };
+
+  // Start loading a medium image first (if present). If it loads, record
+  // that the medium variant exists; also start loading the original as fallback.
+  const preloadImage = (src: string) => {
+    if (!src) return;
+    const md = mediumSrc(src);
+    const imgMd = new window.Image();
+    imgMd.onload = () => setAvailableMedium((s) => ({ ...s, [src]: true }));
+    imgMd.onerror = () => {
+      /* medium not present; nothing to do */
+    };
+    imgMd.src = md;
+
+    // also warm the original image
+    const img = new window.Image();
+    img.src = src;
   };
 
   return (
@@ -42,9 +73,14 @@ export default function ProductGrid({ products }: { products: Product[] }) {
                       position: "relative",
                       overflow: "hidden",
                     }}
+                    onMouseEnter={() =>
+                      preloadImage(p.image || "/images/placeholder-preview.png")
+                    }
                     onClick={(e) => {
                       const src = p.image || "/images/placeholder-preview.png";
-                      handleImageClick(e, src);
+                      const md = mediumSrc(src);
+                      const finalSrc = availableMedium[src] ? md : src;
+                      handleImageClick(e, finalSrc);
                     }}
                   >
                     <picture>
@@ -104,9 +140,10 @@ export default function ProductGrid({ products }: { products: Product[] }) {
             <Image
               src={hoveredImage}
               alt="Product preview"
-              width={1200}
-              height={840}
+              width={1000}
+              height={700}
               sizes="100vw"
+              loading="eager"
               style={{ width: "100%", height: "auto" }}
             />
           </div>
