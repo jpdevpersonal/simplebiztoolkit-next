@@ -116,20 +116,64 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="sb-section pt-5 pb-0">
-            <h2
-              className="text-center"
-              style={{ fontWeight: 700, marginBottom: "0.5rem" }}
-            >
-              What the templates look like
-            </h2>
-            <p className="text-center sb-muted mb-4">
-              Tap any image to zoom in, or click to view on Etsy
-            </p>
-
-            <ProductGrid products={featuredProducts} />
+      <section className="sb-section sb-section-alt">
+        <div className="container">
+          <div className="sb-lead-magnet-card sb-card p-4">
+            <div className="row align-items-center g-4">
+              <div className="col-lg-6">
+                <h2 style={{ fontWeight: 700 }}>Get your free guide</h2>
+                <p className="sb-muted mb-3">
+                  AI for Small Business, Learn to Save Time, Cut Costs and Grow
+                  Your Business Smarter.
+                </p>
+                <ul
+                  className="sb-muted mb-0"
+                  style={{ paddingLeft: 0, listStyle: "none" }}
+                >
+                  <li style={{ marginBottom: "0.35rem" }}>
+                    ✅ Instant download link
+                  </li>
+                  <li style={{ marginBottom: "0.35rem" }}>
+                    ✅ How to use AI tools like Chat GPT
+                  </li>
+                  <li style={{ marginBottom: "0.35rem" }}>
+                    ✅ Simple, step-by-step setups that could save hours every
+                    week
+                  </li>
+                  <li style={{ marginBottom: "0.5rem" }}>
+                    ✅ No spam — just helpful tips & new releases
+                  </li>
+                  <li>✅ Occasional subscriber-only discounts</li>
+                </ul>
+              </div>
+              <div className="col-lg-6">
+                <EmailCaptureForm source="home-lead-magnet" />
+                <div className="sb-muted mt-2" style={{ fontSize: 13 }}>
+                  By subscribing you agree to receive emails. Unsubscribe
+                  anytime.
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
+
+      <section className="sb-section">
+        <div className="container">
+          <h2
+            className="text-center"
+            style={{ fontWeight: 700, marginBottom: "0.5rem" }}
+          >
+            What the templates look like
+          </h2>
+          <p className="text-center sb-muted mb-4">
+            Tap any image to zoom in, or click to view on Etsy
+          </p>
+
+          <ProductGrid products={featuredProducts} />
         </div>
       </section>
 
@@ -235,40 +279,6 @@ export default function HomePage() {
                 />
               </svg>
             </a>
-          </div>
-        </div>
-      </section>
-
-      <section className="sb-section sb-section-alt">
-        <div className="container">
-          <div className="sb-lead-magnet-card sb-card p-4">
-            <div className="row align-items-center g-4">
-              <div className="col-lg-6">
-                <h2 style={{ fontWeight: 700 }}>Get your free guide</h2>
-                <p className="sb-muted mb-3">
-                  Try before you buy — a practical template you can use today.
-                </p>
-                <ul
-                  className="sb-muted mb-0"
-                  style={{ paddingLeft: 0, listStyle: "none" }}
-                >
-                  <li style={{ marginBottom: "0.5rem" }}>
-                    ✅ Instant download link via email
-                  </li>
-                  <li style={{ marginBottom: "0.5rem" }}>
-                    ✅ No spam — just helpful tips & new releases
-                  </li>
-                  <li>✅ Occasional subscriber-only discounts</li>
-                </ul>
-              </div>
-              <div className="col-lg-6">
-                <EmailCaptureForm source="home-lead-magnet" />
-                <div className="sb-muted mt-2" style={{ fontSize: 13 }}>
-                  By subscribing you agree to receive emails. Unsubscribe
-                  anytime.
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
