@@ -134,19 +134,19 @@ export default function HomePage() {
                   style={{ paddingLeft: 0, listStyle: "none" }}
                 >
                   <li style={{ marginBottom: "0.35rem" }}>
-                    ✅ Instant download link
+                    ✓ Instant download link
                   </li>
                   <li style={{ marginBottom: "0.35rem" }}>
-                    ✅ How to use AI tools like Chat GPT
+                    ✓ How to use AI tools like Chat GPT
                   </li>
                   <li style={{ marginBottom: "0.35rem" }}>
-                    ✅ Simple, step-by-step setups that could save hours every
+                    ✓ Simple, step-by-step setups that could save hours every
                     week
                   </li>
                   <li style={{ marginBottom: "0.5rem" }}>
-                    ✅ No spam — just helpful tips & new releases
+                    ✓ No spam — just helpful tips & new releases
                   </li>
-                  <li>✅ Occasional subscriber-only discounts</li>
+                  <li>✓ Occasional subscriber-only discounts</li>
                 </ul>
               </div>
               <div className="col-lg-6">

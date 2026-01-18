@@ -21,66 +21,146 @@ export default function FreebiePage() {
   return (
     <section className="sb-section">
       <div className="container">
-        <div className="row g-4 align-items-center">
-          <div className="col-lg-6">
-            <h1 style={{ fontWeight: 900 }}>Get your free guide</h1>
-            <p className="sb-muted fs-5">
-              Learn to Save Time, Cut Costs and Grow Your Business Smarter.
-            </p>
-            <div className="sb-card p-3">
-              <div style={{ fontWeight: 900, marginBottom: "0.5rem" }}>
-                What you'll get
-              </div>
-              <ul
-                className="sb-muted mb-0"
-                style={{ paddingLeft: 0, listStyle: "none" }}
-              >
-                <li style={{ marginBottom: "0.35rem" }}>
-                  ✅ How to use AI tools like Chat GPT
-                </li>
-                <li style={{ marginBottom: "0.35rem" }}>
-                  ✅ Simple, step-by-step setups that could save hours every
-                  week
-                </li>
-                <li>
-                  ✅ Prompt engineering tricks to get what you want from AI
-                </li>
-                <li>✅ Real small business case studies</li>
-                <li>
-                  ✅ Cost-saving strategies to boost marketing without hiring
-                  staff
-                </li>
-                <li>
-                  ✅ Future-proof trends to keep your business ahead of the
-                  curve
-                </li>
-              </ul>
+        {/* Hero Header */}
+        <div className="text-center mb-5">
+          <h1
+            style={{
+              fontWeight: 900,
+              fontSize: "clamp(1.75rem, 5vw, 2.5rem)",
+              marginBottom: "0.75rem",
+            }}
+          >
+            Master AI for Your Small Business
+          </h1>
+          <p
+            className="sb-muted"
+            style={{
+              fontSize: "1.125rem",
+              maxWidth: "600px",
+              margin: "0 auto",
+            }}
+          >
+            Learn to Save Time, Cut Costs and Grow Your Business Smarter, no
+            tech skills required.
+          </p>
+        </div>
+
+        <div className="row g-4 g-lg-5 align-items-start">
+          {/* Left Column - Image Preview */}
+          <div className="col-lg-6 order-2 order-lg-1">
+            <div
+              className="sb-card p-3 p-md-4"
+              style={{
+                background:
+                  "linear-gradient(135deg, var(--surface) 0%, var(--bg) 100%)",
+                border: "2px solid var(--accent)",
+              }}
+            >
+              <Image
+                src="/images/products/guides/ai-for-small-business.webp"
+                className="img-fluid rounded-3"
+                alt="AI for Small Business Guide Preview"
+                width={1200}
+                height={800}
+                priority
+                style={{
+                  maxHeight: 480,
+                  width: "100%",
+                  objectFit: "contain",
+                  filter: "drop-shadow(0 8px 24px rgba(0,0,0,0.12))",
+                }}
+                sizes="(max-width: 768px) 100vw, (max-width: 992px) 80vw, 520px"
+              />
             </div>
-            <div className="mt-3 sb-muted" style={{ fontSize: 13 }}>
-              Note: the email delivery is placeholder until you connect
-              Mailchimp/MailerLite.
+
+            {/* Social Proof */}
+            <div
+              className="d-flex align-items-center justify-content-center gap-3 mt-3"
+              style={{ fontSize: "0.875rem" }}
+            >
+              <span className="sb-muted">⭐⭐⭐⭐⭐</span>
+              <span className="sb-muted">
+                Loved by over 3500 buyers on Etsy
+              </span>
             </div>
           </div>
 
-          <div className="col-lg-6">
-            <div className="sb-lead-magnet-card sb-card p-4">
-              <h2 style={{ fontWeight: 900 }} className="h4">
-                Send it to my inbox
+          {/* Right Column - Benefits & Form */}
+          <div className="col-lg-6 order-1 order-lg-2">
+            <div className="sb-card p-4">
+              <h2
+                style={{ fontWeight: 800, marginBottom: "1rem" }}
+                className="h5"
+              >
+                What's Inside This Free Guide
               </h2>
-              <p className="sb-muted mb-3">
-                Enter your email to receive the download link.
+              <ul
+                style={{
+                  paddingLeft: 0,
+                  listStyle: "none",
+                  marginBottom: "1.5rem",
+                }}
+              >
+                {[
+                  "How to use AI tools like ChatGPT effectively",
+                  "Step-by-step setups that save hours every week",
+                  "Prompt engineering tricks for better results",
+                  "Real small business case studies",
+                  "Cost-saving marketing strategies",
+                  "Future-proof trends to stay ahead",
+                ].map((item, i) => (
+                  <li
+                    key={i}
+                    className="d-flex align-items-start gap-2"
+                    style={{
+                      marginBottom: "0.75rem",
+                      fontSize: "0.95rem",
+                    }}
+                  >
+                    <span
+                      style={{
+                        color: "var(--accent)",
+                        fontWeight: 700,
+                        flexShrink: 0,
+                      }}
+                    >
+                      ✓
+                    </span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div
+              className="sb-lead-magnet-card sb-card p-4 mt-3"
+              style={{
+                border: "2px solid var(--accent)",
+                background:
+                  "linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%)",
+              }}
+            >
+              <h3
+                style={{ fontWeight: 800, marginBottom: "0.5rem" }}
+                className="h5"
+              >
+                📬 Get Instant Access
+              </h3>
+              <p className="sb-muted mb-3" style={{ fontSize: "0.9rem" }}>
+                Enter your email and we'll send the guide straight to your
+                inbox.
               </p>
               <EmailCaptureForm source="freebie-page" />
 
-              <div className="mt-3 d-flex gap-2 flex-wrap">
+              <div className="mt-4 d-flex gap-2 flex-wrap">
                 <a
-                  className="btn sb-btn-primary"
+                  className="btn sb-btn-primary flex-grow-1 justify-content-center"
                   href={links.etsyShopUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <span className="sb-btn-icon">🛒</span>
-                  Shop on Etsy
+                  Shop More on Etsy
                   <svg
                     className="sb-btn-arrow"
                     width="14"
@@ -98,24 +178,20 @@ export default function FreebiePage() {
                     />
                   </svg>
                 </a>
-                <a className="btn sb-btn-ghost" href="/products">
-                  Browse categories
+                <a
+                  className="btn sb-btn-ghost flex-grow-1 justify-content-center"
+                  href="/products"
+                >
+                  Browse All Products
                 </a>
               </div>
-            </div>
 
-            <div className="sb-card p-3 mt-3">
-              <Image
-                src="/images/placeholder-preview.png"
-                className="img-fluid rounded-4"
-                alt="Freebie preview placeholder"
-                width={1200}
-                height={800}
-                sizes="(max-width: 992px) 100vw, 520px"
-              />
-              <div className="sb-muted mt-2" style={{ fontSize: 13 }}>
-                Replace with a screenshot of the free template.
-              </div>
+              <p
+                className="sb-muted text-center mt-3 mb-0"
+                style={{ fontSize: "0.75rem" }}
+              >
+                🔒 No spam, ever. Unsubscribe anytime.
+              </p>
             </div>
           </div>
         </div>

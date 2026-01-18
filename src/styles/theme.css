@@ -452,6 +452,7 @@ h5 {
   border: 1px solid var(--sb-border);
   position: relative;
   overflow: hidden;
+  transform: translateY(0);
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
