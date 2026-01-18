@@ -232,7 +232,7 @@ export default function HomePage() {
       </section>
 
       {/* LEAD MAGNET */}
-      {/* <section className="sb-section sb-section-alt">
+      <section className="sb-section sb-section-alt">
         <div className="container">
           <div className="sb-lead-magnet-card sb-card p-4">
             <div className="row align-items-center g-4">
@@ -245,6 +245,9 @@ export default function HomePage() {
                   className="sb-muted mb-0"
                   style={{ paddingLeft: 0, listStyle: "none" }}
                 >
+                  <li style={{ marginBottom: "0.35rem" }}>
+                    ✅ Instant download link
+                  </li>
                   <li style={{ marginBottom: "0.35rem" }}>
                     ✅ How to use AI tools like Chat GPT
                   </li>
@@ -268,7 +271,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
     </>
   );
 }
