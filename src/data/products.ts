@@ -25,7 +25,6 @@ export const categories: ProductCategory[] = [
       },
     ],
   },
-
   {
     slug: "accounting-ledger",
     name: "Accounting Ledger",
@@ -35,7 +34,7 @@ export const categories: ProductCategory[] = [
     items: [
       {
         title:
-          "Printable Accounting Ledger General Ledger Sheet, Money Tracker and Expense Tracker",
+          "Printable monthly Accounting Ledger with start and end balance.",
         problem:
           "You need a clean way to track income/expenses without a complicated system.",
         bullets: ["General ledger layout", "Print anytime", "A4 + US Letter"],
@@ -46,8 +45,7 @@ export const categories: ProductCategory[] = [
         price: "$1.93",
       },
       {
-        title:
-          "Accounting Ledger Sheet (Fillable + Printable) – Business Account Ledger (PDF)",
+        title: "Fillable and Printable Accounting Ledger (PDF)",
         problem:
           "You want a reusable ledger you can type into (not handwrite).",
         bullets: [
@@ -72,10 +70,13 @@ export const categories: ProductCategory[] = [
       //   price: "$3.38",
       // },
       {
-        title:
-          "Accounting Ledger (Fillable + Printable) – Alternating Rows Version",
+        title: "Fillable and Printable Accounting Ledger with Alternating Rows",
         problem: "You want a ledger that’s easier to read line-by-line.",
-        bullets: ["Alternating row styling", "Fillable PDF", "Printable"],
+        bullets: [
+          "Alternating row styling",
+          "Fillable PDF",
+          "Auto Calcultating",
+        ],
         image:
           "/images/products/accounting-ledger/fillable-accounting-ledger-alternating.webp",
         etsyUrl:
@@ -86,7 +87,7 @@ export const categories: ProductCategory[] = [
         title:
           "Accounting Ledger Template – Yearly Accounts + General Ledger Sheet (Columnar Paper)",
         problem: "You need a ledger that works across any financial period.",
-        bullets: ["Yearly-style structure", "Column layout", "A4 + US Letter"],
+        bullets: ["Fillable PDF", "Simple layout", "Alternating Rows"],
         image:
           "/images/products/accounting-ledger/accounting-ledger-al-year-02.webp",
         etsyUrl:
@@ -199,7 +200,6 @@ export const categories: ProductCategory[] = [
       // },
     ],
   },
-
   {
     slug: "payment-tracker",
     name: "Payment Tracker",
@@ -253,44 +253,33 @@ export const categories: ProductCategory[] = [
     heroImage: "",
     items: [
       {
-        title:
-          "Rent Payment Ledger – Tenant Payment Log (Fillable + Printable) (PDF)",
+        title: "Fillable and Printable Rent Payment Ledger",
         problem:
-          "You need a reliable record of rent payments and missed payments.",
-        bullets: ["Fillable PDF", "Tenant payment history", "Instant download"],
-        image: "",
+          "Helps you keep reliable record of rent payments and missed payments.",
+        bullets: [
+          "Fillable PDF",
+          "Auto-calculating balance",
+          "Quick to update",
+        ],
+        image:
+          "/images/products/rent-payment-ledger/rent-payment-ledger-fillable.webp",
         etsyUrl:
           "https://www.etsy.com/listing/1312388593/rent-payment-ledger-tenant-payment-log",
         price: "$3.90",
       },
       {
-        title:
-          "Rent Payment Ledger – Printable Rent Payment Tracker / Rental Payment Log",
+        title: "Printable Rent Payment Ledger",
         problem:
-          "You want a printable rent log that’s easy to maintain monthly.",
+          "A convenient printable monthlyrent log that’s easy to maintain.",
         bullets: [
           "Printable PDF",
           "Landlord-friendly layout",
-          "Quick to update",
-        ],
-        image: "",
-        etsyUrl:
-          "https://www.etsy.com/listing/1273225049/rent-payment-ledger-printable-rent",
-        price: "$2.18",
-      },
-      {
-        title:
-          "Printable Rent Payment Tracker – Landlord Ledger / Rental Payment History Log",
-        problem:
-          "You want a simple rent history sheet you can file by property/tenant.",
-        bullets: [
-          "Printable tracker",
-          "Rental payment history",
           "Instant download",
         ],
-        image: "",
+        image:
+          "/images/products/rent-payment-ledger/rent-payment-ledger-rpl01.webp",
         etsyUrl:
-          "https://www.etsy.com/listing/1415207427/printable-rent-payment-tracker-landlord",
+          "https://www.etsy.com/listing/1273225049/rent-payment-ledger-printable-rent",
         price: "$2.18",
       },
     ],

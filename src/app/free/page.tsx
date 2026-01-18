@@ -23,11 +23,10 @@ export default function FreebiePage() {
       <div className="container">
         <div className="row g-4 align-items-center">
           <div className="col-lg-6">
-            <h1 style={{ fontWeight: 900 }}>Free starter template</h1>
+            <h1 style={{ fontWeight: 900 }}>Get your free guide</h1>
             <p className="sb-muted fs-5">
-              An essential download you can use today.
+              Learn to Save Time, Cut Costs and Grow Your Business Smarter.
             </p>
-
             <div className="sb-card p-3">
               <div style={{ fontWeight: 900, marginBottom: "0.5rem" }}>
                 What you'll get
@@ -37,15 +36,26 @@ export default function FreebiePage() {
                 style={{ paddingLeft: 0, listStyle: "none" }}
               >
                 <li style={{ marginBottom: "0.35rem" }}>
-                  ✅ Printable layout (PDF)
+                  ✅ How to use AI tools like Chat GPT
                 </li>
                 <li style={{ marginBottom: "0.35rem" }}>
-                  ✅ Simple instructions
+                  ✅ Simple, step-by-step setups that could save hours every
+                  week
                 </li>
-                <li>✅ A "next steps" link to the full Etsy shop</li>
+                <li>
+                  ✅ Prompt engineering tricks to get what you want from AI
+                </li>
+                <li>✅ Real small business case studies</li>
+                <li>
+                  ✅ Cost-saving strategies to boost marketing without hiring
+                  staff
+                </li>
+                <li>
+                  ✅ Future-proof trends to keep your business ahead of the
+                  curve
+                </li>
               </ul>
             </div>
-
             <div className="mt-3 sb-muted" style={{ fontSize: 13 }}>
               Note: the email delivery is placeholder until you connect
               Mailchimp/MailerLite.

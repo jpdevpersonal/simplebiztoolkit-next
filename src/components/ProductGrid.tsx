@@ -96,6 +96,7 @@ export default function ProductGrid({ products }: { products: Product[] }) {
                   </div>
                 </div>
                 <div className="product-card-content">
+                  <h3 className="product-card-title">{p.title}</h3>
                   <h3 className="product-card-problem">{p.problem}</h3>
                   <ul className="product-card-bullets">
                     {p.bullets.map((b) => (

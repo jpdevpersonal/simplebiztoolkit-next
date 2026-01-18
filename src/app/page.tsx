@@ -13,13 +13,13 @@ import { links } from "@/config/links";
 export const metadata: Metadata = {
   title: "Essential Templates & Tools for Small Business Owners",
   description:
-    "Trust-first templates and toolkits that save time and reduce admin. Get a free starter template, then shop securely on Etsy.",
+    "Trust-first templates and toolkits that save time and reduce admin. Run your business smarter, with this free guide, then shop securely on Etsy.",
   alternates: { canonical: "/" },
   openGraph: {
     title:
       "Simple Biz Toolkit | Essential Templates & Tools for Small Business Owners",
     description:
-      "Trust-first templates and toolkits that save time and reduce admin. Get a free starter template, then shop securely on Etsy.",
+      "Trust-first templates and toolkits that save time and reduce admin. Get a your free guide, then shop securely on Etsy.",
     url: "/",
   },
 };
