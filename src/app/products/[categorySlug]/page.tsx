@@ -100,17 +100,6 @@ export default async function CategoryPage({ params }: Props) {
                   securely through Etsy.
                 </p>
               </div>
-
-              <div className="mt-3 d-flex gap-2 flex-wrap">
-                <a
-                  className="btn sb-btn-ghost"
-                  href={links.etsyShopUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Visit full Etsy shop
-                </a>
-              </div>
             </div>
 
             <div className="col-lg-5">
@@ -131,6 +120,16 @@ export default async function CategoryPage({ params }: Props) {
 
           <div id="items" className="mt-4">
             <ProductGrid products={cat.items} />
+          </div>
+          <div className="mt-3 d-flex gap-2 flex-wrap">
+            <a
+              className="btn sb-btn-ghost"
+              href={links.etsyShopUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              More on our Etsy shop
+            </a>
           </div>
         </div>
       </section>
