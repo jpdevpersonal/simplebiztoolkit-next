@@ -57,76 +57,76 @@ export default function ProductGrid({ products }: { products: Product[] }) {
       <div className="row g-3 mt-2">
         {products.map((p) => (
           <div className="col-md-4" key={p.title}>
-            <a
-              href={p.etsyUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="product-card-link"
-            >
-              <article className="template-thumbnail sb-card h-100 product-card">
-                <div className="overflow-hidden" style={{ width: "100%" }}>
-                  <div
-                    className="product-thumbnail-clickable"
-                    style={{
-                      aspectRatio: "10/7",
-                      width: "100%",
-                      position: "relative",
-                      overflow: "hidden",
-                    }}
-                    onMouseEnter={() =>
-                      preloadImage(p.image || "/images/placeholder-preview.png")
-                    }
-                    onClick={(e) => {
-                      const src = p.image || "/images/placeholder-preview.png";
-                      const md = mediumSrc(src);
-                      const finalSrc = availableMedium[src] ? md : src;
-                      handleImageClick(e, finalSrc);
-                    }}
-                  >
-                    <picture>
-                      <Image
-                        src={p.image || "/images/placeholder-preview.png"}
-                        alt={p.title}
-                        className="img-fluid ledger-thumb"
-                        fill
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                        style={{ objectFit: "cover" }}
-                      />
-                    </picture>
-                  </div>
+            <article className="template-thumbnail sb-card h-100 product-card">
+              <div className="overflow-hidden" style={{ width: "100%" }}>
+                <div
+                  className="product-thumbnail-clickable"
+                  style={{
+                    aspectRatio: "10/7",
+                    width: "100%",
+                    position: "relative",
+                    overflow: "hidden",
+                  }}
+                  onMouseEnter={() =>
+                    preloadImage(p.image || "/images/placeholder-preview.png")
+                  }
+                  onClick={(e) => {
+                    const src = p.image || "/images/placeholder-preview.png";
+                    const md = mediumSrc(src);
+                    const finalSrc = availableMedium[src] ? md : src;
+                    handleImageClick(e, finalSrc);
+                  }}
+                >
+                  <picture>
+                    <Image
+                      src={p.image || "/images/placeholder-preview.png"}
+                      alt={p.title}
+                      className="img-fluid ledger-thumb"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      style={{ objectFit: "cover" }}
+                    />
+                  </picture>
                 </div>
-                <div className="product-card-content">
-                  <h3 className="product-card-title">{p.title}</h3>
-                  <h3 className="product-card-problem">{p.problem}</h3>
-                  <ul className="product-card-bullets">
-                    {p.bullets.map((b) => (
-                      <li key={b}>{b}</li>
-                    ))}
-                  </ul>
-                  <span className="product-card-cta">
-                    <span className="sb-btn-icon" style={{ fontSize: "0.9em" }}>
-                      🛒
-                    </span>
-                    View on Etsy
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M4 12L12 4M12 4H5M12 4v7"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+              </div>
+              <div className="product-card-content">
+                <h3 className="product-card-title">{p.title}</h3>
+                <h3 className="product-card-problem">{p.problem}</h3>
+                <ul className="product-card-bullets">
+                  {p.bullets.map((b) => (
+                    <li key={b}>{b}</li>
+                  ))}
+                </ul>
+                <span className="product-card-cta">
+                  <span className="sb-btn-icon" style={{ fontSize: "0.9em" }}>
+                    🛒
                   </span>
-                </div>
-              </article>
-            </a>
+                  <a
+                    href={p.etsyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="product-card-link"
+                  >
+                    View on Etsy{" "}
+                  </a>
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4 12L12 4M12 4H5M12 4v7"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </article>
           </div>
         ))}
       </div>

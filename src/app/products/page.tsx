@@ -23,7 +23,8 @@ export default function ProductsPage() {
         <div className="products-header">
           <h1>Product Categories</h1>
           <p className="sb-muted">
-            Browse our collection of simple, ready-to-use templates
+            Browse our collection of simple, ready-to-use templates. All come in
+            A4 and US-Letter sizes.
           </p>
         </div>
 
