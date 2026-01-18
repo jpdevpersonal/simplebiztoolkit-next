@@ -452,6 +452,10 @@ h5 {
   border: 1px solid var(--sb-border);
   position: relative;
   overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .sb-lead-magnet-card::before {
@@ -466,4 +470,20 @@ h5 {
     var(--sb-brand-blue) 0%,
     var(--sb-ink) 100%
   );
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+@media (min-width: 992px) {
+  .sb-lead-magnet-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--sb-brand-blue);
+    box-shadow: 0 12px 32px rgba(65, 69, 86, 0.12);
+  }
+
+  .sb-lead-magnet-card:hover::before {
+    transform: scaleX(1);
+  }
 }
