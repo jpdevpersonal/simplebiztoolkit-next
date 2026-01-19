@@ -13,15 +13,22 @@ type Product = {
 };
 
 export default function ProductGrid({ products }: { products: Product[] }) {
-  const [hoveredImage, setHoveredImage] = useState<string | null>(null);
+  const [hoveredProduct, setHoveredProduct] = useState<{
+    image: string;
+    etsyUrl: string;
+  } | null>(null);
   const [availableMedium, setAvailableMedium] = useState<
     Record<string, boolean>
   >({});
 
-  const handleImageClick = (e: React.MouseEvent, image: string) => {
+  const handleImageClick = (
+    e: React.MouseEvent,
+    image: string,
+    etsyUrl: string,
+  ) => {
     e.preventDefault();
     e.stopPropagation();
-    setHoveredImage(image);
+    setHoveredProduct({ image, etsyUrl });
   };
 
   // Compute medium (resized) image path next to the original.
@@ -74,7 +81,7 @@ export default function ProductGrid({ products }: { products: Product[] }) {
                     const src = p.image || "/images/placeholder-preview.png";
                     const md = mediumSrc(src);
                     const finalSrc = availableMedium[src] ? md : src;
-                    handleImageClick(e, finalSrc);
+                    handleImageClick(e, finalSrc, p.etsyUrl);
                   }}
                 >
                   <picture>
@@ -132,14 +139,24 @@ export default function ProductGrid({ products }: { products: Product[] }) {
       </div>
 
       {/* Image Preview Overlay */}
-      {hoveredImage && (
+      {hoveredProduct && (
         <div
           className="product-image-preview-overlay"
-          onClick={() => setHoveredImage(null)}
+          onClick={() => {
+            window.open(
+              hoveredProduct.etsyUrl,
+              "_blank",
+              "noopener,noreferrer",
+            );
+          }}
+          style={{ cursor: "pointer" }}
         >
           <button
             className="product-image-preview-close"
-            onClick={() => setHoveredImage(null)}
+            onClick={(e) => {
+              e.stopPropagation();
+              setHoveredProduct(null);
+            }}
             aria-label="Close preview"
           >
             <svg
@@ -157,7 +174,7 @@ export default function ProductGrid({ products }: { products: Product[] }) {
           </button>
           <div className="product-image-preview-content">
             <Image
-              src={hoveredImage}
+              src={hoveredProduct.image}
               alt="Product preview"
               width={1000}
               height={700}

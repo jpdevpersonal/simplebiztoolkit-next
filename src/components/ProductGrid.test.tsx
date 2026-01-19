@@ -75,7 +75,7 @@ describe("ProductGrid", () => {
       expect(productLinks.length).toBe(3);
       expect(productLinks[0]).toHaveAttribute(
         "href",
-        "https://etsy.com/listing/1"
+        "https://etsy.com/listing/1",
       );
       expect(productLinks[0]).toHaveAttribute("target", "_blank");
       expect(productLinks[0]).toHaveAttribute("rel", "noopener noreferrer");
@@ -104,7 +104,7 @@ describe("ProductGrid", () => {
       // Get the first product image container
       const images = screen.getAllByRole("img");
       const firstImageContainer = images[0].closest(
-        ".product-thumbnail-clickable"
+        ".product-thumbnail-clickable",
       );
 
       // Click the image container
@@ -117,17 +117,17 @@ describe("ProductGrid", () => {
       expect(overlayImage).toBeInTheDocument();
       expect(overlayImage).toHaveAttribute(
         "src",
-        "/images/test-product-1.webp"
+        "/images/test-product-1.webp",
       );
     });
 
-    it("should hide preview overlay when overlay is clicked", () => {
+    it("should hide preview overlay when close button is clicked", () => {
       render(<ProductGrid products={mockProducts} />);
 
       // Click to show preview
       const images = screen.getAllByRole("img");
       const firstImageContainer = images[0].closest(
-        ".product-thumbnail-clickable"
+        ".product-thumbnail-clickable",
       );
       fireEvent.click(firstImageContainer!);
 
@@ -137,15 +137,44 @@ describe("ProductGrid", () => {
         .find((img) => img.getAttribute("alt") === "Product preview");
       expect(previewImage).toBeInTheDocument();
 
-      // Click on overlay to dismiss
-      const overlay = previewImage!.closest(".product-image-preview-overlay");
-      fireEvent.click(overlay!);
+      // Click close button to dismiss
+      const closeButton = screen.getByLabelText("Close preview");
+      fireEvent.click(closeButton);
 
       // Preview should be hidden
       previewImage = screen
         .queryAllByRole("img")
         .find((img) => img.getAttribute("alt") === "Product preview");
       expect(previewImage).toBeUndefined();
+    });
+
+    it("should open Etsy link when overlay is clicked", () => {
+      // Mock window.open
+      const mockOpen = vi.fn();
+      global.window.open = mockOpen;
+
+      render(<ProductGrid products={mockProducts} />);
+
+      // Click to show preview
+      const images = screen.getAllByRole("img");
+      const firstImageContainer = images[0].closest(
+        ".product-thumbnail-clickable",
+      );
+      fireEvent.click(firstImageContainer!);
+
+      // Click overlay background
+      const previewImage = screen
+        .getAllByRole("img")
+        .find((img) => img.getAttribute("alt") === "Product preview");
+      const overlay = previewImage!.closest(".product-image-preview-overlay");
+      fireEvent.click(overlay!);
+
+      // Should open Etsy link
+      expect(mockOpen).toHaveBeenCalledWith(
+        "https://etsy.com/listing/1",
+        "_blank",
+        "noopener,noreferrer",
+      );
     });
 
     it("should show correct image when different products are clicked", () => {
@@ -155,7 +184,7 @@ describe("ProductGrid", () => {
 
       // Click second product
       const secondImageContainer = images[1].closest(
-        ".product-thumbnail-clickable"
+        ".product-thumbnail-clickable",
       );
       fireEvent.click(secondImageContainer!);
 
@@ -165,7 +194,7 @@ describe("ProductGrid", () => {
         .find((img) => img.getAttribute("alt") === "Product preview");
       expect(previewImage).toHaveAttribute(
         "src",
-        "/images/test-product-2.webp"
+        "/images/test-product-2.webp",
       );
 
       // Close preview
@@ -174,7 +203,7 @@ describe("ProductGrid", () => {
 
       // Click third product
       const thirdImageContainer = images[2].closest(
-        ".product-thumbnail-clickable"
+        ".product-thumbnail-clickable",
       );
       fireEvent.click(thirdImageContainer!);
 
@@ -184,7 +213,7 @@ describe("ProductGrid", () => {
         .find((img) => img.getAttribute("alt") === "Product preview");
       expect(previewImage).toHaveAttribute(
         "src",
-        "/images/test-product-3.webp"
+        "/images/test-product-3.webp",
       );
     });
 
@@ -193,7 +222,7 @@ describe("ProductGrid", () => {
 
       const images = screen.getAllByRole("img");
       const firstImageContainer = images[0].closest(
-        ".product-thumbnail-clickable"
+        ".product-thumbnail-clickable",
       );
 
       expect(firstImageContainer).toHaveClass("product-thumbnail-clickable");
