@@ -500,34 +500,29 @@ export const categories: ProductCategory[] = [
     heroImage: "",
     items: [
       {
-        title:
-          "Printable Receipt Template Pack – Customer Receipt + Sales Receipt Forms (Six Colors) (PDF)",
-        problem:
-          "You need professional-looking receipts without buying receipt books.",
-        bullets: ["Six colors", "Printable pack", "Instant download"],
-        image: "",
-        etsyUrl:
-          "https://www.etsy.com/listing/1715418738/printable-receipt-template-pack-customer",
-        price: "$2.25",
-      },
-      {
-        title:
-          "Receipt – Printable Customer Order Receipt Form (A5 + Half Letter)",
-        problem:
-          "You need a compact receipt form for quick sales/order handoffs.",
-        bullets: ["Compact sizes", "Simple layout", "Printable"],
-        image: "",
+        title: "Printabke Receipt Template A5 + Half Letter",
+        problem: "A compact receipt form for quick sales/order handoffs.",
+        bullets: ["Small sizes", "Simple layout", "Printable"],
+        image: "/images/products/receipt/receipt-a5.webp",
         etsyUrl:
           "https://www.etsy.com/listing/1630920679/receipt-printable-customer-order-receipt",
         price: "$1.89",
       },
       {
         title:
-          "Receipt Template – Printable Customer Order Form (A4 + US Letter) (PDF)",
-        problem:
-          "You want a clean receipt you can print on standard paper sizes.",
+          "Printable Receipt Template Pack – Customer Receipt + Sales Receipt Forms (Six Colors) (PDF)",
+        problem: "Professional-looking receipts without buying receipt books.",
+        bullets: ["Six colors", "Printable pack", "Instant download"],
+        image: "/images/products/receipt/receipt-pack.webp",
+        etsyUrl:
+          "https://www.etsy.com/listing/1715418738/printable-receipt-template-pack-customer",
+        price: "$2.25",
+      },
+      {
+        title: "Printabke Receipt Template A4 + US Letter",
+        problem: "A clean receipt you can print on standard paper sizes.",
         bullets: ["A4 + US Letter", "Printable PDF", "Minimalist style"],
-        image: "",
+        image: "/images/products/receipt/receipt-a4.webp",
         etsyUrl:
           "https://www.etsy.com/listing/1566194978/receipt-template-printable-customer",
         price: "$1.97",
@@ -543,21 +538,20 @@ export const categories: ProductCategory[] = [
     heroImage: "",
     items: [
       {
-        title:
-          "Printable Sign In Sheet – Reception Check In Form (A4/US Letter)",
-        problem: "You need a simple front-desk sign-in record.",
-        bullets: ["Reception-friendly", "A4 + US Letter", "Printable"],
-        image: "",
+        title: "Printable Sign In Sheet – Reception Check In Form ",
+        problem: "A simple front-desk sign-in record.",
+        bullets: ["Simple Design", "A4 + US Letter", "Printable"],
+        image: "/images/products/sign-in-sheet/sign-in-simple.webp",
         etsyUrl:
           "https://www.etsy.com/listing/1823174365/printable-sign-in-sheet-reception-check",
         price: "$1.83",
       },
       {
         title:
-          "Printable Sign In Sheet – Reception Check In/Out Form (A4/US Letter)",
-        problem: "You need both arrival and departure times in one place.",
-        bullets: ["Check-in/out", "A4 + US Letter", "Printable"],
-        image: "",
+          "Printable Sign In Sheet With Welcome Title– Reception Check In/Out Form",
+        problem: "Daily Sign In Sheet with Welcome Message.",
+        bullets: ["Daily Sign In", "A4 + US Letter", "Printable"],
+        image: "/images/products/sign-in-sheet/sign-in-welcome.webp",
         etsyUrl:
           "https://www.etsy.com/listing/1684474079/printable-sign-in-sheet-reception-check",
         price: "$1.83",
@@ -575,9 +569,10 @@ export const categories: ProductCategory[] = [
       {
         title:
           "Meeting Notes Template – Agenda Planner (Printable Word Document A4/US Letter)",
-        problem: "Meeting notes end up scattered and hard to follow later.",
-        bullets: ["Agenda + notes", "Word format", "A4 + US Letter"],
-        image: "",
+        problem:
+          "A Meeting notes template that works in Word for easy editing.",
+        bullets: ["Printable and Editable", "Word format", "A4 + US Letter"],
+        image: "/images/products/meeting-notes/meeting-notes-word.webp",
         etsyUrl:
           "https://www.etsy.com/listing/1730107410/meeting-notes-template-agenda-planner",
         price: "$1.90",
@@ -585,9 +580,9 @@ export const categories: ProductCategory[] = [
       {
         title:
           "Meeting Notes Template Printable – Simple Meeting Notes Form (A4/A5/Letter/Half Letter)",
-        problem: "You want a simple, printable notes sheet without fluff.",
+        problem: "A simple, printable notes sheet to capture key points.",
         bullets: ["Multiple sizes", "Printable", "Clean layout"],
-        image: "",
+        image: "/images/products/meeting-notes/meeting-notes.webp",
         etsyUrl:
           "https://www.etsy.com/listing/1348243646/meeting-notes-template-printable-simple",
         price: "$1.86",
@@ -606,8 +601,8 @@ export const categories: ProductCategory[] = [
           "Estimate and Quote Template – Fillable and Printable Simple Estimate Form (Fillable PDF)",
         problem:
           "You need quotes you can send fast without rebuilding a doc each time.",
-        bullets: ["Fillable PDF", "Professional layout", "Instant download"],
-        image: "",
+        bullets: ["Fillable PDF", "Professional layout", "Simnple to use"],
+        image: "/images/products/job-estimate/a4-estimate-fillable.webp",
         etsyUrl:
           "https://www.etsy.com/listing/1421249069/estimate-and-quote-template-fillable-and",
         price: "$3.45",
@@ -617,7 +612,7 @@ export const categories: ProductCategory[] = [
         problem:
           "You want a simple printable quote sheet you can use on demand.",
         bullets: ["Printable", "Clean estimate layout", "Fast to complete"],
-        image: "",
+        image: "/images/products/job-estimate/a4-estimate.webp",
         etsyUrl:
           "https://www.etsy.com/listing/1401560272/estimate-and-quote-template-simple",
         price: "$2.00",
@@ -627,16 +622,15 @@ export const categories: ProductCategory[] = [
 
   {
     slug: "invoices",
-    name: "Invoices",
+    name: "Invoice",
     summary: "Minimalist invoices you can print and use immediately.",
     heroImage: "",
     items: [
       {
-        title:
-          "Invoice Template – Minimalist Invoice (Printable) (Instant Download PDF)",
-        problem: "You need a clean invoice format without design work.",
+        title: "Invoice Template – Printable Minimalist Invoice",
+        problem: "A clean invoice format without design work.",
         bullets: ["Minimalist layout", "Printable PDF", "Small business ready"],
-        image: "",
+        image: "/images/products/invoice/invoice.webp",
         etsyUrl:
           "https://www.etsy.com/listing/1707889862/invoice-template-printable-customer",
         price: "$1.83",
@@ -654,9 +648,9 @@ export const categories: ProductCategory[] = [
       {
         title:
           "Order Form Template – Purchase Order Form + Simple Printable Customer Order (GoodNotes Template)",
-        problem: "Orders get messy when you don’t have one consistent form.",
-        bullets: ["Order form", "GoodNotes-friendly option", "Printable"],
-        image: "",
+        problem: "One consistent order form to keep organised.",
+        bullets: ["Order form", "GoodNotes-friendly", "Printable"],
+        image: "/images/products/order-form/order-form.webp",
         etsyUrl:
           "https://www.etsy.com/listing/1725782753/order-form-template-purchase-order-form",
         price: "$1.83",
@@ -664,9 +658,9 @@ export const categories: ProductCategory[] = [
       {
         title:
           "Printable Order Tracker – Customer Order History and Sales (PDF)",
-        problem: "You need to track what’s ordered, shipped, and completed.",
+        problem: "Easily track what’s ordered, shipped, and completed.",
         bullets: ["Order history", "Printable tracker", "Simple workflow"],
-        image: "",
+        image: "/images/products/order-tracker/order-tracker.webp",
         etsyUrl:
           "https://www.etsy.com/listing/1299688737/printable-order-tracker-customer-order",
         price: "$1.94",
@@ -684,9 +678,9 @@ export const categories: ProductCategory[] = [
         title:
           "Tips Tracker – Printable Server Tips Tracker (Excel Spreadsheet Template)",
         problem:
-          "Tips are hard to track consistently (and you lose the record).",
+          "Helps you consistently track tips without losing cash or miscalculating.",
         bullets: ["Excel-based tracking", "Printable", "Daily/shift friendly"],
-        image: "",
+        image: "/images/products/tips-tracker/tips-tracker-spreadsheet.webp",
         etsyUrl:
           "https://www.etsy.com/listing/1791051126/tips-tracker-printable-server-tips",
         price: "$1.90",
@@ -694,9 +688,9 @@ export const categories: ProductCategory[] = [
       {
         title: "Server Tips Tracker – Simple Tips Record (Printable PDF)",
         problem:
-          "You want a simple paper log for tips (no spreadsheet needed).",
+          "A simple paper log for tips that’s quick to fill out after each shift.",
         bullets: ["Printable PDF", "Quick daily entry", "Simple totals"],
-        image: "",
+        image: "/images/products/tips-tracker/tips-tracker-print.webp",
         etsyUrl:
           "https://www.etsy.com/listing/1712139010/server-tips-tracker-simple-tips-record",
         price: "$1.83",
@@ -704,86 +698,57 @@ export const categories: ProductCategory[] = [
     ],
   },
 
-  {
-    slug: "storyboards",
-    name: "Storyboards",
-    summary:
-      "Storyboard templates for creators, planners, and film/video workflows.",
-    heroImage: "",
-    items: [
-      {
-        title:
-          "Storyboard 6x9 Printable Template – Digital Collage Template and YouTube Planner (4 Frames)",
-        problem:
-          "You need a fast way to plan shots/scenes without messy notes.",
-        bullets: ["4 frames per page", "Printable", "Creator-friendly"],
-        image: "",
-        etsyUrl:
-          "https://www.etsy.com/listing/1653524525/storyboard-6x9-printable-template",
-        price: "$1.97",
-      },
-      {
-        title:
-          "Storyboard Template Printable – Storyboard Planner + Digital Collage Template (A4/US Letter)",
-        problem:
-          "You want a versatile storyboard that fits standard paper sizes.",
-        bullets: ["A4 + US Letter", "Storyboard planner layout", "Printable"],
-        image: "",
-        etsyUrl:
-          "https://www.etsy.com/listing/1237652424/storyboard-template-printable-storyboard",
-        price: "$2.04",
-      },
-      {
-        title:
-          "Storyboard Printable Template – Digital Collage Template and YouTube Planner",
-        problem: "You want a clean storyboard layout for creative planning.",
-        bullets: ["Printable", "YouTube/film planning", "Simple structure"],
-        image: "",
-        etsyUrl:
-          "https://www.etsy.com/listing/1413674238/storyboard-printable-template-digital",
-        price: "$2.04",
-      },
-      {
-        title:
-          "Storyboard Template A4 Printable – Storyboard Planner + Film Planner",
-        problem: "You want an A4-focused storyboard format that prints nicely.",
-        bullets: ["A4 optimized", "Printable", "Film planning friendly"],
-        image: "",
-        etsyUrl:
-          "https://www.etsy.com/listing/1215935073/storyboard-template-a4-printable",
-        price: "$2.04",
-      },
-    ],
-  },
-
-  {
-    slug: "amateur-radio",
-    name: "Amateur Radio",
-    summary: "Ham radio logging sheets and personalized log templates.",
-    heroImage: "",
-    items: [
-      {
-        title:
-          "Ham Radio Log Sheets – Printable Amateur Radio Log, Logbook and QSL Sheets",
-        problem: "You need a tidy log format for contacts and records.",
-        bullets: ["Printable log sheets", "Binder-friendly", "Great gift idea"],
-        image: "",
-        etsyUrl:
-          "https://www.etsy.com/listing/1220494947/ham-radio-log-sheets-printable-amateur",
-        price: "$2.11",
-      },
-      {
-        title:
-          "Personalized Ham Radio Log Sheet – Amateur Radio Call Sign (Digital Download)",
-        problem: "You want a customized log sheet with your call sign.",
-        bullets: ["Personalized", "Printable", "Nice for gifts"],
-        image: "",
-        etsyUrl:
-          "https://www.etsy.com/listing/1478042418/personalized-ham-radio-log-sheet-amateur",
-        price: "$4.22",
-      },
-    ],
-  },
+  // {
+  //   slug: "storyboards",
+  //   name: "Storyboards",
+  //   summary:
+  //     "Storyboard templates for creators, planners, and film/video workflows.",
+  //   heroImage: "",
+  //   items: [
+  //     {
+  //       title:
+  //         "Storyboard 6x9 Printable Template – Digital Collage Template and YouTube Planner (4 Frames)",
+  //       problem:
+  //         "You need a fast way to plan shots/scenes without messy notes.",
+  //       bullets: ["4 frames per page", "Printable", "Creator-friendly"],
+  //       image: "",
+  //       etsyUrl:
+  //         "https://www.etsy.com/listing/1653524525/storyboard-6x9-printable-template",
+  //       price: "$1.97",
+  //     },
+  //     {
+  //       title:
+  //         "Storyboard Template Printable – Storyboard Planner + Digital Collage Template (A4/US Letter)",
+  //       problem:
+  //         "You want a versatile storyboard that fits standard paper sizes.",
+  //       bullets: ["A4 + US Letter", "Storyboard planner layout", "Printable"],
+  //       image: "",
+  //       etsyUrl:
+  //         "https://www.etsy.com/listing/1237652424/storyboard-template-printable-storyboard",
+  //       price: "$2.04",
+  //     },
+  //     {
+  //       title:
+  //         "Storyboard Printable Template – Digital Collage Template and YouTube Planner",
+  //       problem: "You want a clean storyboard layout for creative planning.",
+  //       bullets: ["Printable", "YouTube/film planning", "Simple structure"],
+  //       image: "",
+  //       etsyUrl:
+  //         "https://www.etsy.com/listing/1413674238/storyboard-printable-template-digital",
+  //       price: "$2.04",
+  //     },
+  //     {
+  //       title:
+  //         "Storyboard Template A4 Printable – Storyboard Planner + Film Planner",
+  //       problem: "You want an A4-focused storyboard format that prints nicely.",
+  //       bullets: ["A4 optimized", "Printable", "Film planning friendly"],
+  //       image: "",
+  //       etsyUrl:
+  //         "https://www.etsy.com/listing/1215935073/storyboard-template-a4-printable",
+  //       price: "$2.04",
+  //     },
+  //   ],
+  // },
 
   {
     slug: "business-ledger-bundles",
@@ -802,47 +767,10 @@ export const categories: ProductCategory[] = [
           "Instant download",
           "Small business focused",
         ],
-        image: "",
+        image: "/images/products/business-ledger/Business Planner Bundle.webp",
         etsyUrl:
           "https://www.etsy.com/listing/1805181510/business-ledger-templates-accounting",
         price: "$7.04",
-      },
-      {
-        title:
-          "Business Ledger Template Bundle – Accounting Ledger, Petty Cash, Order & Payment Trackers",
-        problem: "You want a compact bundle for core admin tracking.",
-        bullets: [
-          "4 core templates",
-          "A4 + US Letter",
-          "Standard + wide margins",
-        ],
-        image: "",
-        etsyUrl:
-          "https://www.etsy.com/listing/1340991925/business-ledger-template-bundle",
-        price: "$2.73",
-      },
-      {
-        title:
-          "Small Business Ledger Bundle – Accounting, Order & Payment Trackers (PDF)",
-        problem: "You want a small set of high-use trackers (no extras).",
-        bullets: [
-          "Accounting + orders + payments",
-          "Printable PDFs",
-          "Simple layouts",
-        ],
-        image: "",
-        etsyUrl:
-          "https://www.etsy.com/listing/1298947107/small-business-ledger-bundle-accounting",
-        price: "$2.11",
-      },
-      {
-        title: "Rent Payment Ledger + Tenant Payment Log (Fillable) (PDF)",
-        problem: "You want a landlord-ready bundle-style rent record option.",
-        bullets: ["Fillable PDF", "Tenant history", "Instant download"],
-        image: "",
-        etsyUrl:
-          "https://www.etsy.com/listing/1312388593/rent-payment-ledger-tenant-payment-log",
-        price: "$3.90",
       },
     ],
   },
