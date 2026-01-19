@@ -166,18 +166,16 @@ h5 {
   gap: 0.5rem;
   border: 1px solid var(--sb-border) !important;
   border-radius: var(--sb-radius-sm);
-  background: #fff !important;
-  color: var(--sb-ink) !important;
   font-weight: 600;
   padding: 0.75rem 1.5rem;
   transition: all 0.2s ease;
-}
-.sb-btn-ghost:hover {
-  background: var(--sb-soft) !important;
   border-color: var(--sb-green) !important;
   color: var(--sb-green) !important;
   transform: translateY(-1px);
   box-shadow: var(--sb-shadow);
+}
+.sb-btn-ghost:hover {
+  background: var(--sb-soft) !important;
 }
 
 /* Inline article link with chevron */
