@@ -7,7 +7,7 @@ export const featuredProducts: Product[] = [
     problem:
       "You need a clean way to track income/expenses without a complicated system.",
     bullets: ["General ledger layout", "Print anytime", "A4 + US Letter"],
-    image: "/images/products/thumbnails/accounting-ledger-a4.webp",
+    image: "/images/products/featured/accounting-ledger-a4.webp",
     etsyUrl:
       "https://www.etsy.com/listing/1194290286/printable-accounting-ledger-general",
     price: "$1.93",
@@ -17,7 +17,7 @@ export const featuredProducts: Product[] = [
       "Printable Employee Time Sheet Template – Hours Worked + Weekly Tracker (Digital Download)",
     problem: "You want a fresh version of a classic weekly time sheet layout.",
     bullets: ["Printable", "Weekly structure", "Quick to fill in"],
-    image: "/images/products/thumbnails/employee-weekly-timesheet.webp",
+    image: "/images/products/featured/employee-weekly-timesheet.webp",
     etsyUrl:
       "https://www.etsy.com/listing/4436102417/printable-employee-time-sheet-template",
     price: "$2.00",
@@ -28,7 +28,7 @@ export const featuredProducts: Product[] = [
     problem:
       "You need quotes you can send fast without rebuilding a doc each time.",
     bullets: ["Fillable PDF", "Professional layout", "Instant download"],
-    image: "/images/products/thumbnails/estimate.webp",
+    image: "/images/products/featured/estimate.webp",
     etsyUrl:
       "https://www.etsy.com/listing/1421249069/estimate-and-quote-template-fillable-and",
     price: "$3.45",
