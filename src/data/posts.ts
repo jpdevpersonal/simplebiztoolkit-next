@@ -7,6 +7,8 @@ export type BlogPost = {
   category: "Bookkeeping" | "Productivity" | "Etsy Selling" | "Branding";
   readingMinutes: number;
   badges?: string[];
+  featuredImage?: string; // Optional image for blog index page
+  headerImage?: string; // Optional image for article page header
 };
 
 export const posts: BlogPost[] = [

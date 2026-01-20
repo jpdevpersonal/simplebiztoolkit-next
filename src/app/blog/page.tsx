@@ -30,6 +30,21 @@ export default function BlogIndexPage() {
           {posts.map((p) => (
             <div className="col-lg-6" key={p.slug}>
               <div className="sb-card p-3 h-100">
+                {p.featuredImage && (
+                  <div className="blog-card-image">
+                    <img
+                      src={p.featuredImage}
+                      alt={p.title}
+                      style={{
+                        width: "100%",
+                        height: "auto",
+                        borderRadius: "8px",
+                        marginBottom: "12px",
+                        objectFit: "cover",
+                      }}
+                    />
+                  </div>
+                )}
                 <div className="d-flex justify-content-between gap-2 flex-wrap">
                   <div className="sb-muted" style={{ fontSize: 13 }}>
                     {p.category}
