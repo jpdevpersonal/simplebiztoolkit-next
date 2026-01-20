@@ -45,7 +45,7 @@ export default function ProductGrid({ products }: { products: Product[] }) {
   // Start loading a medium image first (if present). If it loads, record
   // that the medium variant exists; also start loading the original as fallback.
   const preloadImage = (src: string) => {
-    if (!src) return;
+    if (!src || typeof window === "undefined") return;
     const md = mediumSrc(src);
     const imgMd = new window.Image();
     imgMd.onload = () => setAvailableMedium((s) => ({ ...s, [src]: true }));

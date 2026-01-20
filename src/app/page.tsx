@@ -106,7 +106,7 @@ export default function HomePage() {
             <div className="col-lg-6">
               <div className="hero-image-wrapper d-flex justify-content-center">
                 <Image
-                  src="/images/hero-image-desk.png"
+                  src="/images/hero-image-desk.webp"
                   alt="Tools for your small business"
                   className="img-fluid hero-image"
                   width={720}
