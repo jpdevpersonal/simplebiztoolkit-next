@@ -1,7 +1,0 @@
- <span className="sb-value-icon"></span>
-
-🎯
-⭐
-📋
-📦
-⚡

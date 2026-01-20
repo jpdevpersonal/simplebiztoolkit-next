@@ -69,7 +69,7 @@ export default function BlogIndexPage() {
           ))}
         </div>
 
-        <div className="sb-card p-4 mt-4">
+        {/* <div className="sb-card p-4 mt-4">
           <div style={{ fontWeight: 900 }}>
             Want free templates + new posts?
           </div>
@@ -79,7 +79,7 @@ export default function BlogIndexPage() {
           <Link className="btn sb-btn-primary mt-2" href="/free">
             Get the free template
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );
