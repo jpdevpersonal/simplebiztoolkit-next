@@ -1,0 +1,157 @@
+/* Article Layout */
+.article-page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 36px 18px 72px;
+}
+
+/* Breadcrumb Navigation */
+.article-breadcrumb {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 18px;
+}
+
+.article-breadcrumb a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.article-breadcrumb .separator {
+  opacity: 0.6;
+}
+
+/* Article Header */
+.article-header {
+  margin-bottom: 22px;
+}
+
+.article-badges {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.article-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  font-size: 14px;
+  line-height: 1;
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.article-title {
+  margin: 0 0 10px;
+}
+
+.article-subtitle {
+  margin: 0;
+  font-size: 18px;
+  opacity: 0.9;
+  max-width: 860px;
+}
+
+.article-meta {
+  margin-top: 12px;
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+/* Article Content */
+.article-section {
+  margin-top: 28px;
+}
+
+.article-section h2 {
+  margin-top: 0;
+}
+
+.article-section h3 {
+  margin-top: 18px;
+}
+
+/* Callout Box */
+.article-callout {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 16px;
+  padding: 18px;
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.article-callout-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.article-callout-content {
+  opacity: 0.92;
+}
+
+/* CTA Section */
+.article-cta {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 20px;
+  padding: 22px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.01));
+}
+
+.article-cta h2 {
+  margin-top: 0;
+}
+
+.article-cta-description {
+  margin-bottom: 14px;
+}
+
+.article-cta-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.article-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.article-cta-btn-primary {
+  background: rgba(0, 0, 0, 0.92);
+  color: white;
+}
+
+.article-cta-btn-secondary {
+  background: transparent;
+  color: inherit;
+}
+
+.article-cta-disclosure {
+  margin-top: 12px;
+  font-size: 13px;
+  opacity: 0.75;
+}
+
+/* Article Footer */
+.article-footer {
+  margin-top: 26px;
+  font-size: 13px;
+  opacity: 0.75;
+}
+
+.article-footer p {
+  margin-bottom: 6px;
+}
+
+.article-footer p:last-child {
+  margin: 0;
+}

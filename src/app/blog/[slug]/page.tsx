@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 
 import JsonLd from "@/components/JsonLd";
 import { posts } from "@/data/posts";
-import { links } from "@/config/links";
+import { ArticleContent, hasArticleContent } from "../articles";
+import "@/styles/articleStyle.css";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -39,6 +39,8 @@ export default async function BlogPostPage({ params }: Props) {
 
   if (!post) notFound();
 
+  if (!hasArticleContent(slug)) notFound();
+
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -56,58 +58,46 @@ export default async function BlogPostPage({ params }: Props) {
     <>
       <JsonLd json={articleJsonLd} />
 
-      <section className="sb-section">
-        <div className="container" style={{ maxWidth: 860 }}>
-          <Link href="/blog">← Back to Resources</Link>
+      <main className="article-page">
+        {/* Breadcrumb Navigation */}
+        <nav className="article-breadcrumb">
+          <Link href="/">Home</Link>
+          <span className="separator"> / </span>
+          <Link href="/blog">Resources</Link>
+          <span className="separator"> / </span>
+          {post.title.length > 40
+            ? post.title.substring(0, 40) + "..."
+            : post.title}
+        </nav>
 
-          <h1 className="mt-3" style={{ fontWeight: 900 }}>
-            {post.title}
-          </h1>
-          <div className="sb-muted">
-            {post.category} · {post.readingMinutes} min read
-          </div>
-
-          <div className="sb-card p-3 mt-3">
-            <Image
-              src="/images/placeholder-hero.png"
-              alt=""
-              className="img-fluid rounded-4"
-              width={1200}
-              height={675}
-              sizes="(max-width: 900px) 100vw, 860px"
-            />
-          </div>
-
-          <article className="mt-4">
-            {post.body.map((para, idx) => (
-              <p key={idx} className="fs-5" style={{ color: "var(--sb-ink)" }}>
-                {para}
-              </p>
-            ))}
-          </article>
-
-          <div className="sb-card p-4 mt-4">
-            <div style={{ fontWeight: 900 }}>Next step</div>
-            <div className="sb-muted">
-              Get your free guide, then shop securely on Etsy when you’re ready.
+        {/* Article Header */}
+        <header className="article-header">
+          {post.badges && post.badges.length > 0 && (
+            <div className="article-badges">
+              {post.badges.map((badge) => (
+                <span key={badge} className="article-badge">
+                  {badge}
+                </span>
+              ))}
             </div>
+          )}
 
-            <div className="d-flex gap-2 flex-wrap mt-3">
-              <Link className="btn sb-btn-primary" href="/free">
-                Get free template
-              </Link>
-              <a
-                className="btn sb-btn-ghost"
-                href={links.etsyShopUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Shop on Etsy
-              </a>
-            </div>
+          <h1 className="article-title">{post.title}</h1>
+
+          {post.subtitle && <p className="article-subtitle">{post.subtitle}</p>}
+
+          <div className="article-meta">
+            <time dateTime={post.dateISO}>Published {post.dateISO}</time>
+            <span> · </span>
+            <span>{post.readingMinutes} min read</span>
           </div>
-        </div>
-      </section>
+        </header>
+
+        {/* Article Content */}
+        <article>
+          <ArticleContent slug={slug} />
+        </article>
+      </main>
     </>
   );
 }
