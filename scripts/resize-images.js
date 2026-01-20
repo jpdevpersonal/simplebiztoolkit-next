@@ -41,10 +41,24 @@ async function walk(dir) {
 
     console.log("resizing:", full, "->", outPath);
     try {
-      await sharp(full)
-        .resize({ width: MAX_WIDTH, withoutEnlargement: true })
-        .webp({ quality: QUALITY })
-        .toFile(outPath);
+      const image = sharp(full);
+      const metadata = await image.metadata();
+      
+      // Only apply max width for portrait images (height > width)
+      const isLandscape = metadata.width >= metadata.height;
+      
+      if (isLandscape) {
+        // No width restriction for landscape images
+        await image
+          .webp({ quality: QUALITY })
+          .toFile(outPath);
+      } else {
+        // Apply max width for portrait images
+        await image
+          .resize({ width: MAX_WIDTH, withoutEnlargement: true })
+          .webp({ quality: QUALITY })
+          .toFile(outPath);
+      }
     } catch (err) {
       console.error("failed to resize", full, err);
     }
