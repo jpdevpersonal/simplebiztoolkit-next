@@ -60,14 +60,26 @@ export default async function BlogPostPage({ params }: Props) {
 
       <main className="article-page">
         {/* Breadcrumb Navigation */}
-        <nav className="article-breadcrumb">
-          <Link href="/">Home</Link>
-          <span className="separator"> / </span>
-          <Link href="/blog">Resources</Link>
-          <span className="separator"> / </span>
-          {post.title.length > 40
-            ? post.title.substring(0, 40) + "..."
-            : post.title}
+        <nav className="sb-breadcrumb" aria-label="Breadcrumb">
+          <Link href="/blog" className="sb-breadcrumb-link">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              aria-hidden="true"
+              className="sb-breadcrumb-icon"
+            >
+              <path
+                d="M10 3l-5 5 5 5"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            Back to Resources
+          </Link>
         </nav>
 
         {/* Article Header */}
@@ -92,6 +104,13 @@ export default async function BlogPostPage({ params }: Props) {
             <span>{post.readingMinutes} min read</span>
           </div>
         </header>
+
+        {/* Header Image */}
+        {post.headerImage && (
+          <div className="article-header-image">
+            <img src={post.headerImage} alt={post.title} />
+          </div>
+        )}
 
         {/* Article Content */}
         <article>
