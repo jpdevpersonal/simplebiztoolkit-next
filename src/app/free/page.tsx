@@ -5,14 +5,14 @@ import EmailCaptureForm from "@/components/EmailCaptureForm";
 import { links } from "@/config/links";
 
 export const metadata: Metadata = {
-  title: "Free Template",
+  title: "Free AI Guide",
   description:
-    "Get your free guide delivered by email. Try the format and quality before you buy on Etsy.",
+    "Get your free guide delivered by email. Start grow you business smarter.",
   alternates: { canonical: "/free" },
   openGraph: {
-    title: "Free Template | Simple Biz Toolkit",
+    title: "Free AI Guide | Simple Biz Toolkit",
     description:
-      "Get your free guide delivered by email. Try the format and quality before you buy on Etsy.",
+      "Get your free guide delivered by email. Start grow you business smarter.",
     url: "/free",
   },
 };

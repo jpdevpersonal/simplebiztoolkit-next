@@ -3,7 +3,7 @@ import {
   Callout,
   ArticleFooter,
 } from "@/components/ArticleComponents";
-import { ArticleCTA } from "@/components/ArticleCTA";
+// import { ArticleCTA } from "@/components/ArticleCTA";
 
 export default function BookkeepingBasicsContent() {
   return (
@@ -83,10 +83,10 @@ export default function BookkeepingBasicsContent() {
         </p>
       </Section>
 
-      <ArticleCTA
+      {/* <ArticleCTA
         title="Get your bookkeeping started"
         description="Download a free template to start tracking your business finances today."
-      />
+      /> */}
 
       <ArticleFooter>
         <p>

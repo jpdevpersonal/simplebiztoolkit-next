@@ -15,9 +15,9 @@ interface ArticleCTAProps {
 export function ArticleCTA({
   title = "Ready to get started?",
   description = "Get your free guide, then shop securely on Etsy when you're ready.",
-  primaryLabel = "Get free template",
-  primaryHref = "/free",
-  showEtsyLink = true,
+  primaryLabel = "",
+  primaryHref = "https://www.etsy.com/shop/simplebiztoolkit",
+  showEtsyLink = false,
   showHomeLink = false,
   disclosure,
 }: ArticleCTAProps) {
@@ -27,16 +27,20 @@ export function ArticleCTA({
       <p className="article-cta-description">{description}</p>
 
       <div className="article-cta-buttons">
-        <Link
-          href={primaryHref}
-          className="article-cta-btn article-cta-btn-primary"
-        >
-          {primaryLabel}
-        </Link>
-
+        {primaryLabel && primaryHref && (
+          <Link
+            href={primaryHref}
+            className="article-cta-btn article-cta-btn-primary"
+          >
+            {primaryLabel}
+          </Link>
+        )}
         {showHomeLink && (
-          <Link href="/" className="article-cta-btn article-cta-btn-secondary">
-            Back to SimpleBizToolkit
+          <Link
+            href="/products"
+            className="article-cta-btn article-cta-btn-secondary"
+          >
+            See all products
           </Link>
         )}
 

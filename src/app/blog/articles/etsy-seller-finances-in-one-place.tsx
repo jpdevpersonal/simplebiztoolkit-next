@@ -99,8 +99,10 @@ export default function EtsySellerFinancesContent() {
       </Section>
 
       <ArticleCTA
+        showHomeLink={true}
+        showEtsyLink={false}
         title="Track your Etsy finances"
-        description="Get a free template designed specifically for Etsy sellers to track fees, sales, and real profit."
+        description="Get a access to time saving templates designed specifically for Etsy sellers to track fees, sales, and real profit."
       />
 
       <ArticleFooter>
