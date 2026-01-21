@@ -37,12 +37,12 @@ export default function SiteHeader() {
         <SiteNavigation />
 
         <div className="d-flex align-items-center gap-2 sb-site-header-actions">
-          <Link
+          {/* <Link
             href={links.freebiePath}
             className="btn sb-btn-ghost d-none d-sm-inline-flex"
           >
             Get your free guide
-          </Link>
+          </Link> */}
 
           <a
             className="btn sb-btn-primary d-none d-md-inline-flex"

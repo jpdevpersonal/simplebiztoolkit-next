@@ -105,15 +105,13 @@ export default function SiteNavigation() {
           }}
         >
           <div>
-            {/* <h4 style={{ margin: 0, fontWeight: 700, fontSize: "1.125rem" }}>
-              Menu
-            </h4> */}
             <p style={{ margin: 0, fontSize: "1rem" }}>Simple Biz Toolkit</p>
           </div>
           <button
             onClick={closeMenu}
             style={{
               border: "none",
+              background: "transparent",
               borderRadius: "8px",
               width: "36px",
               height: "36px",
@@ -125,14 +123,12 @@ export default function SiteNavigation() {
             }}
             aria-label="Close menu"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M18 6L6 18M6 6L18 18"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-            </svg>
+            <span
+              aria-hidden="true"
+              style={{ fontSize: "40px", lineHeight: 1, fontWeight: 700 }}
+            >
+              ×
+            </span>
           </button>
         </div>
 
