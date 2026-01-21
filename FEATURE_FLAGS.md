@@ -20,89 +20,70 @@ This flag controls the visibility of the "Get Your Free Guide" button across all
 
 ### Option 1: Using Azure Portal (Recommended)
 
-1. **Navigate to your Static Web App**:
-   - Go to [Azure Portal](https://portal.azure.com)
-   - Find your Static Web App resource
-   - Select it to open the overview
+# Feature Flag Configuration
 
-2. **Open Configuration**:
-   - In the left menu, click on **Configuration** (under Settings)
+This document explains how feature flags work for Simple Biz Toolkit and how to configure them for Azure Static Web Apps.
 
-3. **Add Application Setting**:
-   - Click **+ Add** button
-   - Enter the following:
-     - **Name**: `NEXT_PUBLIC_SHOW_FREE_GUIDE_BUTTON`
-     - **Value**: `false` (to hide the button) or `true` (to show the button)
-   - Click **OK**
+## Key point
 
-4. **Save Changes**:
-   - Click **Save** at the top of the Configuration page
+- This site is exported as static HTML/JS (`output: "export"`). Environment variables prefixed with `NEXT_PUBLIC_` are substituted at build time into the generated files. They are NOT read at runtime by the browser.
 
-5. **Rebuild the Site**:
-   - The site needs to be rebuilt for the changes to take effect
-   - You can trigger a rebuild by:
-     - Pushing a new commit to your repository
-     - Or manually triggering a redeployment in GitHub Actions (if using GitHub)
+## The flag: Show Free Guide Button
 
-### Option 2: Using Azure CLI
+- Variable name: `NEXT_PUBLIC_SHOW_FREE_GUIDE_BUTTON`
+- Behavior: if set to the string `"false"` at build time the button will be hidden; any other value or not set → button is shown.
 
-```bash
-# Set the variable to hide the button
-az staticwebapp appsettings set \
-  --name <your-static-web-app-name> \
-  --resource-group <your-resource-group-name> \
-  --setting-names NEXT_PUBLIC_ SHOW_FREE_GUIDE_BUTTON=false
+## How to set this value for your deployment
 
-# Or to show the button (default behavior)
-az staticwebapp appsettings set \
-  --name <your-static-web-app-name> \
-  --resource-group <your-resource-group-name> \
-  --setting-names NEXT_PUBLIC_ SHOW_FREE_GUIDE_BUTTON=true
-```
+1) Recommended — set it in your GitHub Actions workflow (build-time)
 
-After setting the variable, trigger a rebuild of your site.
-
-### Option 3: Using GitHub Actions (Build-time Configuration)
-
-If you're deploying via GitHub Actions, you can set the environment variable in your workflow file:
+Add the variable to the deploy/build step so it is available during `npm run build`. Example snippet (already used in this repo):
 
 ```yaml
-- name: Build And Deploy
-  uses: Azure/static-web-apps-deploy@v1
-  with:
-    # ... other configuration
-  env:
-    NEXT_PUBLIC_ SHOW_FREE_GUIDE_BUTTON: 'false'  # or 'true'
+      - name: Deploy to Azure Static Web Apps
+        id: builddeploy
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          # ... other build settings ...
+        env:
+          NEXT_PUBLIC_SHOW_FREE_GUIDE_BUTTON: "false"
 ```
 
-## Important Notes
+2) Alternative — GitHub Actions repository variable
 
-1. **Build-time Variable**: Since this is a static site, the environment variable is read at **build time**, not runtime. Any changes require a rebuild and redeployment.
+- Go to your repo → Settings → Secrets and variables → Actions → Variables
+- Add `NEXT_PUBLIC_SHOW_FREE_GUIDE_BUTTON` with value `false`
+- Use it in the workflow with: `NEXT_PUBLIC_SHOW_FREE_GUIDE_BUTTON: ${{ vars.NEXT_PUBLIC_SHOW_FREE_GUIDE_BUTTON }}`
 
-2. **NEXT_PUBLIC_ Prefix**: The `NEXT_PUBLIC_` prefix is required for the variable to be available in the browser/client-side code.
+3) Azure Portal / CLI
 
-3. **Default Behavior**: If the variable is not set or set to any value other than `'false'`, the button will be shown by default.
+- You can add an application setting in Azure Portal → Your Static Web App → Configuration. However, because this site is a static build, the value must be present at build time — adding it in the portal alone will not change already-built static files. You must trigger a rebuild after changing the portal setting.
 
-4. **Testing Locally**: 
-   - Create a `.env.local` file in your project root (this file is gitignored)
-   - Add: `NEXT_PUBLIC_ SHOW_FREE_GUIDE_BUTTON=false`
-   - Run `npm run build` and `npm run start` to test the static build locally
+## Important: rebuild required
+
+- Changing the environment variable requires a new build and redeploy. Restarting the static site will not recompile HTML/JS with new values.
+- Trigger a rebuild by pushing a commit, re-running the GitHub Actions workflow, or creating a new deployment.
+
+## Local testing
+
+- For local builds, create `.env.local` (gitignored) and add:
+
+```
+NEXT_PUBLIC_SHOW_FREE_GUIDE_BUTTON=false
+```
+
+Then run:
+
+```bash
+npm run build
+npm run start
+```
 
 ## Troubleshooting
 
-If the button visibility doesn't change after updating the configuration:
+- Confirm the exact variable name `NEXT_PUBLIC_SHOW_FREE_GUIDE_BUTTON` (no extra spaces).
+- Check GitHub Actions build logs to ensure the env value appears when `npm run build` runs.
+- If you use the Azure portal to set variables, make sure you trigger a new build afterward.
 
-1. **Verify the setting is saved** in Azure Portal → Configuration
-2. **Check the variable name** matches exactly: `NEXT_PUBLIC_ SHOW_FREE_GUIDE_BUTTON`
-3. **Ensure you've rebuilt the site** after changing the configuration
-4. **Clear your browser cache** or use incognito mode to see fresh changes
-5. **Check build logs** to confirm the environment variable was available during build
-
-## Adding New Feature Flags
-
-To add new feature flags in the future:
-
-1. Add the flag to [src/config/featureFlags.ts](src/config/featureFlags.ts)
-2. Use the `NEXT_PUBLIC_` prefix for any client-side variables
-3. Document the flag in this file
-4. Update [.env.example](.env.example) with the new variable
+If you want, I can also add a small console.log in the build output to confirm the flag value at build time.
+   - Run `npm run build` and `npm run start` to test the static build locally
