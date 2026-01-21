@@ -81,5 +81,5 @@ jobs:
           app_location: "/" # App source code path
           api_location: "" # Api source code path - optional
           app_build_command: "npm run build"
-          output_location: ".next" # Next.js build output (SSR)
+          output_location: "out" # Static export output
           ###### End of Repository/Build Configurations ######

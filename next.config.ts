@@ -2,17 +2,12 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  output: "standalone", // Required for Azure SSR
-  trailingSlash: false, // Keep URLs clean
-  async redirects() {
-    return [
-      {
-        source: "/index.html",
-        destination: "/",
-        permanent: true,
-      },
-    ];
+  output: "export", // Static export for Azure Static Web Apps
+  trailingSlash: false,
+  images: {
+    unoptimized: true, // Required for Azure Static Web Apps free tier
   },
+  // Note: redirects are handled in staticwebapp.config.json for static exports
 };
 
 export default nextConfig;
