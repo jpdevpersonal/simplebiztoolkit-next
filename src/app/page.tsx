@@ -9,6 +9,7 @@ import TestimonialGrid from "@/components/TestimonialGrid";
 import ProductGrid from "@/components/ProductGrid";
 import { featuredProducts } from "@/data/featured";
 import { links } from "@/config/links";
+import { featureFlags } from "@/config/featureFlags";
 
 export const metadata: Metadata = {
   title: "Essential Templates & Tools for Small Business Owners",
@@ -120,47 +121,49 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="sb-section sb-section-alt">
-        <div className="container">
-          <div className="sb-lead-magnet-card sb-card p-4">
-            <div className="row align-items-center g-4">
-              <div className="col-lg-6">
-                <h2 style={{ fontWeight: 700 }}>Get your free guide</h2>
-                <p className="sb-muted mb-3">
-                  AI for Small Business, Learn to Save Time, Cut Costs and Grow
-                  Your Business Smarter.
-                </p>
-                <ul
-                  className="sb-muted mb-0"
-                  style={{ paddingLeft: 0, listStyle: "none" }}
-                >
-                  <li style={{ marginBottom: "0.35rem" }}>
-                    ✓ Instant download link
-                  </li>
-                  <li style={{ marginBottom: "0.35rem" }}>
-                    ✓ How to use AI tools like Chat GPT
-                  </li>
-                  <li style={{ marginBottom: "0.35rem" }}>
-                    ✓ Simple, step-by-step setups that could save hours every
-                    week
-                  </li>
-                  <li style={{ marginBottom: "0.5rem" }}>
-                    ✓ No spam — just helpful tips & new releases
-                  </li>
-                  <li>✓ Occasional subscriber-only discounts</li>
-                </ul>
-              </div>
-              <div className="col-lg-6">
-                <EmailCaptureForm source="home-lead-magnet" />
-                <div className="sb-muted mt-2" style={{ fontSize: 13 }}>
-                  By subscribing you agree to receive emails. Unsubscribe
-                  anytime.
+      {featureFlags.showFreeGuideButton && (
+        <section className="sb-section sb-section-alt">
+          <div className="container">
+            <div className="sb-lead-magnet-card sb-card p-4">
+              <div className="row align-items-center g-4">
+                <div className="col-lg-6">
+                  <h2 style={{ fontWeight: 700 }}>Get your free guide</h2>
+                  <p className="sb-muted mb-3">
+                    AI for Small Business, Learn to Save Time, Cut Costs and
+                    Grow Your Business Smarter.
+                  </p>
+                  <ul
+                    className="sb-muted mb-0"
+                    style={{ paddingLeft: 0, listStyle: "none" }}
+                  >
+                    <li style={{ marginBottom: "0.35rem" }}>
+                      ✓ Instant download link
+                    </li>
+                    <li style={{ marginBottom: "0.35rem" }}>
+                      ✓ How to use AI tools like Chat GPT
+                    </li>
+                    <li style={{ marginBottom: "0.35rem" }}>
+                      ✓ Simple, step-by-step setups that could save hours every
+                      week
+                    </li>
+                    <li style={{ marginBottom: "0.5rem" }}>
+                      ✓ No spam — just helpful tips & new releases
+                    </li>
+                    <li>✓ Occasional subscriber-only discounts</li>
+                  </ul>
+                </div>
+                <div className="col-lg-6">
+                  <EmailCaptureForm source="home-lead-magnet" />
+                  <div className="sb-muted mt-2" style={{ fontSize: 13 }}>
+                    By subscribing you agree to receive emails. Unsubscribe
+                    anytime.
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <section className="sb-section">
         <div className="container">
@@ -261,7 +264,6 @@ export default function HomePage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="sb-btn-icon">🛒</span>
               Browse the full shop on Etsy
               <svg
                 className="sb-btn-arrow"

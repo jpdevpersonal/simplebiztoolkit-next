@@ -106,8 +106,27 @@ export default function ProductGrid({ products }: { products: Product[] }) {
                   ))}
                 </ul>
                 <span className="product-card-cta">
-                  <span className="sb-btn-icon" style={{ fontSize: "0.9em" }}>
-                    🛒
+                  <span
+                    className="sb-btn-icon"
+                    style={{ fontSize: "0.9em", fontWeight: "bold" }}
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      style={{
+                        display: "inline-block",
+                        verticalAlign: "middle",
+                      }}
+                    >
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
                   </span>
                   <a
                     href={p.etsyUrl}

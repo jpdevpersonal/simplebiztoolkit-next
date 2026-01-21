@@ -291,9 +291,17 @@ h5 {
   border-top: 1px solid var(--sb-border);
   padding: 0.6rem;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .sb-sticky-cta {
     display: none;
+  }
+}
+
+/* On tablets and up, don't let the primary sticky CTA button stretch full-width. */
+@media (min-width: 768px) {
+  .sb-sticky-cta .container .btn.sb-btn-primary {
+    flex: 0 0 auto;
+    width: auto;
   }
 }
 /* =============================================

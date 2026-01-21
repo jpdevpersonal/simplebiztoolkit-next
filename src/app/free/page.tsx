@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import EmailCaptureForm from "@/components/EmailCaptureForm";
 import { links } from "@/config/links";
+import { featureFlags } from "@/config/featureFlags";
 
 export const metadata: Metadata = {
   title: "Free AI Guide",
@@ -18,6 +19,73 @@ export const metadata: Metadata = {
 };
 
 export default function FreebiePage() {
+  if (!featureFlags.showFreeGuideButton) {
+    return (
+      <section className="sb-section">
+        <div className="container">
+          <div
+            className="text-center"
+            style={{
+              maxWidth: "600px",
+              margin: "0 auto",
+              padding: "4rem 1rem",
+            }}
+          >
+            <h1
+              style={{
+                fontWeight: 900,
+                fontSize: "clamp(1.75rem, 5vw, 2.5rem)",
+                marginBottom: "1rem",
+              }}
+            >
+              Free Products
+            </h1>
+            <p
+              className="sb-muted"
+              style={{
+                fontSize: "1.125rem",
+                marginBottom: "2rem",
+              }}
+            >
+              We are not currently offering any free products, please try again
+              soon.
+            </p>
+            <div className="d-flex gap-2 flex-wrap justify-content-center">
+              <a
+                className="btn sb-btn-primary"
+                href={links.etsyShopUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="sb-btn-icon">🛒</span>
+                Shop on Etsy
+                <svg
+                  className="sb-btn-arrow"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 12L12 4M12 4H6M12 4v6"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
+              <a className="btn sb-btn-ghost" href="/products">
+                Browse All Products
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="sb-section">
       <div className="container">

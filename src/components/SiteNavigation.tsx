@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { links } from "@/config/links";
+import { featureFlags } from "@/config/featureFlags";
 import { createPortal } from "react-dom";
 
 export default function SiteNavigation() {
@@ -183,27 +184,29 @@ export default function SiteNavigation() {
 
           {/* Action Buttons */}
           <div style={{ padding: "1.5rem" }}>
-            <Link
-              href={links.freebiePath}
-              onClick={closeMenu}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "0.5rem",
-                padding: "0.875rem 1rem",
-                marginBottom: "0.75rem",
-                textDecoration: "none",
-                fontWeight: 600,
-                fontSize: "0.9375rem",
-                borderRadius: "8px",
-                background: "var(--sb-green)",
-                color: "white",
-                border: "none",
-              }}
-            >
-              Get Your Free Guide
-            </Link>
+            {featureFlags.showFreeGuideButton && (
+              <Link
+                href={links.freebiePath}
+                onClick={closeMenu}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "0.5rem",
+                  padding: "0.875rem 1rem",
+                  marginBottom: "0.75rem",
+                  textDecoration: "none",
+                  fontWeight: 600,
+                  fontSize: "0.9375rem",
+                  borderRadius: "8px",
+                  background: "var(--sb-green)",
+                  color: "white",
+                  border: "none",
+                }}
+              >
+                Get your free guide
+              </Link>
+            )}
             <a
               href={links.etsyShopUrl}
               target="_blank"
@@ -272,7 +275,7 @@ export default function SiteNavigation() {
 
       {/* Mobile Menu Button */}
       <button
-        className="d-lg-none"
+        className="d-lg-none ms-auto"
         type="button"
         onClick={() => setIsOpen(true)}
         onKeyDown={(e) => {
