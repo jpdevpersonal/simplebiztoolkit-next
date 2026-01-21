@@ -31,7 +31,7 @@ This flag controls the visibility of the "Get Your Free Guide" button across all
 3. **Add Application Setting**:
    - Click **+ Add** button
    - Enter the following:
-     - **Name**: `NEXT_PUBLIC_ SHOW_FREE_GUIDE_BUTTON`
+     - **Name**: `NEXT_PUBLIC_SHOW_FREE_GUIDE_BUTTON`
      - **Value**: `false` (to hide the button) or `true` (to show the button)
    - Click **OK**
 
