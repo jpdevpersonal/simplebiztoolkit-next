@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { links } from "@/config/links";
+import { featureFlags } from "@/config/featureFlags";
 
 export default function StickyMobileCta() {
   return (
@@ -13,9 +14,11 @@ export default function StickyMobileCta() {
         >
           Shop on Etsy
         </a>
-        <Link className="btn sb-btn-ghost" href={links.freebiePath}>
-          Get your free guide
-        </Link>
+        {featureFlags.showFreeGuideButton && (
+          <Link className="btn sb-btn-ghost" href={links.freebiePath}>
+            Get your free guide
+          </Link>
+        )}
       </div>
     </div>
   );
