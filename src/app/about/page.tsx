@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import "@/styles/aboutStyle.css";
 
 export const metadata: Metadata = {
   title: "About",
@@ -77,6 +78,13 @@ export default function AboutPage() {
                 Julian
                 <br />
                 Founder
+              </p>
+            </section>
+            <section>
+              <p className="about-disclosure">
+                Disclosure: This site may contain affiliate links. If you use
+                them, SimpleBizToolkit may earn a commission at no extra cost to
+                you.
               </p>
             </section>
           </div>

@@ -41,9 +41,9 @@ export const posts: BlogPost[] = [
     title:
       "How Adobe Express Helps Etsy Sellers Run a More Efficient, Professional Business",
     subtitle:
-      'Running a successful Etsy shop means wearing a suspicious number of hats: creator, photographer, marketer, and designer. Adobe Express can help you do the "visuals" part faster — and make your shop look more consistent and trustworthy while you\'re at it.',
+      'Running a successful Etsy shop means wearing a huge number of different hats: creator, photographer, marketer, and designer. Adobe Express can help you do the "visuals" part faster, and make your shop look more consistent and trustworthy while you\'re at it.',
     description:
-      "Practical ways Etsy sellers can use Adobe Express to polish product photos, build consistent branding, create social content faster, and produce marketing materials — without needing design expertise.",
+      "Practical ways Etsy sellers can use Adobe Express to polish product photos, build consistent branding, create social content faster, and produce marketing materials, without needing design expertise.",
     dateISO: "2026-01-20",
     category: "Branding",
     readingMinutes: 8,
