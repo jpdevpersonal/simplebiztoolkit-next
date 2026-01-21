@@ -13,10 +13,10 @@ export default function SiteHeader() {
         borderBottom: "1px solid var(--sb-border)",
       }}
     >
-      <div className="container py-3 d-flex align-items-center justify-content-between gap-3 sb-site-header-inner">
+      <div className="container py-3 d-flex align-items-center justify-content-between gap-3 flex-nowrap sb-site-header-inner">
         <Link
           href="/"
-          className="d-flex align-items-center gap-2 text-decoration-none sb-site-header-brand"
+          className="d-flex align-items-center gap-2 text-decoration-none sb-site-header-brand flex-shrink-0"
         >
           <Image
             src="/images/simple-biz-toolkit-logo.png"
@@ -34,9 +34,11 @@ export default function SiteHeader() {
           </div>
         </Link>
 
-        <SiteNavigation />
+        <div className="order-3 order-lg-2 d-flex align-items-center">
+          <SiteNavigation />
+        </div>
 
-        <div className="d-flex align-items-center gap-2 sb-site-header-actions">
+        <div className="d-flex align-items-center gap-2 sb-site-header-actions order-2 order-lg-3">
           {/* <Link
             href={links.freebiePath}
             className="btn sb-btn-ghost d-none d-sm-inline-flex"
@@ -45,12 +47,11 @@ export default function SiteHeader() {
           </Link> */}
 
           <a
-            className="btn sb-btn-primary d-none d-md-inline-flex"
+            className="btn sb-btn-primary d-none d-xl-inline-flex"
             href={links.etsyShopUrl}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="sb-btn-icon">🛒</span>
             Shop on Etsy
             <svg
               className="sb-btn-arrow"
