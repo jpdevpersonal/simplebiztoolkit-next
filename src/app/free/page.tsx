@@ -98,7 +98,7 @@ export default function FreebiePage() {
               marginBottom: "0.75rem",
             }}
           >
-            Master AI for Your Small Business
+            Use AI for Your Small Business
           </h1>
           <p
             className="sb-muted"
