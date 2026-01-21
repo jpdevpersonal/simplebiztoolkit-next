@@ -10,16 +10,6 @@ const AFFILIATE_URL = "https://YOUR-AFFILIATE-LINK-HERE"; // TODO: replace
 export default function AdobeExpressEtsyContent() {
   return (
     <>
-      <ArticleCTA
-        title="Try Adobe Express (without the design headache)"
-        description="If your shop visuals are 'fine' but inconsistent (or painfully slow to produce), Adobe Express is a solid way to get faster, cleaner, and more on-brand — without becoming a full-time designer."
-        primaryLabel="Explore Adobe Express"
-        primaryHref={AFFILIATE_URL}
-        showHomeLink={true}
-        showEtsyLink={true}
-        disclosure="Disclosure: This page may contain affiliate links. If you use them, SimpleBizToolkit may earn a commission at no extra cost to you."
-      />
-
       <Section>
         <h2>Polish your product photos effortlessly</h2>
         <p>
@@ -182,17 +172,12 @@ export default function AdobeExpressEtsyContent() {
         primaryHref={AFFILIATE_URL}
         showHomeLink={true}
         showEtsyLink={true}
-        disclosure="Disclosure: This page may contain affiliate links. If you use them, SimpleBizToolkit may earn a commission at no extra cost to you."
       />
 
       <ArticleFooter>
         <p>
           Notes: This article is intended as practical guidance for small
           business owners and Etsy sellers.
-        </p>
-        <p>
-          Disclosure: Affiliate links may be used. You're never paying extra —
-          it just helps support the site.
         </p>
       </ArticleFooter>
     </>

@@ -69,7 +69,7 @@ export default function BookkeepingBasicsContent() {
         <h2>Why a printable ledger works</h2>
         <p>
           If you want a ready-made structure, a printable accounting ledger
-          gives you a frictionless routine — and that routine is the real win.
+          gives you a frictionless routine, and that routine is the real win.
         </p>
         <p>
           Physical ledgers work because they reduce decision fatigue. The
@@ -82,11 +82,6 @@ export default function BookkeepingBasicsContent() {
           than just clicking buttons.
         </p>
       </Section>
-
-      {/* <ArticleCTA
-        title="Get your bookkeeping started"
-        description="Download a free template to start tracking your business finances today."
-      /> */}
 
       <ArticleFooter>
         <p>
