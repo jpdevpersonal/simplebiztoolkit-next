@@ -207,7 +207,7 @@ export default function HomePage() {
                   Essential templates
                 </h3>
                 <p className="sb-muted mb-0" style={{ fontSize: "0.9375rem" }}>
-                  Tracking, planning, and admin — without overcomplication.
+                  Tracking, planning, and admin, without overcomplication.
                 </p>
               </div>
             </div>
@@ -239,7 +239,7 @@ export default function HomePage() {
                   Real-world use
                 </h3>
                 <p className="sb-muted mb-0" style={{ fontSize: "0.9375rem" }}>
-                  Made for small business owners, solo operators, and online
+                  Made for small business owners, solopreneurs, and online
                   sellers.
                 </p>
               </div>

@@ -106,7 +106,15 @@ export default function SiteNavigation() {
           }}
         >
           <div>
-            <p style={{ margin: 0, fontSize: "1rem" }}>Simple Biz Toolkit</p>
+            <Link
+              href="/"
+              onClick={closeMenu}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <p style={{ margin: 0, fontSize: "1.125rem", fontWeight: 700 }}>
+                Simple Biz Toolkit
+              </p>
+            </Link>
           </div>
           <button
             onClick={closeMenu}

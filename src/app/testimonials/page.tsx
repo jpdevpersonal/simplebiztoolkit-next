@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import TestimonialGrid from "@/components/TestimonialGrid";
-import { links } from "@/config/links";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Reviews",
@@ -28,14 +28,25 @@ export default function TestimonialsPage() {
         <TestimonialGrid />
 
         <div className="text-center mt-4">
-          <a
-            className="btn sb-btn-primary"
-            href={links.etsyShopUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Shop on Etsy
-          </a>
+          <Link href="/products" className="btn sb-btn-primary">
+            Browse All Products
+            <svg
+              className="sb-btn-arrow"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M3 8h10M9 4l4 4-4 4"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </Link>
         </div>
       </div>
     </section>
