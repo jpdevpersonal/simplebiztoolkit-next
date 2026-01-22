@@ -93,11 +93,10 @@ export default async function CategoryPage({ params }: Props) {
                     marginBottom: "0.35rem",
                   }}
                 >
-                  Why this helps
+                  How this helps
                 </h2>
                 <p className="sb-muted mb-0" style={{ fontSize: "0.9375rem" }}>
-                  Browse the templates below, then complete your purchase
-                  securely through Etsy.
+                  {cat.howThisHelps}
                 </p>
               </div>
             </div>
