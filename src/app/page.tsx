@@ -20,17 +20,17 @@ export const metadata: Metadata = {
     title:
       "Simple Biz Toolkit | Essential Templates & Tools for Small Business Owners",
     description:
-      "Trust-first templates and toolkits that save time and reduce admin. Get a your free guide, then shop securely on Etsy.",
+      "Trust-first templates and toolkits that save time and reduce admin. Shop securely on Etsy.",
     url: "/",
   },
 };
 
 export default function HomePage() {
   const trust = [
-    "4.8★ Etsy rating",
+    "Five Star Etsy rating",
     "Etsy Star Seller!",
-    "Secure checkout via Etsy",
     "Over 3500 sales",
+    "Secure checkout via Etsy",
   ];
 
   const orgJsonLd = {
@@ -89,17 +89,21 @@ export default function HomePage() {
                 className="sb-card p-3 mt-4"
                 style={{ borderLeft: "3px solid var(--sb-brand-blue)" }}
               >
-                <p
+                <div
                   className="mb-1"
                   style={{ fontWeight: 600, fontStyle: "italic" }}
                 >
-                  "Perfect, saved me a lot of time."
-                </p>
+                  <p>
+                    "Just what I was looking for and could not find. So glad I
+                    found these,
+                  </p>
+                  <p>They print out great!"</p>
+                </div>
                 <cite
                   className="sb-muted"
                   style={{ fontSize: "0.8125rem", fontStyle: "normal" }}
                 >
-                  — Verified Etsy buyer
+                  — Becky, Etsy buyer
                 </cite>
               </blockquote>
             </div>
@@ -203,7 +207,7 @@ export default function HomePage() {
                   Essential templates
                 </h3>
                 <p className="sb-muted mb-0" style={{ fontSize: "0.9375rem" }}>
-                  Tracking, planning, and admin — without overcomplication.
+                  Tracking, planning, and admin, without overcomplication.
                 </p>
               </div>
             </div>
@@ -235,7 +239,7 @@ export default function HomePage() {
                   Real-world use
                 </h3>
                 <p className="sb-muted mb-0" style={{ fontSize: "0.9375rem" }}>
-                  Made for small business owners, solo operators, and online
+                  Made for small business owners, solopreneurs, and online
                   sellers.
                 </p>
               </div>
@@ -255,7 +259,7 @@ export default function HomePage() {
               Read more reviews
             </Link>
           </div>
-          <TestimonialGrid />
+          <TestimonialGrid count={3} />
 
           <div className="text-center mt-4">
             <a
