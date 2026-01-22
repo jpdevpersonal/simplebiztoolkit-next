@@ -20,7 +20,8 @@ export default function HelpPage() {
         <div className="products-header">
           <h1 style={{ fontWeight: 900 }}>Help</h1>
           <p className="sb-muted">
-            Help for common questions about downloads and access.
+            Help for common questions you may have about our site and your
+            purchase.
           </p>
         </div>
 

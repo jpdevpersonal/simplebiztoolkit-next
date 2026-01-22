@@ -22,8 +22,8 @@ export default function BlogIndexPage() {
       <div className="container">
         <h1 style={{ fontWeight: 900 }}>Resources</h1>
         <p className="sb-muted">
-          Helpful content attracts traffic, builds trust, and converts readers
-          into buyers and subscribers.
+          Essential guides and tips for small business owners and online
+          sellers.
         </p>
 
         <div className="row g-3 mt-2">

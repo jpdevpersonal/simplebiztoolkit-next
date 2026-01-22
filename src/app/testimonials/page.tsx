@@ -22,7 +22,7 @@ export default function TestimonialsPage() {
       <div className="container">
         <h1 style={{ fontWeight: 900 }}>Reviews</h1>
         <p className="sb-muted">
-          Social proof builds trust and helps visitors feel confident.
+          Here's what some of our customers are saying about Simple Biz Toolkit
         </p>
 
         <TestimonialGrid />
