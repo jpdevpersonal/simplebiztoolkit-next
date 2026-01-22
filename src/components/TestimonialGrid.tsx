@@ -1,10 +1,17 @@
 import { testimonials } from "../data/testimonials";
 
-export default function TestimonialGrid() {
+type TestimonialGridProps = {
+  count?: number;
+};
+
+export default function TestimonialGrid({ count }: TestimonialGridProps) {
+  const items =
+    typeof count === "number" ? testimonials.slice(0, count) : testimonials;
+
   return (
     <div className="row g-3">
-      {testimonials.map((t) => (
-        <div className="col-md-4" key={t.quote}>
+      {items.map((t) => (
+        <div className="col-md-4" key={t.id}>
           <blockquote
             className="sb-card p-3 h-100"
             style={{ borderLeft: "3px solid var(--sb-brand-blue)", margin: 0 }}
