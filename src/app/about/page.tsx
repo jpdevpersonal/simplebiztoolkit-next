@@ -22,8 +22,8 @@ export default function AboutPage() {
         <div className="products-header">
           <h1 style={{ fontWeight: 900 }}>About</h1>
           <p className="sb-muted">
-            Welcome to Simple Biz Toolkit: your source for printable templates
-            and business solutions.
+            Welcome to Simple Biz Toolkit: your source for simple convenient
+            printable templates and business enhancing solutions.
           </p>
         </div>
 
