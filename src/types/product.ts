@@ -2,6 +2,7 @@ export type ProductCategory = {
   slug: string;
   name: string;
   summary: string;
+  howThisHelps: string;
   heroImage: string;
   items: Array<{
     title: string;

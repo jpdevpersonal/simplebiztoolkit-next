@@ -1,4 +1,3 @@
-// productCategories.ts
 import type { ProductCategory } from "../types/product";
 
 export const categories: ProductCategory[] = [
@@ -6,6 +5,8 @@ export const categories: ProductCategory[] = [
     slug: "guides",
     name: "Guides",
     summary: "Short, practical guides to help you work faster and smarter.",
+    howThisHelps:
+      "Gives you clear, step-by-step advice you can apply immediately—so you waste less time guessing and make better business decisions faster.",
     heroImage: "",
     items: [
       {
@@ -30,6 +31,8 @@ export const categories: ProductCategory[] = [
     name: "Accounting Ledger",
     summary:
       "Simple printable ledgers for bookkeeping, income/expense tracking, and balances.",
+    howThisHelps:
+      "Keeps your finances organized in one place so you can see income, expenses, and balances at a glance—useful for budgeting, taxes, and staying in control.",
     heroImage: "",
     items: [
       {
@@ -59,16 +62,6 @@ export const categories: ProductCategory[] = [
           "https://www.etsy.com/listing/1366816474/accounting-ledger-sheet-fillable-and",
         price: "$3.83",
       },
-      // {
-      //   title:
-      //     "Accounting Ledger (Fillable + Printable) – Accounts Template (Instant Download)",
-      //   problem: "You want a straightforward ledger that’s quick to complete.",
-      //   bullets: ["Fillable PDF", "Simple layout", "Instant download"],
-      //   image: "",
-      //   etsyUrl:
-      //     "https://www.etsy.com/listing/1683213810/accounting-ledger-fillable-and-printable",
-      //   price: "$3.38",
-      // },
       {
         title: "Fillable and Printable Accounting Ledger with Alternating Rows",
         problem: "You want a ledger that’s easier to read line-by-line.",
@@ -94,20 +87,6 @@ export const categories: ProductCategory[] = [
           "https://www.etsy.com/listing/1366270922/accounting-ledger-template-yearly",
         price: "$1.97",
       },
-      // {
-      //   title:
-      //     "Accounting Ledger and General Ledger Sheet – Income/Expense + Money Tracker (A5/Half Letter)",
-      //   problem: "You want a compact ledger for binders/notebooks.",
-      //   bullets: [
-      //     "Smaller paper sizes",
-      //     "Income/expense friendly",
-      //     "Clean columns",
-      //   ],
-      //   image: "",
-      //   etsyUrl:
-      //     "https://www.etsy.com/listing/1592780981/accounting-ledger-and-general-ledger",
-      //   price: "$1.82",
-      // },
       {
         title:
           "Accounting Ledger – General Ledger Sheets (6 Colors, Wide Margins)",
@@ -150,60 +129,14 @@ export const categories: ProductCategory[] = [
           "https://www.etsy.com/listing/1417451512/printable-accounting-ledger-money",
         price: "$1.97",
       },
-      // {
-      //   title: "Printable Accounting General Ledger Sheet – Monthly Format",
-      //   problem: "You want a monthly ledger that’s easy to file and review.",
-      //   bullets: ["Monthly format", "Printable", "A4 + US Letter"],
-      //   image: "",
-      //   etsyUrl:
-      //     "https://www.etsy.com/listing/1222780541/printable-accounting-general-ledger",
-      //   price: "$1.97",
-      // },
-      // {
-      //   title:
-      //     "Yearly Accounting Ledger – Printable Ledger Sheet (A4 + US Letter)",
-      //   problem: "You want one sheet that summarizes a full year cleanly.",
-      //   bullets: [
-      //     "Yearly layout",
-      //     "Standard + wide margin versions",
-      //     "Printable PDF",
-      //   ],
-      //   image: "",
-      //   etsyUrl:
-      //     "https://www.etsy.com/listing/1170038582/yearly-accounting-ledger-printable",
-      //   price: "$1.93",
-      // },
-      // {
-      //   title:
-      //     "Printable Accounting Ledger Sheets + Money Tracker – Yearly Format (Violet)",
-      //   problem: "You want a yearly ledger in a specific color theme.",
-      //   bullets: ["Yearly format", "Violet theme", "Printable PDF"],
-      //   image: "",
-      //   etsyUrl:
-      //     "https://www.etsy.com/listing/1202491640/printable-accounting-ledger-sheets-and",
-      //   price: "$1.97",
-      // },
-      // {
-      //   title:
-      //     "Printable Accounting Ledger Sheets – Money Tracker + General Ledger (Six Colors)",
-      //   problem:
-      //     "You want multiple color options for different accounts/projects.",
-      //   bullets: [
-      //     "Six colors",
-      //     "Printable set",
-      //     "Great for organizing multiple ledgers",
-      //   ],
-      //   image: "",
-      //   etsyUrl:
-      //     "https://www.etsy.com/listing/1177112696/printable-accounting-ledger-sheets-money",
-      //   price: "$3.20",
-      // },
     ],
   },
   {
     slug: "payment-tracker",
     name: "Payment Tracker",
     summary: "Track what’s due, what’s paid, and what’s outstanding — cleanly.",
+    howThisHelps:
+      "Helps you avoid missed payments and awkward follow-ups by showing what’s due, what’s paid, and what’s overdue—improving cash flow and reducing admin.",
     heroImage: "",
     items: [
       {
@@ -250,6 +183,8 @@ export const categories: ProductCategory[] = [
     name: "Rent Payment Ledger",
     summary:
       "Simple rent payment logs for landlords — printable and fillable options.",
+    howThisHelps:
+      "Makes it easy to document rent due/paid by tenant and date, giving you a clear paper trail that supports smoother management and fewer disputes.",
     heroImage: "",
     items: [
       {
@@ -284,12 +219,13 @@ export const categories: ProductCategory[] = [
       },
     ],
   },
-
   {
     slug: "time-sheet",
     name: "Time Sheet",
     summary:
       "Time sheets and time trackers for staff, freelancers, and contractors.",
+    howThisHelps:
+      "Captures hours worked consistently so you can bill accurately, run payroll confidently, and understand where time is actually going.",
     heroImage: "",
     items: [
       {
@@ -355,12 +291,13 @@ export const categories: ProductCategory[] = [
       },
     ],
   },
-
   {
     slug: "attendance-record",
     name: "Attendance Record",
     summary:
       "Attendance sheets for schools, clubs, events, and staff sign-offs.",
+    howThisHelps:
+      "Provides a simple record of who attended and when—useful for compliance, safety, staffing, and keeping events or sessions organized.",
     heroImage: "",
     items: [
       {
@@ -415,6 +352,8 @@ export const categories: ProductCategory[] = [
     name: "Petty Cash",
     summary:
       "Log cash-in/cash-out with a clean, low-friction petty cash sheet.",
+    howThisHelps:
+      "Creates a clean audit trail for small cash transactions so your totals reconcile and you don’t lose money to ‘mystery’ cash leakage.",
     heroImage: "",
     items: [
       {
@@ -445,6 +384,8 @@ export const categories: ProductCategory[] = [
     name: "Expense & Spending Trackers",
     summary:
       "Quick templates to track spending, income, and expenses without chaos.",
+    howThisHelps:
+      "Turns day-to-day spending into simple numbers you can act on—so you can spot overspend early, price smarter, and keep profit healthier.",
     heroImage: "",
     items: [
       {
@@ -491,12 +432,13 @@ export const categories: ProductCategory[] = [
       },
     ],
   },
-
   {
     slug: "receipts",
     name: "Receipts",
     summary:
       "Printable receipt templates in multiple styles and color options.",
+    howThisHelps:
+      "Lets you issue professional-looking receipts quickly, improving customer trust and giving you cleaner records for bookkeeping and returns.",
     heroImage: "",
     items: [
       {
@@ -529,12 +471,13 @@ export const categories: ProductCategory[] = [
       },
     ],
   },
-
   {
     slug: "sign-in-sheets",
     name: "Sign In Sheets",
     summary:
       "Reception and check-in sheets for visitors, events, and front desks.",
+    howThisHelps:
+      "Speeds up check-ins and visitor logs while keeping accurate records—handy for reception, workshops, classes, and basic security.",
     heroImage: "",
     items: [
       {
@@ -558,12 +501,13 @@ export const categories: ProductCategory[] = [
       },
     ],
   },
-
   {
     slug: "meeting-notes",
     name: "Meeting Notes",
     summary:
       "Agenda + minutes templates for client meetings and internal notes.",
+    howThisHelps:
+      "Keeps decisions, actions, and next steps captured in one consistent format—so nothing falls through the cracks and follow-ups are faster.",
     heroImage: "",
     items: [
       {
@@ -589,11 +533,12 @@ export const categories: ProductCategory[] = [
       },
     ],
   },
-
   {
     slug: "estimates",
     name: "Estimates & Quotes",
     summary: "Estimate/quote templates in printable and fillable formats.",
+    howThisHelps:
+      "Helps you send clear quotes that reduce back-and-forth, set expectations early, and improve your chances of closing work at the right price.",
     heroImage: "",
     items: [
       {
@@ -619,11 +564,12 @@ export const categories: ProductCategory[] = [
       },
     ],
   },
-
   {
     slug: "invoices",
     name: "Invoice",
     summary: "Minimalist invoices you can print and use immediately.",
+    howThisHelps:
+      "Makes billing straightforward and consistent so you get paid faster, reduce errors, and keep customer-facing paperwork professional.",
     heroImage: "",
     items: [
       {
@@ -637,12 +583,13 @@ export const categories: ProductCategory[] = [
       },
     ],
   },
-
   {
     slug: "order-forms-and-trackers",
     name: "Order Forms & Trackers",
     summary:
       "Order forms and trackers to keep sales, fulfillment, and records tidy.",
+    howThisHelps:
+      "Keeps orders and fulfillment organized from sale to delivery—reducing mistakes, saving time, and improving customer experience.",
     heroImage: "",
     items: [
       {
@@ -667,11 +614,12 @@ export const categories: ProductCategory[] = [
       },
     ],
   },
-
   {
     slug: "tips-and-service",
     name: "Tips & Service Trackers",
     summary: "Tip tracking templates for service workers and staff.",
+    howThisHelps:
+      "Tracks tips and service income cleanly so staff payouts are fair, reporting is easier, and you have better visibility on earnings.",
     heroImage: "",
     items: [
       {
@@ -697,64 +645,13 @@ export const categories: ProductCategory[] = [
       },
     ],
   },
-
-  // {
-  //   slug: "storyboards",
-  //   name: "Storyboards",
-  //   summary:
-  //     "Storyboard templates for creators, planners, and film/video workflows.",
-  //   heroImage: "",
-  //   items: [
-  //     {
-  //       title:
-  //         "Storyboard 6x9 Printable Template – Digital Collage Template and YouTube Planner (4 Frames)",
-  //       problem:
-  //         "You need a fast way to plan shots/scenes without messy notes.",
-  //       bullets: ["4 frames per page", "Printable", "Creator-friendly"],
-  //       image: "",
-  //       etsyUrl:
-  //         "https://www.etsy.com/listing/1653524525/storyboard-6x9-printable-template",
-  //       price: "$1.97",
-  //     },
-  //     {
-  //       title:
-  //         "Storyboard Template Printable – Storyboard Planner + Digital Collage Template (A4/US Letter)",
-  //       problem:
-  //         "You want a versatile storyboard that fits standard paper sizes.",
-  //       bullets: ["A4 + US Letter", "Storyboard planner layout", "Printable"],
-  //       image: "",
-  //       etsyUrl:
-  //         "https://www.etsy.com/listing/1237652424/storyboard-template-printable-storyboard",
-  //       price: "$2.04",
-  //     },
-  //     {
-  //       title:
-  //         "Storyboard Printable Template – Digital Collage Template and YouTube Planner",
-  //       problem: "You want a clean storyboard layout for creative planning.",
-  //       bullets: ["Printable", "YouTube/film planning", "Simple structure"],
-  //       image: "",
-  //       etsyUrl:
-  //         "https://www.etsy.com/listing/1413674238/storyboard-printable-template-digital",
-  //       price: "$2.04",
-  //     },
-  //     {
-  //       title:
-  //         "Storyboard Template A4 Printable – Storyboard Planner + Film Planner",
-  //       problem: "You want an A4-focused storyboard format that prints nicely.",
-  //       bullets: ["A4 optimized", "Printable", "Film planning friendly"],
-  //       image: "",
-  //       etsyUrl:
-  //         "https://www.etsy.com/listing/1215935073/storyboard-template-a4-printable",
-  //       price: "$2.04",
-  //     },
-  //   ],
-  // },
-
   {
     slug: "business-ledger-bundles",
     name: "Business Ledger Bundles",
     summary:
       "Bundles that combine the core templates: accounting, orders, payments, and cash.",
+    howThisHelps:
+      "Gives you a ready-made admin system with matching templates—so your records stay consistent across money in, money out, and day-to-day operations.",
     heroImage: "",
     items: [
       {
