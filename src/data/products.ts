@@ -272,7 +272,7 @@ export const categories: ProductCategory[] = [
       },
       {
         title:
-          "Printable Employee Time Sheet Template – Hours Worked + Weekly Tracker (Digital Download)",
+          "Printable Employee Time Sheet Template and Hours Worked + Weekly Tracker",
         problem:
           "A version of a classic weekly time sheet layout that records break time.",
         bullets: ["Printable", "Weekly structure", "Quick to fill in"],
