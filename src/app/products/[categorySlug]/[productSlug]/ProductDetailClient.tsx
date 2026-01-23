@@ -11,9 +11,6 @@ type Props = {
 
 export default function ProductDetailClient({ product }: Props) {
   const [showPreview, setShowPreview] = useState(false);
-  // const [availableMedium, setAvailableMedium] = useState<
-  //   Record<string, boolean>
-  // >({});
 
   // Compute medium (resized) image path
   const mediumSrc = (src: string) => {
@@ -31,7 +28,6 @@ export default function ProductDetailClient({ product }: Props) {
     if (!src || typeof window === "undefined") return;
     const md = mediumSrc(src);
     const imgMd = new window.Image();
-    // imgMd.onload = () => setAvailableMedium((s) => ({ ...s, [src]: true }));
     imgMd.onerror = () => {};
     imgMd.src = md;
 
@@ -39,27 +35,18 @@ export default function ProductDetailClient({ product }: Props) {
     img.src = src;
   };
 
-  // const handleImageClick = () => {
-  //   const src = product.image || "/images/placeholder-preview.png";
-  //   preloadImage(src);
-  //   setShowPreview(true);
-  // };
-
-  // const getPreviewImage = () => {
-  //   const src = product.image || "/images/placeholder-preview.png";
-  //   const md = mediumSrc(src);
-  //   return availableMedium[src] ? md : src;
-  // };
-
   return (
     <>
       {/* Two Column Layout */}
       <div className="product-detail-layout">
+        {/* Mobile-only title shown above the image on small screens */}
+        <h1 className="product-detail-title product-detail-title--mobile">
+          {product.title}
+        </h1>
         {/* Left Column - Image */}
         <div className="product-detail-image-container">
           <div
             className="product-detail-image-wrapper"
-            // onClick={handleImageClick}
             onMouseEnter={() =>
               preloadImage(product.image || "/images/placeholder-preview.png")
             }
@@ -173,17 +160,6 @@ export default function ProductDetailClient({ product }: Props) {
               <line x1="6" y1="6" x2="18" y2="18" />
             </svg>
           </button>
-          {/* <div className="product-image-preview-content">
-            <Image
-              src={getPreviewImage()}
-              alt="Product preview"
-              width={1000}
-              height={700}
-              sizes="100vw"
-              loading="eager"
-              style={{ width: "100%", height: "auto" }}
-            />
-          </div> */}
         </div>
       )}
     </>
