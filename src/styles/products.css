@@ -151,7 +151,7 @@
 
 @media (min-width: 768px) {
   .product-thumbnail-clickable {
-    cursor: zoom-in;
+    cursor: pointer;
   }
 }
 
@@ -379,5 +379,205 @@
 }
 
 .category-card:hover .category-card-cta svg {
+  transform: translateX(2px);
+}
+
+/* =============================================
+   Product Detail Page
+   ============================================= */
+
+.product-detail-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 992px) {
+  .product-detail-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+}
+
+/* Image Container */
+.product-detail-image-container {
+  width: 100%;
+}
+
+.product-detail-image-wrapper {
+  position: relative;
+  width: 100%;
+  cursor: zoom-in;
+  border-radius: var(--sb-radius);
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.product-detail-image-wrapper:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+  transform: translateY(-2px);
+}
+
+.product-detail-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-detail-zoom-hint {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--sb-muted);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.product-detail-image-wrapper:hover .product-detail-zoom-hint {
+  opacity: 1;
+}
+
+/* Content Section */
+.product-detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.product-detail-title {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--sb-ink);
+  margin: 0;
+}
+
+.product-detail-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--sb-green);
+  margin: 0;
+}
+
+.product-detail-problem {
+  background: var(--sb-soft);
+  border-radius: var(--sb-radius);
+  padding: 1.25rem;
+  border-left: 3px solid var(--sb-brand-blue);
+}
+
+.product-detail-problem h2 {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--sb-ink);
+  margin: 0 0 0.5rem 0;
+}
+
+.product-detail-problem p {
+  font-size: 0.9375rem;
+  color: var(--sb-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.product-detail-features h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--sb-ink);
+  margin: 0 0 0.75rem 0;
+}
+
+.product-detail-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.product-detail-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9375rem;
+  color: var(--sb-ink);
+}
+
+.feature-check-icon {
+  flex-shrink: 0;
+  color: var(--sb-green);
+}
+
+/* CTA Section */
+.product-detail-cta {
+  margin-top: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--sb-border);
+}
+
+.product-detail-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.875rem 1.5rem;
+  transition:
+    gap 0.2s ease,
+    transform 0.2s ease;
+}
+
+.product-detail-cta-btn:hover {
+  gap: 0.75rem;
+  transform: translateY(-1px);
+}
+
+.product-detail-cta-note {
+  font-size: 0.8125rem;
+  color: var(--sb-muted);
+  margin: 0.75rem 0 0 0;
+}
+
+/* See Full Details Link */
+/* .product-card-details-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--sb-brand-blue);
+  text-decoration: none;
+  margin-top: 0.5rem;
+  transition:
+    gap 0.2s ease,
+    color 0.2s ease;
+  margin-bottom: 1em;
+} */
+
+.product-card-details-link:hover {
+  gap: 0.5rem;
+  color: var(--sb-ink);
+  text-decoration: none;
+}
+
+.product-card-details-link svg {
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover .product-card-details-link svg {
   transform: translateX(2px);
 }
