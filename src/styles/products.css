@@ -569,33 +569,3 @@
   color: var(--sb-muted);
   margin: 0.75rem 0 0 0;
 }
-
-/* See Full Details Link */
-/* .product-card-details-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: var(--sb-brand-blue);
-  text-decoration: none;
-  margin-top: 0.5rem;
-  transition:
-    gap 0.2s ease,
-    color 0.2s ease;
-  margin-bottom: 1em;
-} */
-
-.product-card-details-link:hover {
-  gap: 0.5rem;
-  color: var(--sb-ink);
-  text-decoration: none;
-}
-
-.product-card-details-link svg {
-  transition: transform 0.2s ease;
-}
-
-.product-card:hover .product-card-details-link svg {
-  transform: translateX(2px);
-}
