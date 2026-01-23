@@ -11,9 +11,9 @@ type Props = {
 
 export default function ProductDetailClient({ product }: Props) {
   const [showPreview, setShowPreview] = useState(false);
-  const [availableMedium, setAvailableMedium] = useState<
-    Record<string, boolean>
-  >({});
+  // const [availableMedium, setAvailableMedium] = useState<
+  //   Record<string, boolean>
+  // >({});
 
   // Compute medium (resized) image path
   const mediumSrc = (src: string) => {
@@ -31,7 +31,7 @@ export default function ProductDetailClient({ product }: Props) {
     if (!src || typeof window === "undefined") return;
     const md = mediumSrc(src);
     const imgMd = new window.Image();
-    imgMd.onload = () => setAvailableMedium((s) => ({ ...s, [src]: true }));
+    // imgMd.onload = () => setAvailableMedium((s) => ({ ...s, [src]: true }));
     imgMd.onerror = () => {};
     imgMd.src = md;
 
@@ -39,17 +39,17 @@ export default function ProductDetailClient({ product }: Props) {
     img.src = src;
   };
 
-  const handleImageClick = () => {
-    const src = product.image || "/images/placeholder-preview.png";
-    preloadImage(src);
-    setShowPreview(true);
-  };
+  // const handleImageClick = () => {
+  //   const src = product.image || "/images/placeholder-preview.png";
+  //   preloadImage(src);
+  //   setShowPreview(true);
+  // };
 
-  const getPreviewImage = () => {
-    const src = product.image || "/images/placeholder-preview.png";
-    const md = mediumSrc(src);
-    return availableMedium[src] ? md : src;
-  };
+  // const getPreviewImage = () => {
+  //   const src = product.image || "/images/placeholder-preview.png";
+  //   const md = mediumSrc(src);
+  //   return availableMedium[src] ? md : src;
+  // };
 
   return (
     <>
@@ -59,7 +59,7 @@ export default function ProductDetailClient({ product }: Props) {
         <div className="product-detail-image-container">
           <div
             className="product-detail-image-wrapper"
-            onClick={handleImageClick}
+            // onClick={handleImageClick}
             onMouseEnter={() =>
               preloadImage(product.image || "/images/placeholder-preview.png")
             }
@@ -173,7 +173,7 @@ export default function ProductDetailClient({ product }: Props) {
               <line x1="6" y1="6" x2="18" y2="18" />
             </svg>
           </button>
-          <div className="product-image-preview-content">
+          {/* <div className="product-image-preview-content">
             <Image
               src={getPreviewImage()}
               alt="Product preview"
@@ -183,7 +183,7 @@ export default function ProductDetailClient({ product }: Props) {
               loading="eager"
               style={{ width: "100%", height: "auto" }}
             />
-          </div>
+          </div> */}
         </div>
       )}
     </>
