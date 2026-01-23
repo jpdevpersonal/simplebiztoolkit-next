@@ -13,7 +13,7 @@ export const categories: ProductCategory[] = [
         title:
           "AI for Small Business Owners Guide – Save Time & Grow Smarter with AI Tools (PDF)",
         problem:
-          "You want to use AI but don’t know where to start (or what actually helps).",
+          "Take advantage of AI for your business.  this guide teaches you where to start.",
         bullets: [
           "Plain-English walkthrough",
           "Practical examples",
@@ -23,6 +23,7 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/4361641425/ai-for-small-business-owners-guide-save",
         price: "$3.36",
+        productPageUrl: "/products/guides/ai-for-small-business-owners-guide",
       },
     ],
   },
@@ -46,11 +47,13 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1194290286/printable-accounting-ledger-general",
         price: "$1.93",
+        productPageUrl:
+          "/products/accounting-ledger/printable-monthly-accounting-ledger-start-end-balance",
       },
       {
         title: "Fillable and Printable Accounting Ledger (PDF)",
         problem:
-          "You want a reusable ledger you can type into (not handwrite).",
+          "A reusable ledger you can type into and auto-calculates your balance and totals.",
         bullets: [
           "Fillable PDF",
           "Printable",
@@ -61,10 +64,12 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1366816474/accounting-ledger-sheet-fillable-and",
         price: "$3.83",
+        productPageUrl:
+          "/products/accounting-ledger/fillable-printable-accounting-ledger-pdf",
       },
       {
         title: "Fillable and Printable Accounting Ledger with Alternating Rows",
-        problem: "You want a ledger that’s easier to read line-by-line.",
+        problem: "A ledger that's easier to read line-by-line.",
         bullets: [
           "Alternating row styling",
           "Fillable PDF",
@@ -75,6 +80,8 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1683205210/accounting-ledger-fillable-and-printable",
         price: "$3.83",
+        productPageUrl:
+          "/products/accounting-ledger/fillable-printable-accounting-ledger-alternating-rows",
       },
       {
         title:
@@ -86,23 +93,26 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1366270922/accounting-ledger-template-yearly",
         price: "$1.97",
+        productPageUrl:
+          "/products/accounting-ledger/accounting-ledger-template-yearly-general-ledger-sheet",
       },
       {
         title:
           "Accounting Ledger – General Ledger Sheets (6 Colors, Wide Margins)",
-        problem: "You want color options and binder-friendly margins.",
+        problem: "Six color options and binder-friendly margins.",
         bullets: ["6 color set", "Wide margins", "Printable columnar paper"],
         image:
           "/images/products/accounting-ledger/accounting-ledger-six-colour-bundle.webp",
         etsyUrl:
           "https://www.etsy.com/listing/1263178836/accounting-ledger-general-ledger-sheets",
         price: "$2.82",
+        productPageUrl:
+          "/products/accounting-ledger/accounting-ledger-general-ledger-sheets-6-colors",
       },
       {
         title:
           "Accounting Ledger and Money Tracker – Auto Calculating Balance (Fillable PDF)",
-        problem:
-          "You want your balance calculated automatically (less manual math).",
+        problem: "Your balance calculated automatically (less manual math).",
         bullets: [
           "Auto-calculating balance",
           "Fillable + printable",
@@ -113,6 +123,8 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1384315830/accounting-ledger-and-money-tracker",
         price: "$3.83",
+        productPageUrl:
+          "/products/accounting-ledger/accounting-ledger-money-tracker-auto-calculating",
       },
       {
         title:
@@ -128,27 +140,31 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1417451512/printable-accounting-ledger-money",
         price: "$1.97",
+        productPageUrl:
+          "/products/accounting-ledger/printable-accounting-ledger-accounts-receivable",
       },
     ],
   },
   {
     slug: "payment-tracker",
     name: "Payment Tracker",
-    summary: "Track what’s due, what’s paid, and what’s outstanding — cleanly.",
+    summary: "Track what's due, what's paid, and what's outstanding — cleanly.",
     howThisHelps:
-      "Helps you avoid missed payments and awkward follow-ups by showing what’s due, what’s paid, and what’s overdue—improving cash flow and reducing admin.",
+      "Helps you avoid missed payments and awkward follow-ups by showing what's due, what's paid, and what's overdue—improving cash flow and reducing admin.",
     heroImage: "",
     items: [
       {
         title:
           "Payment Tracker – Simple Printable Fee Payment Tracker and Client Payment Log",
         problem:
-          "You’re losing track of who paid, who hasn’t, and what’s outstanding.",
+          "You're losing track of who paid, who hasn't, and what's outstanding.",
         bullets: ["Track due vs paid", "Client history", "Printable PDF"],
         image: "/images/products/payment-tracker/payment-tracker-pay-02.webp",
         etsyUrl:
           "https://www.etsy.com/listing/4328745492/payment-tracker-simple-printable-fee",
         price: "$2.04",
+        productPageUrl:
+          "/products/payment-tracker/simple-printable-fee-payment-tracker-client-log",
       },
       {
         title:
@@ -164,6 +180,8 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1302357238/payment-tracker-and-client-payment",
         price: "$2.04",
+        productPageUrl:
+          "/products/payment-tracker/payment-tracker-client-payment-history-log",
       },
       {
         title:
@@ -175,6 +193,8 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1294509158/payment-tracker-client-payment-history",
         price: "$1.97",
+        productPageUrl:
+          "/products/payment-tracker/client-payment-history-fee-tracker-a4-letter",
       },
     ],
   },
@@ -201,11 +221,13 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1312388593/rent-payment-ledger-tenant-payment-log",
         price: "$3.90",
+        productPageUrl:
+          "/products/rent-payment-ledger/fillable-printable-rent-payment-ledger",
       },
       {
         title: "Printable Rent Payment Ledger",
         problem:
-          "A convenient printable monthlyrent log that’s easy to maintain.",
+          "A convenient printable monthlyrent log that's easy to maintain.",
         bullets: [
           "Printable PDF",
           "Landlord-friendly layout",
@@ -216,6 +238,8 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1273225049/rent-payment-ledger-printable-rent",
         price: "$2.18",
+        productPageUrl:
+          "/products/rent-payment-ledger/printable-rent-payment-ledger",
       },
     ],
   },
@@ -243,28 +267,35 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1359275270/printable-employee-time-sheet-template",
         price: "$2.00",
+        productPageUrl:
+          "/products/time-sheet/printable-employee-time-sheet-hours-worked-weekly",
       },
       {
         title:
           "Printable Employee Time Sheet Template – Hours Worked + Weekly Tracker (Digital Download)",
         problem:
-          "You want a version of a classic weekly time sheet layout that records break time.",
+          "A version of a classic weekly time sheet layout that records break time.",
         bullets: ["Printable", "Weekly structure", "Quick to fill in"],
         image:
           "/images/products/employee-timesheet/employee-weekly-timesheet-a4-3.webp",
         etsyUrl:
           "https://www.etsy.com/listing/4436102417/printable-employee-time-sheet-template",
         price: "$2.00",
+        productPageUrl:
+          "/products/time-sheet/printable-employee-time-sheet-weekly-tracker-digital",
       },
       {
         title:
           "Weekly Employee Time Sheet – Editable Excel Spreadsheet (Printable)",
-        problem: "You want to edit totals quickly and keep digital copies.",
+        problem:
+          "Edit totals quickly and keep digital copies. Use the full power of a spreadsheet",
         bullets: ["Editable Excel", "Printable", "Great for payroll prep"],
         image: "/images/products/employee-timesheet/timesheet-excel.webp",
         etsyUrl:
           "https://www.etsy.com/listing/1765516952/weekly-employee-time-sheet-time-tracker",
         price: "$2.11",
+        productPageUrl:
+          "/products/time-sheet/weekly-employee-time-sheet-editable-excel",
       },
       {
         title:
@@ -277,6 +308,8 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1514062037/printable-employee-time-sheet-weekly",
         price: "$2.53",
+        productPageUrl:
+          "/products/time-sheet/printable-employee-time-sheet-contractor",
       },
       {
         title:
@@ -288,6 +321,8 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1388832247/printable-freelancer-time-tracker-work",
         price: "$2.00",
+        productPageUrl:
+          "/products/time-sheet/printable-freelancer-time-tracker-daily-hours",
       },
     ],
   },
@@ -303,13 +338,15 @@ export const categories: ProductCategory[] = [
       {
         title:
           "School Attendance Record Sheet – Class Attendance Register (Monthly) (A4 Landscape)",
-        problem: "You need a clear monthly register that’s easy to review.",
+        problem: "You need a clear monthly register that's easy to review.",
         bullets: ["Monthly register", "A4 landscape", "Printable"],
         image:
           "/images/products/attendance/school-attendance-register-school-att-01.webp",
         etsyUrl:
           "https://www.etsy.com/listing/1670351760/school-attendance-record-sheet-class",
         price: "$2.04",
+        productPageUrl:
+          "/products/attendance-record/school-attendance-record-sheet-monthly",
       },
       {
         title:
@@ -322,28 +359,34 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1252218381/attendance-sheet-printable-attendance",
         price: "$2.04",
+        productPageUrl:
+          "/products/attendance-record/attendance-sheet-printable-tracker-school-employees",
       },
       {
         title:
           "Attendance Tracker – Printable Attendance Sheet for Conference and Events)",
-        problem: "You want an attendance log for events and sessions.",
+        problem: "Ideal attendance log for events and sessions.",
         bullets: ["Event-friendly", "Printable", "Easy check-off"],
         image:
           "/images/products/attendance/attendance-register-club-attend-club-event.webp",
         etsyUrl:
           "https://www.etsy.com/listing/1201911266/attendance-tracker-printable-attendance",
         price: "$2.01",
+        productPageUrl:
+          "/products/attendance-record/attendance-tracker-conference-events",
       },
       {
         title:
           "Attendance Tracker – Printable Attendance Record Sheet (Monthly Format)",
-        problem: "You want a monthly-format tracker you can file by month.",
+        problem: "A simple monthly-format tracker you can file by month.",
         bullets: ["Monthly format", "Printable PDF", "Simple layout"],
         image:
           "/images/products/attendance/attendance-register-horizontal-monthly-att-monthly.webp",
         etsyUrl:
           "https://www.etsy.com/listing/1179350757/attendance-tracker-printable-attendance",
         price: "$1.97",
+        productPageUrl:
+          "/products/attendance-record/attendance-tracker-printable-monthly-format",
       },
     ],
   },
@@ -353,7 +396,7 @@ export const categories: ProductCategory[] = [
     summary:
       "Log cash-in/cash-out with a clean, low-friction petty cash sheet.",
     howThisHelps:
-      "Creates a clean audit trail for small cash transactions so your totals reconcile and you don’t lose money to ‘mystery’ cash leakage.",
+      "Creates a clean audit trail for small cash transactions so your totals reconcile and you don't lose money to 'mystery' cash leakage.",
     heroImage: "",
     items: [
       {
@@ -365,6 +408,8 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1230155489/petty-cash-log-printable-cash-flow-sheet",
         price: "$1.97",
+        productPageUrl:
+          "/products/petty-cash/petty-cash-log-printable-small-business",
       },
       {
         title:
@@ -376,6 +421,8 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1230155489/petty-cash-log-printable-cash-flow-sheet",
         price: "$1.97",
+        productPageUrl:
+          "/products/petty-cash/petty-cash-log-fillable-auto-calculating",
       },
     ],
   },
@@ -403,6 +450,8 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1662236236/expense-tracker-income-and-expense-sheet",
         price: "$1.86",
+        productPageUrl:
+          "/products/expense-and-spending/expense-tracker-income-expense-sheet-goodnotes",
       },
       {
         title:
@@ -415,6 +464,8 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1245251867/spending-tracker-printable-income-and",
         price: "$1.93",
+        productPageUrl:
+          "/products/expense-and-spending/spending-tracker-printable-income-expense-planner",
       },
       {
         title:
@@ -429,6 +480,8 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1466892677/bill-payment-tracker-editable-yearly",
         price: "$1.69",
+        productPageUrl:
+          "/products/expense-and-spending/bill-payment-tracker-editable-yearly-monthly-quarterly",
       },
     ],
   },
@@ -449,6 +502,8 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1630920679/receipt-printable-customer-order-receipt",
         price: "$1.89",
+        productPageUrl:
+          "/products/receipts/printable-receipt-template-a5-half-letter",
       },
       {
         title:
@@ -459,6 +514,8 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1715418738/printable-receipt-template-pack-customer",
         price: "$2.25",
+        productPageUrl:
+          "/products/receipts/printable-receipt-template-pack-six-colors",
       },
       {
         title: "Printabke Receipt Template A4 + US Letter",
@@ -468,6 +525,8 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1566194978/receipt-template-printable-customer",
         price: "$1.97",
+        productPageUrl:
+          "/products/receipts/printable-receipt-template-a4-us-letter",
       },
     ],
   },
@@ -488,6 +547,8 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1823174365/printable-sign-in-sheet-reception-check",
         price: "$1.83",
+        productPageUrl:
+          "/products/sign-in-sheets/printable-sign-in-sheet-reception-check-in",
       },
       {
         title:
@@ -498,6 +559,8 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1684474079/printable-sign-in-sheet-reception-check",
         price: "$1.83",
+        productPageUrl:
+          "/products/sign-in-sheets/printable-sign-in-sheet-welcome-title",
       },
     ],
   },
@@ -520,6 +583,8 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1730107410/meeting-notes-template-agenda-planner",
         price: "$1.90",
+        productPageUrl:
+          "/products/meeting-notes/meeting-notes-template-agenda-planner-word",
       },
       {
         title:
@@ -530,6 +595,8 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1348243646/meeting-notes-template-printable-simple",
         price: "$1.86",
+        productPageUrl:
+          "/products/meeting-notes/meeting-notes-template-printable-simple-form",
       },
     ],
   },
@@ -551,16 +618,20 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1421249069/estimate-and-quote-template-fillable-and",
         price: "$3.45",
+        productPageUrl:
+          "/products/estimates/estimate-quote-template-fillable-printable",
       },
       {
         title: "Estimate and Quote Template – Simple Estimate Form (Printable)",
         problem:
-          "You want a simple printable quote sheet you can use on demand.",
+          "A simple printable estimate and quote sheet you can use on demand.",
         bullets: ["Printable", "Clean estimate layout", "Fast to complete"],
         image: "/images/products/job-estimate/a4-estimate.webp",
         etsyUrl:
           "https://www.etsy.com/listing/1401560272/estimate-and-quote-template-simple",
         price: "$2.00",
+        productPageUrl:
+          "/products/estimates/estimate-quote-template-simple-printable",
       },
     ],
   },
@@ -580,6 +651,8 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1707889862/invoice-template-printable-customer",
         price: "$1.83",
+        productPageUrl:
+          "/products/invoices/invoice-template-printable-minimalist",
       },
     ],
   },
@@ -601,16 +674,20 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1725782753/order-form-template-purchase-order-form",
         price: "$1.83",
+        productPageUrl:
+          "/products/order-forms-and-trackers/order-form-template-purchase-order-goodnotes",
       },
       {
         title:
           "Printable Order Tracker – Customer Order History and Sales (PDF)",
-        problem: "Easily track what’s ordered, shipped, and completed.",
+        problem: "Easily track what's ordered, shipped, and completed.",
         bullets: ["Order history", "Printable tracker", "Simple workflow"],
         image: "/images/products/order-tracker/order-tracker.webp",
         etsyUrl:
           "https://www.etsy.com/listing/1299688737/printable-order-tracker-customer-order",
         price: "$1.94",
+        productPageUrl:
+          "/products/order-forms-and-trackers/printable-order-tracker-customer-history",
       },
     ],
   },
@@ -632,16 +709,20 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1791051126/tips-tracker-printable-server-tips",
         price: "$1.90",
+        productPageUrl:
+          "/products/tips-and-service/tips-tracker-printable-server-excel",
       },
       {
         title: "Server Tips Tracker – Simple Tips Record (Printable PDF)",
         problem:
-          "A simple paper log for tips that’s quick to fill out after each shift.",
+          "A simple paper log for tips that's quick to fill out after each shift.",
         bullets: ["Printable PDF", "Quick daily entry", "Simple totals"],
         image: "/images/products/tips-tracker/tips-tracker-print.webp",
         etsyUrl:
           "https://www.etsy.com/listing/1712139010/server-tips-tracker-simple-tips-record",
         price: "$1.83",
+        productPageUrl:
+          "/products/tips-and-service/server-tips-tracker-simple-printable",
       },
     ],
   },
@@ -657,8 +738,7 @@ export const categories: ProductCategory[] = [
       {
         title:
           "Business Ledger Templates Bundle – Accounting, Invoice, Petty Cash, Order Tracker, Estimate and Time Sheet",
-        problem:
-          "You want the essentials in one pack instead of buying separately.",
+        problem: "All the essentials in one pack instead of buying separately.",
         bullets: [
           "8 essential forms",
           "Instant download",
@@ -668,6 +748,8 @@ export const categories: ProductCategory[] = [
         etsyUrl:
           "https://www.etsy.com/listing/1805181510/business-ledger-templates-accounting",
         price: "$7.04",
+        productPageUrl:
+          "/products/business-ledger-bundles/business-ledger-templates-bundle",
       },
     ],
   },

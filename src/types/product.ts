@@ -7,10 +7,12 @@ export type ProductCategory = {
   items: Array<{
     title: string;
     problem: string;
+    description?: string;
     bullets: string[];
     image: string;
     etsyUrl: string;
     price: string;
+    productPageUrl: string;
   }>;
 };
 
