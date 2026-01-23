@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import "../styles/products.css";
@@ -14,6 +15,22 @@ type Product = {
 };
 
 export default function ProductGrid({ products }: { products: Product[] }) {
+  const [previewProduct, setPreviewProduct] = useState<Product | null>(null);
+
+  const handleImageClick = (e: React.MouseEvent, product: Product) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setPreviewProduct(product);
+  };
+
+  const handleClosePreview = () => setPreviewProduct(null);
+
+  const handleOverlayClick = () => {
+    if (previewProduct) {
+      window.open(previewProduct.etsyUrl, "_blank", "noopener,noreferrer");
+    }
+  };
+
   return (
     <>
       <div className="row g-3 mt-2">
@@ -31,6 +48,7 @@ export default function ProductGrid({ products }: { products: Product[] }) {
                     overflow: "hidden",
                     display: "block",
                   }}
+                  onClick={(e) => handleImageClick(e, p)}
                 >
                   <picture>
                     <Image
@@ -126,6 +144,36 @@ export default function ProductGrid({ products }: { products: Product[] }) {
           </div>
         ))}
       </div>
+
+      {/* Image Preview Overlay */}
+      {previewProduct && (
+        <div
+          data-testid="product-image-preview-overlay"
+          className="product-image-preview-overlay"
+          onClick={handleOverlayClick}
+          style={{ cursor: "pointer" }}
+        >
+          <button
+            className="product-image-preview-close"
+            onClick={(e) => {
+              e.stopPropagation();
+              handleClosePreview();
+            }}
+            aria-label="Close preview"
+          >
+            ×
+          </button>
+          <div className="product-image-preview-container">
+            <Image
+              src={previewProduct.image}
+              alt="Product preview"
+              width={800}
+              height={600}
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </div>
+        </div>
+      )}
     </>
   );
 }
