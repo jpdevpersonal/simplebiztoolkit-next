@@ -39,13 +39,6 @@ export default function SiteHeader() {
         </div>
 
         <div className="d-flex align-items-center gap-2 sb-site-header-actions order-2 order-lg-3">
-          {/* <Link
-            href={links.freebiePath}
-            className="btn sb-btn-ghost d-none d-sm-inline-flex"
-          >
-            Get your free guide
-          </Link> */}
-
           <a
             className="btn sb-btn-primary d-none d-xl-inline-flex"
             href={links.etsyShopUrl}

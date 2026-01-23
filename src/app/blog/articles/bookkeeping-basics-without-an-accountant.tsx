@@ -3,7 +3,6 @@ import {
   Callout,
   ArticleFooter,
 } from "@/components/ArticleComponents";
-// import { ArticleCTA } from "@/components/ArticleCTA";
 
 export default function BookkeepingBasicsContent() {
   return (

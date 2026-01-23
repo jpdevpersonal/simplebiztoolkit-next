@@ -260,25 +260,6 @@ h5 {
   flex-direction: column;
 }
 
-/* Navigation animations */
-@keyframes slideInFromRight {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-.offcanvas.show {
-  animation: slideInFromRight 0.3s ease-out;
-}
-
-/* Hamburger menu button hover effect */
-.hamburger-btn:hover .hamburger-line {
-  background-color: var(--sb-green) !important;
-}
-
 /* Sticky mobile CTA bar */
 .sb-sticky-cta {
   position: fixed;
@@ -317,24 +298,6 @@ h5 {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
   }
 }
 
@@ -417,12 +380,6 @@ h5 {
 
 .sb-value-card:hover::before {
   transform: scaleX(1);
-}
-
-.sb-value-icon {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  display: block;
 }
 
 /* Enhanced trust pill hover */
