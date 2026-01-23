@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import "../styles/products.css";
@@ -15,22 +14,6 @@ type Product = {
 };
 
 export default function ProductGrid({ products }: { products: Product[] }) {
-  const [previewProduct, setPreviewProduct] = useState<Product | null>(null);
-
-  const handleImageClick = (e: React.MouseEvent, product: Product) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setPreviewProduct(product);
-  };
-
-  const handleClosePreview = () => setPreviewProduct(null);
-
-  const handleOverlayClick = () => {
-    if (previewProduct) {
-      window.open(previewProduct.etsyUrl, "_blank", "noopener,noreferrer");
-    }
-  };
-
   return (
     <>
       <div className="row g-3 mt-2">
@@ -48,7 +31,6 @@ export default function ProductGrid({ products }: { products: Product[] }) {
                     overflow: "hidden",
                     display: "block",
                   }}
-                  onClick={(e) => handleImageClick(e, p)}
                 >
                   <picture>
                     <Image
@@ -71,27 +53,6 @@ export default function ProductGrid({ products }: { products: Product[] }) {
                     <li key={b}>{b}</li>
                   ))}
                 </ul>
-                {/* <Link
-                href={p.productPageUrl}
-                className="product-card-details-link"
-              >
-                See full details
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M6 3l5 5-5 5"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </Link> */}
                 <span className="product-card-cta">
                   <span
                     className="sb-btn-icon"
@@ -144,36 +105,6 @@ export default function ProductGrid({ products }: { products: Product[] }) {
           </div>
         ))}
       </div>
-
-      {/* Image Preview Overlay */}
-      {previewProduct && (
-        <div
-          data-testid="product-image-preview-overlay"
-          className="product-image-preview-overlay"
-          onClick={handleOverlayClick}
-          style={{ cursor: "pointer" }}
-        >
-          <button
-            className="product-image-preview-close"
-            onClick={(e) => {
-              e.stopPropagation();
-              handleClosePreview();
-            }}
-            aria-label="Close preview"
-          >
-            ×
-          </button>
-          <div className="product-image-preview-container">
-            <Image
-              src={previewProduct.image}
-              alt="Product preview"
-              width={800}
-              height={600}
-              style={{ maxWidth: "100%", height: "auto" }}
-            />
-          </div>
-        </div>
-      )}
     </>
   );
 }

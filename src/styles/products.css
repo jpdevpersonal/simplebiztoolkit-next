@@ -408,7 +408,7 @@
 .product-detail-image-wrapper {
   position: relative;
   width: 100%;
-  cursor: pointer;
+  cursor: default;
   border-radius: var(--sb-radius);
   overflow: hidden;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
