@@ -256,7 +256,7 @@ export default function HomePage() {
               <p className="sb-muted mb-0">Real feedback from Etsy buyers.</p>
             </div>
             <Link className="btn sb-btn-ghost" href="/testimonials">
-              Read more reviews
+              See more reviews
             </Link>
           </div>
           <TestimonialGrid count={3} />
