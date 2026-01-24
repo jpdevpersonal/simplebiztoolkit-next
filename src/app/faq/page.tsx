@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 import FaqAccordion from "@/components/FaqAccordion";
 
@@ -22,12 +23,43 @@ export default function FaqPage() {
         <div className="products-header">
           <h1 style={{ fontWeight: 900 }}>FAQ</h1>
           <p className="sb-muted">
-            Answers to common questions about downloads, printing, and usage.
+            Answers to common questions about downloads and usage.
           </p>
         </div>
 
-        <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <FaqAccordion />
+        <div className="row g-4" style={{ maxWidth: 1100, margin: "0 auto" }}>
+          <main className="col-12 col-lg-8">
+            <FaqAccordion />
+          </main>
+
+          <aside className="col-12 col-lg-4">
+            <div className="card">
+              <div className="card-body d-flex flex-column">
+                <h3 className="h6" style={{ fontWeight: 800 }}>
+                  Need more help?
+                </h3>
+                <p className="sb-muted mb-3">
+                  If the FAQ doesn't answer your question you can contact us and
+                  we'll get back to you.
+                </p>
+
+                <Link href="/contact" className="btn btn-primary mt-auto">
+                  Contact page
+                </Link>
+
+                <hr />
+                <h4 className="h6">Helpful links</h4>
+                <ul className="list-unstyled sb-muted small">
+                  <li>
+                    <Link href="/help">Help & Troubleshooting</Link>
+                  </li>
+                  <li>
+                    <a href="https://www.etsy.com/">Etsy Help</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
