@@ -25,10 +25,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
   }));
 
+  // product detail routes: flatten all category items and use their productPageUrl
+  const productRoutes: MetadataRoute.Sitemap = categories
+    .flatMap((c) => c.items || [])
+    .map((p) => ({
+      url: `${site.url}${p.productPageUrl}`,
+      lastModified: now,
+    }));
+
   const blogRoutes: MetadataRoute.Sitemap = posts.map((p) => ({
     url: `${site.url}/blog/${p.slug}`,
     lastModified: p.dateISO,
   }));
 
-  return [...staticRoutes, ...categoryRoutes, ...blogRoutes];
+  return [...staticRoutes, ...categoryRoutes, ...productRoutes, ...blogRoutes];
 }

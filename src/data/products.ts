@@ -6,7 +6,7 @@ export const categories: ProductCategory[] = [
     name: "Guides",
     summary: "Short, practical guides to help you work faster and smarter.",
     howThisHelps:
-      "Gives you clear, step-by-step advice you can apply immediately—so you waste less time guessing and make better business decisions faster.",
+      "This AI guide is for small business owners looking to leverage AI tools effectively. It gives you clear, step-by-step advice you can apply immediately—so you waste less time guessing and make better business decisions faster.",
     heroImage: "",
     items: [
       {
