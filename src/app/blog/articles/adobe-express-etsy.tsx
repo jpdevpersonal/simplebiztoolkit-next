@@ -5,7 +5,8 @@ import {
 } from "@/components/ArticleComponents";
 import { ArticleCTA } from "@/components/ArticleCTA";
 
-const AFFILIATE_URL = "https://YOUR-AFFILIATE-LINK-HERE"; // TODO: replace
+const AFFILIATE_URL =
+  "https://https://www.adobe.com/uk/express/-AFFILIATE-LINK-HERE"; // TODO: replace
 
 export default function AdobeExpressEtsyContent() {
   return (
