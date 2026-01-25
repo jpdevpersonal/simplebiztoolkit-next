@@ -43,6 +43,7 @@ export default function ProductDetailClient({ product }: Props) {
         <h1 className="product-detail-title product-detail-title--mobile">
           {product.title}
         </h1>
+
         {/* Left Column - Image */}
         <div className="product-detail-image-container">
           <div
@@ -60,22 +61,118 @@ export default function ProductDetailClient({ product }: Props) {
               sizes="(max-width: 768px) 100vw, 50vw"
               priority
             />
+            {/* Trust badge on image
+            <div className="product-detail-badge">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              Instant Download
+            </div> */}
           </div>
         </div>
 
         {/* Right Column - Description */}
         <div className="product-detail-content">
-          <h1 className="product-detail-title">{product.title}</h1>
+          <div className="product-detail-header">
+            <h1 className="product-detail-title">{product.title}</h1>
 
-          <p className="product-detail-price">{product.price}</p>
+            {/* Price and Primary CTA Row (mobile optimized) */}
+            <div className="product-detail-price-cta-row">
+              <div className="product-detail-price-wrapper">
+                <span className="product-detail-price">{product.price}</span>
+              </div>
+              <a
+                href={product.etsyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn sb-btn-primary product-detail-cta-btn product-detail-cta-btn--primary"
+              >
+                <span>Get It Now</span>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 12L12 4M12 4H5M12 4v7"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            {/* Trust indicators */}
+            <div className="product-detail-trust">
+              <div className="product-detail-trust-item">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+                <span>Secure checkout</span>
+              </div>
+              <div className="product-detail-trust-item">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span>Instant download</span>
+              </div>
+              <div className="product-detail-trust-item">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+                <span>Available 24/7</span>
+              </div>
+            </div>
+          </div>
 
           <div className="product-detail-problem">
-            <h2>Description</h2>
+            <h2>What You'll Get</h2>
             <p>{product.description || product.problem}</p>
           </div>
 
           <div className="product-detail-features">
-            <h2>Key Features</h2>
+            <h2>What's Included</h2>
             <ul>
               {product.bullets.map((bullet, index) => (
                 <li key={index}>
@@ -85,7 +182,7 @@ export default function ProductDetailClient({ product }: Props) {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    strokeWidth="2"
+                    strokeWidth="2.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     className="feature-check-icon"
@@ -98,15 +195,15 @@ export default function ProductDetailClient({ product }: Props) {
             </ul>
           </div>
 
-          {/* CTA Button */}
-          <div className="product-detail-cta">
+          {/* Secondary CTA - Desktop only, less prominent */}
+          <div className="product-detail-cta product-detail-cta--secondary">
             <a
               href={product.etsyUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="btn sb-btn-primary product-detail-cta-btn"
             >
-              Buy on Etsy
+              <span>Get Instant Access</span>
               <svg
                 width="18"
                 height="18"
@@ -124,9 +221,29 @@ export default function ProductDetailClient({ product }: Props) {
               </svg>
             </a>
             <p className="product-detail-cta-note">
-              Secure checkout on Etsy with confidence
+              ✓ Secure payment via Etsy • Digital download available immediately
             </p>
           </div>
+        </div>
+      </div>
+
+      {/* Sticky Mobile CTA */}
+      <div className="product-detail-sticky-cta">
+        <div className="product-detail-sticky-cta-content">
+          <div className="product-detail-sticky-price">
+            <span className="product-detail-sticky-price-label">Price:</span>
+            <span className="product-detail-sticky-price-value">
+              {product.price}
+            </span>
+          </div>
+          <a
+            href={product.etsyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn sb-btn-primary product-detail-sticky-cta-btn"
+          >
+            Get It Now
+          </a>
         </div>
       </div>
 

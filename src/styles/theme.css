@@ -178,6 +178,72 @@ h5 {
   background: var(--sb-soft) !important;
 }
 
+.ctaButton {
+  --cta-bg: #111827; /* deep slate */
+  --cta-bg-hover: #0b1220; /* slightly darker */
+  --cta-text: #ffffff;
+  --cta-ring: rgba(17, 24, 39, 0.35);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  padding: 0.95rem 1.2rem;
+  min-height: 48px; /* thumb-friendly */
+  border-radius: 14px;
+
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1;
+
+  color: var(--cta-text);
+  background: var(--cta-bg);
+  text-decoration: none;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.18),
+    0 2px 0 rgba(255, 255, 255, 0.08) inset;
+
+  transform: translateY(0);
+  transition:
+    transform 140ms ease,
+    box-shadow 140ms ease,
+    background 140ms ease,
+    filter 140ms ease;
+}
+
+.ctaButton:hover {
+  background: var(--cta-bg-hover);
+  transform: translateY(-1px);
+  box-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.22),
+    0 2px 0 rgba(255, 255, 255, 0.1) inset;
+}
+
+.ctaButton:active {
+  transform: translateY(1px);
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.18),
+    0 1px 0 rgba(255, 255, 255, 0.06) inset;
+}
+
+.ctaButton:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 4px var(--cta-ring),
+    0 10px 24px rgba(0, 0, 0, 0.18),
+    0 2px 0 rgba(255, 255, 255, 0.08) inset;
+}
+
+@media (max-width: 640px) {
+  .ctaButton {
+    width: 100%;
+  }
+}
+
 /* Inline article link with chevron */
 .sb-article-link {
   display: inline-flex;
@@ -199,7 +265,7 @@ h5 {
 }
 
 .sb-section {
-  padding: 3.25rem 0;
+  padding: 2.25rem 0;
 }
 .sb-section-alt {
   background: var(--sb-soft);

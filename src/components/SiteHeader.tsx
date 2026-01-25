@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { links } from "@/config/links";
 import SiteNavigation from "./SiteNavigation";
+import EtsyCtaButton from "@/components/EtsyCtaButton";
 
 export default function SiteHeader() {
   return (
@@ -39,30 +39,7 @@ export default function SiteHeader() {
         </div>
 
         <div className="d-flex align-items-center gap-2 sb-site-header-actions order-2 order-lg-3">
-          <a
-            className="btn sb-btn-primary d-none d-xl-inline-flex"
-            href={links.etsyShopUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Shop on Etsy
-            <svg
-              className="sb-btn-arrow"
-              width="14"
-              height="14"
-              viewBox="0 0 16 16"
-              fill="none"
-              aria-hidden="true"
-            >
-              <path
-                d="M4 12L12 4M12 4H6M12 4v6"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </a>
+          <EtsyCtaButton className="d-none d-xl-inline-flex" />
         </div>
       </div>
     </header>

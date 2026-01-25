@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { links } from "@/config/links";
 import { featureFlags } from "@/config/featureFlags";
 import { createPortal } from "react-dom";
+import EtsyCtaButton from "@/components/EtsyCtaButton";
 
 export default function SiteNavigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -215,27 +216,7 @@ export default function SiteNavigation() {
                 Get your free guide
               </Link>
             )}
-            <a
-              href={links.etsyShopUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "0.5rem",
-                padding: "0.875rem 1rem",
-                textDecoration: "none",
-                fontWeight: 600,
-                fontSize: "0.9375rem",
-                borderRadius: "8px",
-                backgroundColor: "white",
-                color: "var(--sb-green)",
-                border: "1px solid var(--sb-border)",
-              }}
-            >
-              Shop on Etsy
-            </a>
+            <EtsyCtaButton onClick={closeMenu} />
 
             <div
               style={{

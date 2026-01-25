@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { links } from "@/config/links";
 import "@/styles/articleStyle.css";
+import EtsyCtaButton from "@/components/EtsyCtaButton";
 
 interface ArticleCTAProps {
   title?: string;
@@ -44,16 +44,7 @@ export function ArticleCTA({
           </Link>
         )}
 
-        {showEtsyLink && (
-          <a
-            href={links.etsyShopUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="article-cta-btn article-cta-btn-secondary"
-          >
-            Shop on Etsy
-          </a>
-        )}
+        {showEtsyLink && <EtsyCtaButton />}
       </div>
 
       {disclosure && <p className="article-cta-disclosure">{disclosure}</p>}
