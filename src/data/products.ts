@@ -14,6 +14,8 @@ export const categories: ProductCategory[] = [
           "AI for Small Business Owners Guide – Save Time & Grow Smarter with AI Tools (PDF)",
         problem:
           "Take advantage of AI for your business.  this guide teaches you where to start.",
+        description:
+          "In this easy-to-follow guide, you will learn how to use Artificial Intelligence to lighten the load, cut costs, and compete with bigger players.",
         bullets: [
           "Plain-English walkthrough",
           "Practical examples",
@@ -41,6 +43,8 @@ export const categories: ProductCategory[] = [
           "Printable monthly Accounting Ledger with start and end balance.",
         problem:
           "You need a clean way to track income/expenses without a complicated system.",
+        description:
+          "This accounts ledger sheet is simple in design, and easy to use. It is ideal for small business owners looking for a more minimalist and convenient alternative to the typical 2 or 3 column accounting forms.",
         bullets: ["General ledger layout", "Print anytime", "A4 + US Letter"],
         image:
           "/images/products/accounting-ledger/accounting-ledger-stat-balance-month-al02.webp",
@@ -54,6 +58,8 @@ export const categories: ProductCategory[] = [
         title: "Fillable and Printable Accounting Ledger (PDF)",
         problem:
           "A reusable ledger you can type into and auto-calculates your balance and totals.",
+        description:
+          "This fillable and printable Accounting Ledger sheet is designed to be simple and convenient, whilst still making life easier. It will auto calculate your new balance on every entry. It is an ideal general ledger sheet for your small business bookkeeping needs.",
         bullets: [
           "Fillable PDF",
           "Printable",
@@ -70,6 +76,8 @@ export const categories: ProductCategory[] = [
       {
         title: "Fillable and Printable Accounting Ledger with Alternating Rows",
         problem: "A ledger that's easier to read line-by-line.",
+        description:
+          "This fillable and printable Accounting Ledger sheet will calculate your new balance on every entry. Ideal for your small business bookkeeping needs. You can enter all your incoming and outgoing transactions on this simple money tracker. You can see the balance updating each time you hit enter",
         bullets: [
           "Alternating row styling",
           "Fillable PDF",
@@ -87,6 +95,8 @@ export const categories: ProductCategory[] = [
         title:
           "Accounting Ledger Template – Yearly Accounts + General Ledger Sheet (Columnar Paper)",
         problem: "You need a ledger that works across any financial period.",
+        description:
+          "This printable yearly accounting ledger sheet is simple and easy to use.  It is ideal for small business owners looking for a more minimalist and convenient alternative to the typical 2 or 3 column accounting forms. Designed for both personal and professional use, this essential small business form ensures accurate record-keeping, balancing, and analysis.",
         bullets: ["Fillable PDF", "Simple layout", "Alternating Rows"],
         image:
           "/images/products/accounting-ledger/accounting-ledger-al-year-02.webp",
@@ -100,6 +110,8 @@ export const categories: ProductCategory[] = [
         title:
           "Accounting Ledger – General Ledger Sheets (6 Colors, Wide Margins)",
         problem: "Six color options and binder-friendly margins.",
+        description:
+          "These easy to use general ledger templates feature 6 different colours to help you keep track of different types of transactions and accounts. They are a simple and convenient alternative to an account ledger book or columnar paper.",
         bullets: ["6 color set", "Wide margins", "Printable columnar paper"],
         image:
           "/images/products/accounting-ledger/accounting-ledger-six-colour-bundle.webp",
@@ -113,6 +125,8 @@ export const categories: ProductCategory[] = [
         title:
           "Accounting Ledger and Money Tracker – Auto Calculating Balance (Fillable PDF)",
         problem: "Your balance calculated automatically (less manual math).",
+        description:
+          "This fillable and printable Accounting Ledger PDF form, will calculate your updated balance automatically on every row. This saves you time and effort, and it is ideal to simplify your small business bookkeeping needs.",
         bullets: [
           "Auto-calculating balance",
           "Fillable + printable",
@@ -130,6 +144,8 @@ export const categories: ProductCategory[] = [
         title:
           "Printable Accounting Ledger Money Tracker and General Ledger Sheets (Accounts Receivable)",
         problem: "You need a ledger that supports receivables-style tracking.",
+        description:
+          "This printable accounting ledger sheet will help you stay on top of your small business bookkeeping. Ideal as a general ledger sheet, this printable PDF template is designed to help you to record income and expense transactions by month. Ideal for any financial period.",
         bullets: [
           "Accounts receivable friendly",
           "Printable",
@@ -158,6 +174,7 @@ export const categories: ProductCategory[] = [
           "Payment Tracker – Simple Printable Fee Payment Tracker and Client Payment Log",
         problem:
           "You're losing track of who paid, who hasn't, and what's outstanding.",
+        description: "",
         bullets: ["Track due vs paid", "Client history", "Printable PDF"],
         image: "/images/products/payment-tracker/payment-tracker-pay-02.webp",
         etsyUrl:
@@ -170,6 +187,7 @@ export const categories: ProductCategory[] = [
         title:
           "Payment Tracker and Client Payment History Log – Simple Fee Tracker",
         problem: "You need a lightweight way to track ongoing client payments.",
+        description: "",
         bullets: [
           "Client payment history",
           "Outstanding amounts",
@@ -187,6 +205,7 @@ export const categories: ProductCategory[] = [
         title:
           "Payment Tracker – Client Payment History and Fee Payment Tracker (A4 + US Letter)",
         problem: "You need a clear fee tracker you can file per client.",
+        description: "",
         bullets: ["Client-based tracking", "A4 + US Letter", "Printable PDF"],
         image:
           "/images/products/payment-tracker/payment-ledger-a4-monthly.webp",
@@ -211,6 +230,7 @@ export const categories: ProductCategory[] = [
         title: "Fillable and Printable Rent Payment Ledger",
         problem:
           "Helps you keep reliable record of rent payments and missed payments.",
+        description: "",
         bullets: [
           "Fillable PDF",
           "Auto-calculating balance",
@@ -228,6 +248,7 @@ export const categories: ProductCategory[] = [
         title: "Printable Rent Payment Ledger",
         problem:
           "A convenient printable monthlyrent log that's easy to maintain.",
+        description: "",
         bullets: [
           "Printable PDF",
           "Landlord-friendly layout",
@@ -257,6 +278,7 @@ export const categories: ProductCategory[] = [
           "Printable Employee Time Sheet Template – Hours Worked Log + Weekly Time Tracker",
         problem:
           "You need a simple way to record hours without messy spreadsheets.",
+        description: "",
         bullets: [
           "Printable time sheet",
           "Weekly tracking",
@@ -275,6 +297,7 @@ export const categories: ProductCategory[] = [
           "Printable Employee Time Sheet Template and Hours Worked + Weekly Tracker",
         problem:
           "A version of a classic weekly time sheet layout that records break time.",
+        description: "",
         bullets: ["Printable", "Weekly structure", "Quick to fill in"],
         image:
           "/images/products/employee-timesheet/employee-weekly-timesheet-a4-3.webp",
@@ -289,6 +312,7 @@ export const categories: ProductCategory[] = [
           "Weekly Employee Time Sheet – Editable Excel Spreadsheet (Printable)",
         problem:
           "Edit totals quickly and keep digital copies. Use the full power of a spreadsheet",
+        description: "",
         bullets: ["Editable Excel", "Printable", "Great for payroll prep"],
         image: "/images/products/employee-timesheet/timesheet-excel.webp",
         etsyUrl:
@@ -302,6 +326,7 @@ export const categories: ProductCategory[] = [
           "Printable Employee Time Sheet – Weekly Work Tracker / Contractor Time Sheet",
         problem:
           "You need a simple weekly tracker for contractors or short-term staff.",
+        description: "",
         bullets: ["Weekly tracker", "Printable PDF", "Contractor-friendly"],
         image:
           "/images/products/employee-timesheet/weekly-employee-timeshet-6-colours.webp",
@@ -315,6 +340,7 @@ export const categories: ProductCategory[] = [
         title:
           "Printable Freelancer Time Tracker – Work Time Sheet / Daily Hours Tracker",
         problem: "You need to track billable hours without overthinking it.",
+        description: "",
         bullets: ["Daily hours tracking", "Freelancer-friendly", "Printable"],
         image:
           "/images/products/employee-timesheet/employee-timesheet-a4-2.webp",
@@ -339,6 +365,7 @@ export const categories: ProductCategory[] = [
         title:
           "School Attendance Record Sheet – Class Attendance Register (Monthly) (A4 Landscape)",
         problem: "You need a clear monthly register that's easy to review.",
+        description: "",
         bullets: ["Monthly register", "A4 landscape", "Printable"],
         image:
           "/images/products/attendance/school-attendance-register-school-att-01.webp",
@@ -353,6 +380,7 @@ export const categories: ProductCategory[] = [
           "Attendance Sheet – Printable Attendance Tracker (School/Employees/Students)",
         problem:
           "You need a general-purpose attendance log that works anywhere.",
+        description: "",
         bullets: ["Simple grid format", "Printable", "Multi-use"],
         image:
           "/images/products/attendance/attendance-record-person-att-person-01.webp",
@@ -366,6 +394,7 @@ export const categories: ProductCategory[] = [
         title:
           "Attendance Tracker – Printable Attendance Sheet for Conference and Events)",
         problem: "Ideal attendance log for events and sessions.",
+        description: "",
         bullets: ["Event-friendly", "Printable", "Easy check-off"],
         image:
           "/images/products/attendance/attendance-register-club-attend-club-event.webp",
@@ -379,6 +408,7 @@ export const categories: ProductCategory[] = [
         title:
           "Attendance Tracker – Printable Attendance Record Sheet (Monthly Format)",
         problem: "A simple monthly-format tracker you can file by month.",
+        description: "",
         bullets: ["Monthly format", "Printable PDF", "Simple layout"],
         image:
           "/images/products/attendance/attendance-register-horizontal-monthly-att-monthly.webp",
@@ -403,6 +433,7 @@ export const categories: ProductCategory[] = [
         title:
           "Petty Cash Log – Printable Cash Flow Sheet (Small Business Bookkeeping)",
         problem: "Small cash purchases pile up and you lose track of them.",
+        description: "",
         bullets: ["Cash in/out tracking", "Printable PDF", "Simple totals"],
         image: "/images/products/petty-cash/petty-cash-log-a4-single.webp",
         etsyUrl:
@@ -415,6 +446,7 @@ export const categories: ProductCategory[] = [
         title:
           "Petty Cash Log – Fillable Printable Cash Flow Sheet (Auto Calcultating Balance)",
         problem: "Fillable and printable so you can easily track cash flow.",
+        description: "",
         bullets: ["Cash in/out tracking", "Printable PDF", "Simple totals"],
         image:
           "/images/products/petty-cash/fillable-petty-cash-log-sheet-image.webp",
@@ -440,6 +472,7 @@ export const categories: ProductCategory[] = [
           "Expense Tracker – Income and Expense Sheet (GoodNotes Template)",
         problem:
           "You need a simple way to track money in/out (especially on tablet).",
+        description: "",
         bullets: [
           "Income + expense tracking",
           "GoodNotes-friendly",
@@ -458,6 +491,7 @@ export const categories: ProductCategory[] = [
           "Spending Tracker – Printable Income and Expense Tracker and Finance Planner",
         problem:
           "You need a straightforward spending log to stop leaks in your budget.",
+        description: "",
         bullets: ["Spending-focused", "Income + expense", "Printable PDF"],
         image:
           "/images/products/expense-tracker/expenses-tracker-month-start-bal.webp",
@@ -471,6 +505,7 @@ export const categories: ProductCategory[] = [
         title:
           "Bill Payment Tracker – Editable Yearly, Monthly and Quarterly Bills Tracker",
         problem: "Bills slip through the cracks and you miss payments.",
+        description: "",
         bullets: [
           "Yearly/monthly/quarterly options",
           "Editable",
@@ -497,6 +532,7 @@ export const categories: ProductCategory[] = [
       {
         title: "Printabke Receipt Template A5 + Half Letter",
         problem: "A compact receipt form for quick sales/order handoffs.",
+        description: "",
         bullets: ["Small sizes", "Simple layout", "Printable"],
         image: "/images/products/receipt/receipt-a5.webp",
         etsyUrl:
@@ -509,6 +545,7 @@ export const categories: ProductCategory[] = [
         title:
           "Printable Receipt Template Pack – Customer Receipt + Sales Receipt Forms (Six Colors) (PDF)",
         problem: "Professional-looking receipts without buying receipt books.",
+        description: "",
         bullets: ["Six colors", "Printable pack", "Instant download"],
         image: "/images/products/receipt/receipt-pack.webp",
         etsyUrl:
@@ -520,6 +557,7 @@ export const categories: ProductCategory[] = [
       {
         title: "Printabke Receipt Template A4 + US Letter",
         problem: "A clean receipt you can print on standard paper sizes.",
+        description: "",
         bullets: ["A4 + US Letter", "Printable PDF", "Minimalist style"],
         image: "/images/products/receipt/receipt-a4.webp",
         etsyUrl:
@@ -542,6 +580,7 @@ export const categories: ProductCategory[] = [
       {
         title: "Printable Sign In Sheet – Reception Check In Form ",
         problem: "A simple front-desk sign-in record.",
+        description: "",
         bullets: ["Simple Design", "A4 + US Letter", "Printable"],
         image: "/images/products/sign-in-sheet/sign-in-simple.webp",
         etsyUrl:
@@ -554,6 +593,7 @@ export const categories: ProductCategory[] = [
         title:
           "Printable Sign In Sheet With Welcome Title– Reception Check In/Out Form",
         problem: "Daily Sign In Sheet with Welcome Message.",
+        description: "",
         bullets: ["Daily Sign In", "A4 + US Letter", "Printable"],
         image: "/images/products/sign-in-sheet/sign-in-welcome.webp",
         etsyUrl:
@@ -578,6 +618,7 @@ export const categories: ProductCategory[] = [
           "Meeting Notes Template – Agenda Planner (Printable Word Document A4/US Letter)",
         problem:
           "A Meeting notes template that works in Word for easy editing.",
+        description: "",
         bullets: ["Printable and Editable", "Word format", "A4 + US Letter"],
         image: "/images/products/meeting-notes/meeting-notes-word.webp",
         etsyUrl:
@@ -590,6 +631,7 @@ export const categories: ProductCategory[] = [
         title:
           "Meeting Notes Template Printable – Simple Meeting Notes Form (A4/A5/Letter/Half Letter)",
         problem: "A simple, printable notes sheet to capture key points.",
+        description: "",
         bullets: ["Multiple sizes", "Printable", "Clean layout"],
         image: "/images/products/meeting-notes/meeting-notes.webp",
         etsyUrl:
@@ -613,6 +655,7 @@ export const categories: ProductCategory[] = [
           "Estimate and Quote Template – Fillable and Printable Simple Estimate Form (Fillable PDF)",
         problem:
           "You need quotes you can send fast without rebuilding a doc each time.",
+        description: "",
         bullets: ["Fillable PDF", "Professional layout", "Simnple to use"],
         image: "/images/products/job-estimate/a4-estimate-fillable.webp",
         etsyUrl:
@@ -625,6 +668,7 @@ export const categories: ProductCategory[] = [
         title: "Estimate and Quote Template – Simple Estimate Form (Printable)",
         problem:
           "A simple printable estimate and quote sheet you can use on demand.",
+        description: "",
         bullets: ["Printable", "Clean estimate layout", "Fast to complete"],
         image: "/images/products/job-estimate/a4-estimate.webp",
         etsyUrl:
@@ -646,6 +690,7 @@ export const categories: ProductCategory[] = [
       {
         title: "Invoice Template – Printable Minimalist Invoice",
         problem: "A clean invoice format without design work.",
+        description: "",
         bullets: ["Minimalist layout", "Printable PDF", "Small business ready"],
         image: "/images/products/invoice/invoice.webp",
         etsyUrl:
@@ -669,6 +714,7 @@ export const categories: ProductCategory[] = [
         title:
           "Order Form Template – Purchase Order Form + Simple Printable Customer Order (GoodNotes Template)",
         problem: "One consistent order form to keep organised.",
+        description: "",
         bullets: ["Order form", "GoodNotes-friendly", "Printable"],
         image: "/images/products/order-form/order-form.webp",
         etsyUrl:
@@ -681,6 +727,7 @@ export const categories: ProductCategory[] = [
         title:
           "Printable Order Tracker – Customer Order History and Sales (PDF)",
         problem: "Easily track what's ordered, shipped, and completed.",
+        description: "",
         bullets: ["Order history", "Printable tracker", "Simple workflow"],
         image: "/images/products/order-tracker/order-tracker.webp",
         etsyUrl:
@@ -704,6 +751,7 @@ export const categories: ProductCategory[] = [
           "Tips Tracker – Printable Server Tips Tracker (Excel Spreadsheet Template)",
         problem:
           "Helps you consistently track tips without losing cash or miscalculating.",
+        description: "",
         bullets: ["Excel-based tracking", "Printable", "Daily/shift friendly"],
         image: "/images/products/tips-tracker/tips-tracker-spreadsheet.webp",
         etsyUrl:
@@ -716,6 +764,7 @@ export const categories: ProductCategory[] = [
         title: "Server Tips Tracker – Simple Tips Record (Printable PDF)",
         problem:
           "A simple paper log for tips that's quick to fill out after each shift.",
+        description: "",
         bullets: ["Printable PDF", "Quick daily entry", "Simple totals"],
         image: "/images/products/tips-tracker/tips-tracker-print.webp",
         etsyUrl:
@@ -739,6 +788,7 @@ export const categories: ProductCategory[] = [
         title:
           "Business Ledger Templates Bundle – Accounting, Invoice, Petty Cash, Order Tracker, Estimate and Time Sheet",
         problem: "All the essentials in one pack instead of buying separately.",
+        description: "",
         bullets: [
           "8 essential forms",
           "Instant download",

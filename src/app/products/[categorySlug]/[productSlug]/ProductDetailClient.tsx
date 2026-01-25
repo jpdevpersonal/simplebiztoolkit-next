@@ -203,7 +203,7 @@ export default function ProductDetailClient({ product }: Props) {
               rel="noopener noreferrer"
               className="btn sb-btn-primary product-detail-cta-btn"
             >
-              <span>Get Instant Access</span>
+              <span>More about this item</span>
               <svg
                 width="18"
                 height="18"
