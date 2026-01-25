@@ -127,7 +127,7 @@ export default async function CategoryPage({ params }: Props) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              More on our Etsy shop
+              Visit our Etsy shop
             </a>
           </div>
         </div>

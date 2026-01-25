@@ -7,6 +7,7 @@ import TrustBar from "@/components/TrustBar";
 import EmailCaptureForm from "@/components/EmailCaptureForm";
 import TestimonialGrid from "@/components/TestimonialGrid";
 import ProductGrid from "@/components/ProductGrid";
+import EtsyCtaButton from "@/components/EtsyCtaButton";
 import { featuredProducts } from "@/data/featured";
 import { links } from "@/config/links";
 import { featureFlags } from "@/config/featureFlags";
@@ -31,6 +32,7 @@ export default function HomePage() {
     "Etsy Star Seller!",
     "Over 3500 sales",
     "Secure checkout via Etsy",
+    "Excellent servive & support",
   ];
 
   const orgJsonLd = {
@@ -93,11 +95,13 @@ export default function HomePage() {
                   className="mb-1"
                   style={{ fontWeight: 600, fontStyle: "italic" }}
                 >
-                  <p>
+                  <p style={{ padding: 0, margin: 0 }}>
                     "Just what I was looking for and could not find. So glad I
                     found these,
                   </p>
-                  <p>They print out great!"</p>
+                  <p style={{ padding: 0, margin: 0 }}>
+                    They print out great!"
+                  </p>
                 </div>
                 <cite
                   className="sb-muted"
@@ -262,30 +266,7 @@ export default function HomePage() {
           <TestimonialGrid count={3} />
 
           <div className="text-center mt-4">
-            <a
-              className="btn sb-btn-primary"
-              href={links.etsyShopUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Browse the full shop on Etsy
-              <svg
-                className="sb-btn-arrow"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                aria-hidden="true"
-              >
-                <path
-                  d="M4 12L12 4M12 4H6M12 4v6"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </a>
+            <EtsyCtaButton label="Browse the full shop on Etsy" />
           </div>
         </div>
       </section>
