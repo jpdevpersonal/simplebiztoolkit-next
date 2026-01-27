@@ -174,7 +174,8 @@ export const categories: ProductCategory[] = [
           "Payment Tracker – Simple Printable Fee Payment Tracker and Client Payment Log",
         problem:
           "You're losing track of who paid, who hasn't, and what's outstanding.",
-        description: "",
+        description:
+          "Effortlessly manage client payments and stay on top of your business finances, with this simple and affordable Client Payment Tracker. This printable payment tracker is designed with simplicity in mind.",
         bullets: ["Track due vs paid", "Client history", "Printable PDF"],
         image: "/images/products/payment-tracker/payment-tracker-pay-02.webp",
         etsyUrl:
@@ -187,7 +188,8 @@ export const categories: ProductCategory[] = [
         title:
           "Payment Tracker and Client Payment History Log – Simple Fee Tracker",
         problem: "You need a lightweight way to track ongoing client payments.",
-        description: "",
+        description:
+          "Stay on top of your business finances and effortlessly manage client payments with this simple and affordable Client Payment Tracker. Ideal for small business bookkeeping and entrepreneurs tracking payments.",
         bullets: [
           "Client payment history",
           "Outstanding amounts",
@@ -205,7 +207,8 @@ export const categories: ProductCategory[] = [
         title:
           "Payment Tracker – Client Payment History and Fee Payment Tracker (A4 + US Letter)",
         problem: "You need a clear fee tracker you can file per client.",
-        description: "",
+        description:
+          "This Printable Payment Tracker helps you organise and keep track of your client payment history. You can log all transactions for any month.  Designed to be a simple, easy to use and affordable alternative to any other system.",
         bullets: ["Client-based tracking", "A4 + US Letter", "Printable PDF"],
         image:
           "/images/products/payment-tracker/payment-ledger-a4-monthly.webp",
@@ -230,7 +233,8 @@ export const categories: ProductCategory[] = [
         title: "Fillable and Printable Rent Payment Ledger",
         problem:
           "Helps you keep reliable record of rent payments and missed payments.",
-        description: "",
+        description:
+          "This fillable and printable Rent Payment Ledger helps landlords keep track of tenant payments and easily log rent transactions each month. This is a simple, easy to use and affordable alternative to any other system.",
         bullets: [
           "Fillable PDF",
           "Auto-calculating balance",
@@ -248,7 +252,8 @@ export const categories: ProductCategory[] = [
         title: "Printable Rent Payment Ledger",
         problem:
           "A convenient printable monthlyrent log that's easy to maintain.",
-        description: "",
+        description:
+          "This is a simple, easy to use and affordable alternative to any other system. No need to purchase an entire rent ledger book any more. As a printable rent payment tracker, you can easily download and print as many copies as you like.",
         bullets: [
           "Printable PDF",
           "Landlord-friendly layout",
@@ -278,7 +283,8 @@ export const categories: ProductCategory[] = [
           "Printable Employee Time Sheet Template – Hours Worked Log + Weekly Time Tracker",
         problem:
           "You need a simple way to record hours without messy spreadsheets.",
-        description: "",
+        description:
+          "This printable Employee Time Sheet is simple and easy to use. If you are a small business owner looking for a simple, convenient and efficient way to track your employees' time, then this printable time log is the perfect solution for you",
         bullets: [
           "Printable time sheet",
           "Weekly tracking",
@@ -297,7 +303,8 @@ export const categories: ProductCategory[] = [
           "Printable Employee Time Sheet Template and Hours Worked + Weekly Tracker",
         problem:
           "A version of a classic weekly time sheet layout that records break time.",
-        description: "",
+        description:
+          "A simple Employee Time Sheet with Break Time Hours column. If you are a small business owner looking for a simple, convenient and efficient way to track your employees' time, then this printable time log is the perfect solution for you.",
         bullets: ["Printable", "Weekly structure", "Quick to fill in"],
         image:
           "/images/products/employee-timesheet/employee-weekly-timesheet-a4-3.webp",
@@ -312,7 +319,8 @@ export const categories: ProductCategory[] = [
           "Weekly Employee Time Sheet – Editable Excel Spreadsheet (Printable)",
         problem:
           "Edit totals quickly and keep digital copies. Use the full power of a spreadsheet",
-        description: "",
+        description:
+          "This weekly freelancer and employee time sheet is a simple and easy to use Excel spreadsheet designed to take the hassle out of colleting hours worked from employees or contractors. Fullly editable and printable.",
         bullets: ["Editable Excel", "Printable", "Great for payroll prep"],
         image: "/images/products/employee-timesheet/timesheet-excel.webp",
         etsyUrl:
@@ -326,7 +334,8 @@ export const categories: ProductCategory[] = [
           "Printable Employee Time Sheet – Weekly Work Tracker / Contractor Time Sheet",
         problem:
           "You need a simple weekly tracker for contractors or short-term staff.",
-        description: "",
+        description:
+          "This printable weekly time tracker pack is the ideal template for small business owners or HR departments looking to efficiently track and monitor employee hours. Available in Six different colours, you can use these forms to record hours worked by your employees on client or internal work.",
         bullets: ["Weekly tracker", "Printable PDF", "Contractor-friendly"],
         image:
           "/images/products/employee-timesheet/weekly-employee-timeshet-6-colours.webp",
@@ -340,7 +349,8 @@ export const categories: ProductCategory[] = [
         title:
           "Printable Freelancer Time Tracker – Work Time Sheet / Daily Hours Tracker",
         problem: "You need to track billable hours without overthinking it.",
-        description: "",
+        description:
+          "This printable time sheet helps you and your employees record all time worked every day. If you are a small business owner looking for a simple, convenient and efficient way to log employee time, then this printable time tracker is the ideal solution.",
         bullets: ["Daily hours tracking", "Freelancer-friendly", "Printable"],
         image:
           "/images/products/employee-timesheet/employee-timesheet-a4-2.webp",
@@ -365,7 +375,8 @@ export const categories: ProductCategory[] = [
         title:
           "School Attendance Record Sheet – Class Attendance Register (Monthly) (A4 Landscape)",
         problem: "You need a clear monthly register that's easy to review.",
-        description: "",
+        description:
+          "This printable School Attendance Register sheet is ideal to help you record the daily attendance of your pupils, at home or in class. This sheet is designed to help you keep track of the attendance students in school, university, college or even a home school.",
         bullets: ["Monthly register", "A4 landscape", "Printable"],
         image:
           "/images/products/attendance/school-attendance-register-school-att-01.webp",
@@ -380,7 +391,8 @@ export const categories: ProductCategory[] = [
           "Attendance Sheet – Printable Attendance Tracker (School/Employees/Students)",
         problem:
           "You need a general-purpose attendance log that works anywhere.",
-        description: "",
+        description:
+          "This Printable Attendance Tracker is designed to be flexible enough to be used to record the attendance of home school pupils, employees, students or keeping an attendance log of any individual in a class or a conference. It's format is laid out to support monthly and yearly attendance recording by day.",
         bullets: ["Simple grid format", "Printable", "Multi-use"],
         image:
           "/images/products/attendance/attendance-record-person-att-person-01.webp",
@@ -394,7 +406,8 @@ export const categories: ProductCategory[] = [
         title:
           "Attendance Tracker – Printable Attendance Sheet for Conference and Events)",
         problem: "Ideal attendance log for events and sessions.",
-        description: "",
+        description:
+          "Printable Attendance Record sheets. Printable Attendance Log sheets to help you keep track of the attendance of visitors at events and conferences. Now there is no more need for a new attendance book, simply download and print this template as many times as you like.",
         bullets: ["Event-friendly", "Printable", "Easy check-off"],
         image:
           "/images/products/attendance/attendance-register-club-attend-club-event.webp",
@@ -408,7 +421,8 @@ export const categories: ProductCategory[] = [
         title:
           "Attendance Tracker – Printable Attendance Record Sheet (Monthly Format)",
         problem: "A simple monthly-format tracker you can file by month.",
-        description: "",
+        description:
+          "These printable Attendance Record sheets are formatted for monthly attendance tracking. They are designed to help you keep track of the attendance of visitors at events, or the attendance of students in school, university or college.",
         bullets: ["Monthly format", "Printable PDF", "Simple layout"],
         image:
           "/images/products/attendance/attendance-register-horizontal-monthly-att-monthly.webp",
