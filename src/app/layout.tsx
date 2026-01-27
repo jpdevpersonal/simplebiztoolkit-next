@@ -13,6 +13,7 @@ import SiteFooter from "@/components/SiteFooter";
 import StickyMobileCta from "@/components/StickyMobileCta";
 import JsonLd from "@/components/JsonLd";
 import BootstrapClient from "./BootstrapClient";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -49,6 +50,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const gaId = process.env.NEXT_PUBLIC_GA_ID ?? "G-3ZQY64S5JJ";
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -58,6 +60,20 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <Script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', '${gaId}');`}
+        </Script>
+      </head>
       <body>
         <BootstrapClient />
 
