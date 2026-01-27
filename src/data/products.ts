@@ -447,7 +447,8 @@ export const categories: ProductCategory[] = [
         title:
           "Petty Cash Log – Printable Cash Flow Sheet (Small Business Bookkeeping)",
         problem: "Small cash purchases pile up and you lose track of them.",
-        description: "",
+        description:
+          "These Printable Petty Cash sheets are ideal for your small business accounting ledger needs. No need to purchase an entire petty cash book, with these simple and affordable petty cash templates, you can instantly download and print them as many times as you like from where you like.",
         bullets: ["Cash in/out tracking", "Printable PDF", "Simple totals"],
         image: "/images/products/petty-cash/petty-cash-log-a4-single.webp",
         etsyUrl:
@@ -460,12 +461,13 @@ export const categories: ProductCategory[] = [
         title:
           "Petty Cash Log – Fillable Printable Cash Flow Sheet (Auto Calcultating Balance)",
         problem: "Fillable and printable so you can easily track cash flow.",
-        description: "",
+        description:
+          "This fillable and printable Petty Cash Log will calculate your new balance on every entry.  Ideal for your small business bookkeeping and accounting ledger needs. You can enter all your small business incoming and outgoing petty cash transactions on this one simple fillable ledger sheet.  You can see the new balance updating each time you hit enter.  This fillable acrobat pdf file, is designed to simplify your accounting by giving you only what you need.",
         bullets: ["Cash in/out tracking", "Printable PDF", "Simple totals"],
         image:
           "/images/products/petty-cash/fillable-petty-cash-log-sheet-image.webp",
         etsyUrl:
-          "https://www.etsy.com/listing/1230155489/petty-cash-log-printable-cash-flow-sheet",
+          "https://www.etsy.com/uk/listing/1223397578/petty-cash-log-fillable-and-printable",
         price: "$1.97",
         productPageUrl:
           "/products/petty-cash/petty-cash-log-fillable-auto-calculating",
@@ -486,7 +488,8 @@ export const categories: ProductCategory[] = [
           "Expense Tracker – Income and Expense Sheet (GoodNotes Template)",
         problem:
           "You need a simple way to track money in/out (especially on tablet).",
-        description: "",
+        description:
+          "This Printable Expense Tracker is designed to help you take control and keep track of all your daily and monthly small business transactions. It is a simple printable money tracker sheet also works in GoodNotes. It offers you an easy and convenient way to log and record your income and expenses on one simple form. It is ideal for small business owners or self employed people, and can be used for any financial period",
         bullets: [
           "Income + expense tracking",
           "GoodNotes-friendly",
@@ -505,7 +508,8 @@ export const categories: ProductCategory[] = [
           "Spending Tracker – Printable Income and Expense Tracker and Finance Planner",
         problem:
           "You need a straightforward spending log to stop leaks in your budget.",
-        description: "",
+        description:
+          "This Printable Expense Tracker is designed to help you take control and keep track of all your daily and monthly account transactions. As a money tracker, this printable ledger sheet offers you an easy and convenient way to log and record your cash flow on one simple form. It is ideal for small business owners or self employed people, and can be used for any financial period.",
         bullets: ["Spending-focused", "Income + expense", "Printable PDF"],
         image:
           "/images/products/expense-tracker/expenses-tracker-month-start-bal.webp",
@@ -519,7 +523,8 @@ export const categories: ProductCategory[] = [
         title:
           "Bill Payment Tracker – Editable Yearly, Monthly and Quarterly Bills Tracker",
         problem: "Bills slip through the cracks and you miss payments.",
-        description: "",
+        description:
+          "With this easy-to-use bill payment tracker, you can effortlessly manage all your bills on one sheet. It helps you see at a glance which bills are outstanding and which are paid.",
         bullets: [
           "Yearly/monthly/quarterly options",
           "Editable",
@@ -546,7 +551,8 @@ export const categories: ProductCategory[] = [
       {
         title: "Printabke Receipt Template A5 + Half Letter",
         problem: "A compact receipt form for quick sales/order handoffs.",
-        description: "",
+        description:
+          "This Customer Order Receipt form is designed to efficiently capture all necessary details, ensuring smooth transactions with your customers. With both A5 and Half Letter sizes available, this simple template allows you to easily print professional business receipts, saving you time and effort.",
         bullets: ["Small sizes", "Simple layout", "Printable"],
         image: "/images/products/receipt/receipt-a5.webp",
         etsyUrl:
@@ -559,7 +565,8 @@ export const categories: ProductCategory[] = [
         title:
           "Printable Receipt Template Pack – Customer Receipt + Sales Receipt Forms (Six Colors) (PDF)",
         problem: "Professional-looking receipts without buying receipt books.",
-        description: "",
+        description:
+          "This Customer Order Receipt is designed to efficiently capture all necessary details, ensuring smooth transactions with your valued customers. With both A4 and US Letter sizes available, this versatile form allows you to easily print professional receipts, saving you time and effort.",
         bullets: ["Six colors", "Printable pack", "Instant download"],
         image: "/images/products/receipt/receipt-pack.webp",
         etsyUrl:
@@ -571,7 +578,8 @@ export const categories: ProductCategory[] = [
       {
         title: "Printabke Receipt Template A4 + US Letter",
         problem: "A clean receipt you can print on standard paper sizes.",
-        description: "",
+        description:
+          "Printable Receipt Template. Instantly downloadable and a must have for any small business owner. The form includes space for you to add your business name and address at the top.",
         bullets: ["A4 + US Letter", "Printable PDF", "Minimalist style"],
         image: "/images/products/receipt/receipt-a4.webp",
         etsyUrl:
