@@ -93,7 +93,7 @@ export default function HelpPage() {
                     <Link href="/faq">FAQ</Link>
                   </li>
                   <li>
-                    <a href="https://www.etsy.com/">Etsy Help</a>
+                    <a href="https://www.help.etsy.com/">Etsy Help</a>
                   </li>
                 </ul>
               </div>
