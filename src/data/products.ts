@@ -781,7 +781,8 @@ export const categories: ProductCategory[] = [
           "Tips Tracker – Printable Server Tips Tracker (Excel Spreadsheet Template)",
         problem:
           "Helps you consistently track tips without losing cash or miscalculating.",
-        description: "",
+        description:
+          "This server tips tracker is a simple Excel spreadsheet. It is simple and easy to use. Designed for recording the tips received on a daily basis. As a spreadsheet, tips tracker will calculate the totals for all your tips, and give you an accurate display of each type of tip and the total for any given period.",
         bullets: ["Excel-based tracking", "Printable", "Daily/shift friendly"],
         image: "/images/products/tips-tracker/tips-tracker-spreadsheet.webp",
         etsyUrl:
@@ -794,7 +795,8 @@ export const categories: ProductCategory[] = [
         title: "Server Tips Tracker – Simple Tips Record (Printable PDF)",
         problem:
           "A simple paper log for tips that's quick to fill out after each shift.",
-        description: "",
+        description:
+          "This printable tips tracker is simple and easy to use. Designed for recording the tips received on a daily basis by staff serving customers. This tips tracker is ideal for restaurants, bars, or anyone who serves customers. You can easily record tips received in cash, credit or by any other means.",
         bullets: ["Printable PDF", "Quick daily entry", "Simple totals"],
         image: "/images/products/tips-tracker/tips-tracker-print.webp",
         etsyUrl:
@@ -818,7 +820,8 @@ export const categories: ProductCategory[] = [
         title:
           "Business Ledger Templates Bundle – Accounting, Invoice, Petty Cash, Order Tracker, Estimate and Time Sheet",
         problem: "All the essentials in one pack instead of buying separately.",
-        description: "",
+        description:
+          "This business ledger template bundle is a collection of 8 of the most essential business and finance templates and planners. It is designed to help business professionals and online sellers stay organized and simplify their lives.",
         bullets: [
           "8 essential forms",
           "Instant download",
