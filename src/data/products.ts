@@ -602,7 +602,8 @@ export const categories: ProductCategory[] = [
       {
         title: "Printable Sign In Sheet – Reception Check In Form ",
         problem: "A simple front-desk sign-in record.",
-        description: "",
+        description:
+          "This simple printable sign in sheet is designed to enhance your visitor and guest management by ensuring you have a smooth welcoming experience for all your visitors. Easy to fill in, with a simple layout, it is ideal for any busy reception or front of house desk.",
         bullets: ["Simple Design", "A4 + US Letter", "Printable"],
         image: "/images/products/sign-in-sheet/sign-in-simple.webp",
         etsyUrl:
@@ -615,7 +616,8 @@ export const categories: ProductCategory[] = [
         title:
           "Printable Sign In Sheet With Welcome Title– Reception Check In/Out Form",
         problem: "Daily Sign In Sheet with Welcome Message.",
-        description: "",
+        description:
+          "This printable sign in sheet is designed to simplify your visitor and guest management by ensuring you have a smooth welcoming experience for all your visitors. With its simple and efficient layout, it is perfect for any busy front of house or reception desk.",
         bullets: ["Daily Sign In", "A4 + US Letter", "Printable"],
         image: "/images/products/sign-in-sheet/sign-in-welcome.webp",
         etsyUrl:
@@ -653,7 +655,8 @@ export const categories: ProductCategory[] = [
         title:
           "Meeting Notes Template Printable – Simple Meeting Notes Form (A4/A5/Letter/Half Letter)",
         problem: "A simple, printable notes sheet to capture key points.",
-        description: "",
+        description:
+          "This printable meeting notes template is designed to help you organize and stay on top of all your meetings. As a meeting minutes and agenda aid this planner can assist you in organizing and conducting more effective meetings, either in person or online.",
         bullets: ["Multiple sizes", "Printable", "Clean layout"],
         image: "/images/products/meeting-notes/meeting-notes.webp",
         etsyUrl:
@@ -677,7 +680,8 @@ export const categories: ProductCategory[] = [
           "Estimate and Quote Template – Fillable and Printable Simple Estimate Form (Fillable PDF)",
         problem:
           "You need quotes you can send fast without rebuilding a doc each time.",
-        description: "",
+        description:
+          "This fillable and printable simple estimate form is designed for small business owners and online sellers who need to provide a simple estimate or quote for work or products that have been requested by customers. This form is really simple and easy to use, and can save a lot of time.",
         bullets: ["Fillable PDF", "Professional layout", "Simnple to use"],
         image: "/images/products/job-estimate/a4-estimate-fillable.webp",
         etsyUrl:
@@ -690,7 +694,8 @@ export const categories: ProductCategory[] = [
         title: "Estimate and Quote Template – Simple Estimate Form (Printable)",
         problem:
           "A simple printable estimate and quote sheet you can use on demand.",
-        description: "",
+        description:
+          "Transform your business proposals with this printable estimate and quote template, designed for professionals and small business owners like you. This simple estimate template helps you deliverer quotes and job estimates to your clients in a clear and professional format.",
         bullets: ["Printable", "Clean estimate layout", "Fast to complete"],
         image: "/images/products/job-estimate/a4-estimate.webp",
         etsyUrl:
@@ -712,7 +717,8 @@ export const categories: ProductCategory[] = [
       {
         title: "Invoice Template – Printable Minimalist Invoice",
         problem: "A clean invoice format without design work.",
-        description: "",
+        description:
+          "This printable invoice template gives you a simple and convenient way of managing your customer order finances quickly, and without any expensive computer systems.",
         bullets: ["Minimalist layout", "Printable PDF", "Small business ready"],
         image: "/images/products/invoice/invoice.webp",
         etsyUrl:
@@ -736,7 +742,8 @@ export const categories: ProductCategory[] = [
         title:
           "Order Form Template – Purchase Order Form + Simple Printable Customer Order (GoodNotes Template)",
         problem: "One consistent order form to keep organised.",
-        description: "",
+        description:
+          "This simple printable purchase order form is designed to give you, as a small business owner, the simplicity and convenience of managing your customer orders quickly and without any expensive computer systems",
         bullets: ["Order form", "GoodNotes-friendly", "Printable"],
         image: "/images/products/order-form/order-form.webp",
         etsyUrl:
@@ -749,7 +756,8 @@ export const categories: ProductCategory[] = [
         title:
           "Printable Order Tracker – Customer Order History and Sales (PDF)",
         problem: "Easily track what's ordered, shipped, and completed.",
-        description: "",
+        description:
+          "This printable order tracker template will help you boost your small business efficiency. Keep track of all your orders, in one organized place. With this easy to use template, you can simply print it out or upload it to GoodNotes as a template.",
         bullets: ["Order history", "Printable tracker", "Simple workflow"],
         image: "/images/products/order-tracker/order-tracker.webp",
         etsyUrl:
