@@ -149,78 +149,6 @@
   cursor: pointer;
 }
 
-@media (min-width: 768px) {
-  .product-thumbnail-clickable {
-    cursor: pointer;
-  }
-}
-
-.product-image-preview-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.85);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  padding: 2rem;
-  cursor: pointer;
-}
-
-.product-image-preview-close {
-  position: fixed;
-  top: 1.5rem;
-  right: 1.5rem;
-  width: 44px;
-  height: 44px;
-  background: none;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 10000;
-  transition: all 0.2s ease;
-  padding: 0;
-}
-
-.product-image-preview-close:hover {
-  transform: scale(1.15);
-}
-
-.product-image-preview-close svg {
-  stroke: #ffffff;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
-  width: 32px;
-  height: 32px;
-}
-
-.product-image-preview-content {
-  max-width: 90vw;
-  max-height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  background-color: white;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
-  pointer-events: none;
-}
-
-.product-image-preview-content img {
-  max-width: 100%;
-  max-height: calc(90vh - 2rem);
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  display: block;
-}
-
 /* =============================================
    Products Page - Category Grid
    ============================================= */
@@ -428,31 +356,6 @@
   width: 100%;
   height: auto;
   display: block;
-}
-
-/* Trust badge on image */
-.product-detail-badge {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0.875rem;
-  background: linear-gradient(
-    135deg,
-    var(--sb-green) 0%,
-    var(--sb-green-hover) 100%
-  );
-  color: white;
-  border-radius: 24px;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  box-shadow: 0 4px 12px rgba(26, 127, 90, 0.3);
-}
-
-.product-detail-badge svg {
-  flex-shrink: 0;
 }
 
 /* Content Section */

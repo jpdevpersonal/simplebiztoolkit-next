@@ -1,6 +1,4 @@
 "use client";
-
-import { useState } from "react";
 import Image from "next/image";
 import type { Product } from "@/types/product";
 import "@/styles/products.css";
@@ -10,8 +8,6 @@ type Props = {
 };
 
 export default function ProductDetailClient({ product }: Props) {
-  const [showPreview, setShowPreview] = useState(false);
-
   // Compute medium (resized) image path
   const mediumSrc = (src: string) => {
     if (!src) return src;
@@ -61,22 +57,6 @@ export default function ProductDetailClient({ product }: Props) {
               sizes="(max-width: 768px) 100vw, 50vw"
               priority
             />
-            {/* Trust badge on image
-            <div className="product-detail-badge">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              </svg>
-              Instant Download
-            </div> */}
           </div>
         </div>
 
@@ -246,39 +226,6 @@ export default function ProductDetailClient({ product }: Props) {
           </a>
         </div>
       </div>
-
-      {/* Image Preview Overlay */}
-      {showPreview && (
-        <div
-          className="product-image-preview-overlay"
-          onClick={() => {
-            window.open(product.etsyUrl, "_blank", "noopener,noreferrer");
-          }}
-          style={{ cursor: "pointer" }}
-        >
-          <button
-            className="product-image-preview-close"
-            onClick={(e) => {
-              e.stopPropagation();
-              setShowPreview(false);
-            }}
-            aria-label="Close preview"
-          >
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <line x1="18" y1="6" x2="6" y2="18" />
-              <line x1="6" y1="6" x2="18" y2="18" />
-            </svg>
-          </button>
-        </div>
-      )}
     </>
   );
 }
