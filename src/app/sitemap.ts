@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { site } from "@/config/site";
 import { categories } from "@/data/products";
 import { posts } from "@/data/posts";
+import { featuredProducts } from "@/data/featured";
 
 export const dynamic = "force-static";
 
@@ -12,7 +13,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: site.url, lastModified: now },
     { url: `${site.url}/products`, lastModified: now },
     { url: `${site.url}/blog`, lastModified: now },
-    { url: `${site.url}/free`, lastModified: now },
     { url: `${site.url}/about`, lastModified: now },
     { url: `${site.url}/testimonials`, lastModified: now },
     { url: `${site.url}/faq`, lastModified: now },
@@ -33,10 +33,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
     }));
 
+  const featuredProductRoutes: MetadataRoute.Sitemap = featuredProducts.map(
+    (p) => ({
+      url: `${site.url}${p.productPageUrl}`,
+      lastModified: now,
+    }),
+  );
+
   const blogRoutes: MetadataRoute.Sitemap = posts.map((p) => ({
     url: `${site.url}/blog/${p.slug}`,
     lastModified: p.dateISO,
   }));
 
-  return [...staticRoutes, ...categoryRoutes, ...productRoutes, ...blogRoutes];
+  const allRoutes = [
+    ...staticRoutes,
+    ...categoryRoutes,
+    ...productRoutes,
+    ...featuredProductRoutes,
+    ...blogRoutes,
+  ];
+
+  const uniqueRoutes = new Map<string, MetadataRoute.Sitemap[number]>();
+  for (const route of allRoutes) {
+    uniqueRoutes.set(route.url, route);
+  }
+
+  return Array.from(uniqueRoutes.values());
 }
