@@ -7,6 +7,7 @@ import JsonLd from "@/components/JsonLd";
 import ProductGrid from "@/components/ProductGrid";
 import { categories } from "@/data/products";
 import { links } from "@/config/links";
+import { site } from "@/config/site";
 
 type Props = {
   params: Promise<{ categorySlug: string }>;
@@ -49,9 +50,35 @@ export default async function CategoryPage({ params }: Props) {
     url: `https://simplebiztoolkit.com/products/${cat.slug}`,
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: site.url,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Products",
+        item: `${site.url}/products`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: cat.name,
+        item: `${site.url}/products/${cat.slug}`,
+      },
+    ],
+  };
+
   return (
     <>
       <JsonLd json={jsonLd} />
+      <JsonLd json={breadcrumbJsonLd} />
 
       <section className="sb-section">
         <div className="container">

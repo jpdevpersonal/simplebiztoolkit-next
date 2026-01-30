@@ -39,7 +39,7 @@ export default function ProductGrid({ products }: { products: Product[] }) {
                       className="img-fluid ledger-thumb"
                       fill
                       sizes="(max-width: 768px) 100vw, 33vw"
-                      style={{ objectFit: "cover" }}
+                      style={{ objectFit: "contain" }}
                       loading="lazy"
                     />
                   </picture>
@@ -77,12 +77,11 @@ export default function ProductGrid({ products }: { products: Product[] }) {
                     </svg>
                   </span>
                   <a
-                    href={p.etsyUrl}
-                    target="_blank"
+                    href={p.productPageUrl}
                     rel="noopener noreferrer"
                     className="product-card-link"
                   >
-                    View on Etsy{" "}
+                    View details{" "}
                   </a>
                   <svg
                     width="14"

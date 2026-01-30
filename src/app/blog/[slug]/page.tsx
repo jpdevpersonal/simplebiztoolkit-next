@@ -6,6 +6,7 @@ import JsonLd from "@/components/JsonLd";
 import { posts } from "@/data/posts";
 import { ArticleContent, hasArticleContent } from "../articles";
 import "@/styles/articleStyle.css";
+import { site } from "@/config/site";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -20,6 +21,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = posts.find((p) => p.slug === slug);
   if (!post) return {};
 
+  const ogImage = post.featuredImage ?? "/images/hero-image-desk.webp";
+
   return {
     title: post.title,
     description: post.description,
@@ -29,6 +32,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `${post.title} | Simple Biz Toolkit`,
       description: post.description,
       url: `/blog/${post.slug}`,
+      images: [{ url: ogImage }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${post.title} | Simple Biz Toolkit`,
+      description: post.description,
+      images: [ogImage],
     },
   };
 }
@@ -47,16 +57,54 @@ export default async function BlogPostPage({ params }: Props) {
     headline: post.title,
     description: post.description,
     datePublished: post.dateISO,
+    dateModified: post.dateISO,
+    image: post.headerImage
+      ? [`https://simplebiztoolkit.com${post.headerImage}`]
+      : undefined,
     author: { "@type": "Person", name: "Julian (Simple Biz Toolkit)" },
+    publisher: {
+      "@type": "Organization",
+      name: site.name,
+      logo: {
+        "@type": "ImageObject",
+        url: `${site.url}/images/simple-biz-toolkit-logo.png`,
+      },
+    },
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `https://simplebiztoolkit.com/blog/${post.slug}`,
     },
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: site.url,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Resources",
+        item: `${site.url}/blog`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.title,
+        item: `${site.url}/blog/${post.slug}`,
+      },
+    ],
+  };
+
   return (
     <>
       <JsonLd json={articleJsonLd} />
+      <JsonLd json={breadcrumbJsonLd} />
 
       <main className="article-page">
         {/* Breadcrumb Navigation */}
