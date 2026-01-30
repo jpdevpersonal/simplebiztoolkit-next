@@ -23,6 +23,8 @@ export const posts: BlogPost[] = [
     category: "Bookkeeping",
     readingMinutes: 6,
     badges: ["Bookkeeping", "Small Business"],
+    featuredImage: "/images/articles/images/printable-ledger-works.webp",
+    headerImage: "/images/articles/images/printable-ledger-works.webp",
   },
   {
     slug: "etsy-seller-finances-in-one-place",
@@ -35,6 +37,8 @@ export const posts: BlogPost[] = [
     category: "Etsy Selling",
     readingMinutes: 7,
     badges: ["Etsy", "Finance"],
+    featuredImage: "/images/articles/images/ledger-helps.webp",
+    headerImage: "/images/articles/images/ledger-helps.webp",
   },
   {
     slug: "adobe-express-etsy",
@@ -48,5 +52,7 @@ export const posts: BlogPost[] = [
     category: "Branding",
     readingMinutes: 8,
     badges: ["Branding", "Product photos", "Social media", "Time-savers"],
+    featuredImage: "/images/articles/images/adobe-helps.webp",
+    headerImage: "/images/articles/images/adobe-helps.webp",
   },
 ];

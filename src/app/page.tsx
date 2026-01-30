@@ -32,7 +32,7 @@ export default function HomePage() {
     "Etsy Star Seller!",
     "Over 3500 sales",
     "Secure checkout via Etsy",
-    "Excellent servive & support",
+    "Excellent service & support",
   ];
 
   const orgJsonLd = {
@@ -40,6 +40,7 @@ export default function HomePage() {
     "@type": "Organization",
     name: "Simple Biz Toolkit",
     url: "https://simplebiztoolkit.com",
+    logo: "https://simplebiztoolkit.com/images/simple-biz-toolkit-logo.png",
     sameAs: [links.etsyShopUrl],
   };
 
@@ -179,10 +180,10 @@ export default function HomePage() {
             className="text-center"
             style={{ fontWeight: 700, marginBottom: "0.5rem" }}
           >
-            What the templates look like
+            Popular Templates
           </h2>
           <p className="text-center sb-muted mb-4">
-            Tap any image to zoom in, or click to view on Etsy
+            Take a look at some of our most popular requests and best-sellers.
           </p>
 
           <ProductGrid products={featuredProducts} />

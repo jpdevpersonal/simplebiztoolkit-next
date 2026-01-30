@@ -54,6 +54,53 @@
   padding: 1rem;
 }
 
+.sb-popular-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.sb-popular-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sb-popular-card {
+  background: #fff;
+  border: 1px solid var(--sb-border);
+  border-radius: 16px;
+  padding: 1rem 1.1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.sb-popular-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.sb-popular-card p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.sb-popular-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+}
+
+.sb-popular-cta {
+  margin-top: auto;
+  font-weight: 600;
+  color: var(--sb-brand-blue);
+}
+
 /* Mobile and tablet: full width hero image */
 @media (max-width: 991px) {
   .hero-image-wrapper {

@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import JsonLd from "@/components/JsonLd";
 import ProductDetailClient from "./ProductDetailClient";
 import { categories } from "@/data/products";
+import { site } from "@/config/site";
 
 type Props = {
   params: Promise<{ categorySlug: string; productSlug: string }>;
@@ -86,6 +87,10 @@ export default async function ProductDetailPage({ params }: Props) {
       ? `https://simplebiztoolkit.com${product.image}`
       : undefined,
     url: `https://simplebiztoolkit.com${product.productPageUrl}`,
+    brand: {
+      "@type": "Organization",
+      name: site.name,
+    },
     offers: {
       "@type": "Offer",
       price: product.price.replace("$", ""),
@@ -95,9 +100,41 @@ export default async function ProductDetailPage({ params }: Props) {
     },
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: site.url,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Products",
+        item: `${site.url}/products`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: category.name,
+        item: `${site.url}/products/${category.slug}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: product.title,
+        item: `${site.url}${product.productPageUrl}`,
+      },
+    ],
+  };
+
   return (
     <>
       <JsonLd json={jsonLd} />
+      <JsonLd json={breadcrumbJsonLd} />
 
       <section className="sb-section">
         <div className="container">

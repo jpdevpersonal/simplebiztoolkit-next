@@ -11,11 +11,11 @@ export const faqs: Faq[] = [
   },
   {
     q: "Can I print the templates?",
-    a: "Yes absolutly, they’re designed for clean printing and easy reuse.",
+    a: "Yes, absolutely. They’re designed for clean printing and easy reuse.",
   },
   {
     q: "Can I use them digitally?",
-    a: "Many customers use the printable templates digitally on aps such as GooNotes, either by filling them out on their computer or using a tablet.  The fillable pdf forms are designed to be filled out digitally in your browser or a PDF reader app.  These type of template are not designed for use in specialized note-taking apps, but may work depending on the app.",
+    a: "Many customers use the printable templates digitally on apps such as GoodNotes, either by filling them out on their computer or using a tablet. The fillable PDF forms are designed to be completed in your browser or a PDF reader app. These types of templates are not designed for specialized note-taking apps, but may work depending on the app.",
   },
   {
     q: "How can I contact the seller?",
