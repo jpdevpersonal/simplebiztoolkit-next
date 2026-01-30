@@ -70,42 +70,37 @@ describe("ProductGrid", () => {
       expect(screen.getByText("Benefit 1")).toBeInTheDocument();
     });
 
-    it("should render Etsy links for all products", () => {
+    it("should render product detail links for all products", () => {
       render(<ProductGrid products={mockProducts} />);
 
-      // The CTA "View on Etsy" anchors should link to Etsy
       const ctaAnchors = screen
-        .getAllByText(/View on Etsy/i)
+        .getAllByText(/View details/i)
         .map((el) => el.closest("a"));
       expect(ctaAnchors.length).toBe(3);
       expect(ctaAnchors[0]).toHaveAttribute(
         "href",
-        "https://etsy.com/listing/1",
+        "/products/test-category/test-product-1",
       );
-      expect(ctaAnchors[0]).toHaveAttribute("target", "_blank");
       expect(ctaAnchors[0]).toHaveAttribute("rel", "noopener noreferrer");
     });
 
     it("should render product page links for each product thumbnail", () => {
-      render(<ProductGrid products={mockProducts} />);
+      const { container } = render(<ProductGrid products={mockProducts} />);
 
-      // Find anchors by role and match hrefs to productPageUrl
-      const allLinks = screen.getAllByRole("link");
-      const pageLinks = allLinks.filter((l) =>
-        mockProducts.some((p) => l.getAttribute("href") === p.productPageUrl),
+      const thumbnailLinks = container.querySelectorAll(
+        "a.product-thumbnail-clickable",
       );
-      expect(pageLinks.length).toBe(3);
-      expect(pageLinks[0]).toHaveAttribute(
+      expect(thumbnailLinks.length).toBe(3);
+      expect(thumbnailLinks[0]).toHaveAttribute(
         "href",
         "/products/test-category/test-product-1",
       );
     });
 
-    it("should display 'View on Etsy' call-to-action text", () => {
+    it("should display 'View details' call-to-action text", () => {
       render(<ProductGrid products={mockProducts} />);
 
-      // The CTA text should appear for each product
-      const ctaTexts = screen.getAllByText(/View on Etsy/i);
+      const ctaTexts = screen.getAllByText(/View details/i);
       expect(ctaTexts.length).toBe(3);
     });
   });
