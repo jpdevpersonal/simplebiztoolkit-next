@@ -3,7 +3,10 @@ import Link from "next/link";
 
 import JsonLd from "@/components/JsonLd";
 import { site } from "@/config/site";
-import { posts } from "@/data/posts";
+import { getPublishedPosts } from "@/lib/blog-data";
+
+// ISR: Revalidate every 60 seconds
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Resources",
@@ -26,7 +29,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function BlogIndexPage() {
+export default async function BlogIndexPage() {
+  const posts = await getPublishedPosts();
+
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -69,10 +74,10 @@ export default function BlogIndexPage() {
             {posts.map((p) => (
               <div className="col-lg-6" key={p.slug}>
                 <div className="sb-card p-3 h-100">
-                  {p.featuredImage && (
+                  {p.coverImageUrl && (
                     <div className="blog-card-image">
                       <img
-                        src={p.featuredImage}
+                        src={p.coverImageUrl}
                         alt={p.title}
                         style={{
                           width: "100%",
@@ -100,7 +105,7 @@ export default function BlogIndexPage() {
                   >
                     {p.title}
                   </div>
-                  <div className="sb-muted mt-1">{p.description}</div>
+                  <div className="sb-muted mt-1">{p.excerpt}</div>
 
                   <div className="mt-3">
                     <Link className="sb-article-link" href={`/blog/${p.slug}`}>

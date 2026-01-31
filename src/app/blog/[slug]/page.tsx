@@ -3,41 +3,52 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import JsonLd from "@/components/JsonLd";
-import { posts } from "@/data/posts";
+import { PostContent } from "@/components/blog/PostContent";
+import { getPostBySlug, getAllPostSlugs } from "@/lib/blog-data";
 import { ArticleContent, hasArticleContent } from "../articles";
-import "@/styles/articleStyle.css";
 import { site } from "@/config/site";
+import "@/styles/articleStyle.css";
+import "@/styles/prose.css";
 
 type Props = {
   params: Promise<{ slug: string }>;
 };
 
+// ISR: Revalidate every 60 seconds
+export const revalidate = 60;
+
 export async function generateStaticParams() {
-  return posts.map((p) => ({ slug: p.slug }));
+  const slugs = await getAllPostSlugs();
+  return slugs.map((item) => ({ slug: item.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const post = posts.find((p) => p.slug === slug);
+  const post = await getPostBySlug(slug);
   if (!post) return {};
 
-  const ogImage = post.featuredImage ?? "/images/hero-image-desk.webp";
+  const ogImage =
+    post.ogImageUrl || post.coverImageUrl || "/images/hero-image-desk.webp";
+  const title = post.seoTitle || post.title;
+  const description = post.seoDescription || post.excerpt || "";
 
   return {
-    title: post.title,
-    description: post.description,
+    title,
+    description,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
       type: "article",
-      title: `${post.title} | Simple Biz Toolkit`,
-      description: post.description,
+      title: `${title} | Simple Biz Toolkit`,
+      description,
       url: `/blog/${post.slug}`,
       images: [{ url: ogImage }],
+      publishedTime: post.publishedAt || undefined,
+      authors: post.authorName ? [post.authorName] : undefined,
     },
     twitter: {
       card: "summary_large_image",
-      title: `${post.title} | Simple Biz Toolkit`,
-      description: post.description,
+      title: `${title} | Simple Biz Toolkit`,
+      description,
       images: [ogImage],
     },
   };
@@ -45,23 +56,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
-  const post = posts.find((p) => p.slug === slug);
+  const post = await getPostBySlug(slug);
 
   if (!post) notFound();
 
-  if (!hasArticleContent(slug)) notFound();
+  // For legacy posts, check if we have the article content component
+  if (post.isLegacy && !hasArticleContent(slug)) notFound();
 
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: post.title,
-    description: post.description,
-    datePublished: post.dateISO,
-    dateModified: post.dateISO,
-    image: post.headerImage
-      ? [`https://simplebiztoolkit.com${post.headerImage}`]
+    description: post.excerpt || post.seoDescription,
+    datePublished: post.publishedAt,
+    dateModified: post.publishedAt,
+    image: post.coverImageUrl
+      ? [`${site.url}${post.coverImageUrl}`]
       : undefined,
-    author: { "@type": "Person", name: "Julian (Simple Biz Toolkit)" },
+    author: post.authorName
+      ? { "@type": "Person", name: post.authorName }
+      : { "@type": "Person", name: "Julian (Simple Biz Toolkit)" },
     publisher: {
       "@type": "Organization",
       name: site.name,
@@ -72,7 +86,7 @@ export default async function BlogPostPage({ params }: Props) {
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://simplebiztoolkit.com/blog/${post.slug}`,
+      "@id": `${site.url}/blog/${post.slug}`,
     },
   };
 
@@ -132,11 +146,11 @@ export default async function BlogPostPage({ params }: Props) {
 
         {/* Article Header */}
         <header className="article-header">
-          {post.badges && post.badges.length > 0 && (
+          {post.tags.length > 0 && (
             <div className="article-badges">
-              {post.badges.map((badge) => (
-                <span key={badge} className="article-badge">
-                  {badge}
+              {post.tags.map((tag) => (
+                <span key={tag} className="article-badge">
+                  {tag}
                 </span>
               ))}
             </div>
@@ -144,25 +158,37 @@ export default async function BlogPostPage({ params }: Props) {
 
           <h1 className="article-title">{post.title}</h1>
 
-          {post.subtitle && <p className="article-subtitle">{post.subtitle}</p>}
+          {post.excerpt && <p className="article-subtitle">{post.excerpt}</p>}
 
           <div className="article-meta">
-            <time dateTime={post.dateISO}>Published {post.dateISO}</time>
-            <span> · </span>
-            <span>{post.readingMinutes} min read</span>
+            <time dateTime={post.publishedAt || undefined}>
+              Published {post.publishedAt}
+            </time>
+            {post.readingMinutes && (
+              <>
+                <span> · </span>
+                <span>{post.readingMinutes} min read</span>
+              </>
+            )}
           </div>
         </header>
 
         {/* Header Image */}
-        {post.headerImage && (
+        {post.coverImageUrl && (
           <div className="article-header-image">
-            <img src={post.headerImage} alt={post.title} />
+            <img src={post.coverImageUrl} alt={post.title} />
           </div>
         )}
 
         {/* Article Content */}
         <article>
-          <ArticleContent slug={slug} />
+          {post.isLegacy ? (
+            // Legacy posts render via ArticleContent component
+            <ArticleContent slug={slug} />
+          ) : (
+            // CMS posts render via PostContent component
+            <PostContent content={post.content} variant={post.themeVariant} />
+          )}
         </article>
       </main>
     </>

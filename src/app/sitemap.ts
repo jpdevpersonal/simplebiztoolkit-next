@@ -1,12 +1,15 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/config/site";
 import { categories } from "@/data/products";
-import { posts } from "@/data/posts";
+import { posts as legacyPosts } from "@/data/posts";
 import { featuredProducts } from "@/data/featured";
+import { getAllPostSlugs } from "@/lib/blog-data";
 
-export const dynamic = "force-static";
+// Dynamic sitemap for SSR mode
+export const dynamic = "force-dynamic";
+export const revalidate = 3600; // Revalidate every hour
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
 
   const staticRoutes: MetadataRoute.Sitemap = [
@@ -40,10 +43,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   );
 
-  const blogRoutes: MetadataRoute.Sitemap = posts.map((p) => ({
-    url: `${site.url}/blog/${p.slug}`,
-    lastModified: p.dateISO,
-  }));
+  // Fetch blog posts from CMS API (with legacy fallback)
+  const postSlugs = await getAllPostSlugs();
+
+  // Map slugs to sitemap entries
+  const blogRoutes: MetadataRoute.Sitemap = postSlugs.map((post) => {
+    // If it's a CMS post with updatedAt, use that
+    if (post.updatedAt) {
+      return {
+        url: `${site.url}/blog/${post.slug}`,
+        lastModified: new Date(post.updatedAt),
+      };
+    }
+    // Legacy post - find it in the legacy posts array
+    const legacyPost = legacyPosts.find((p) => p.slug === post.slug);
+    return {
+      url: `${site.url}/blog/${post.slug}`,
+      lastModified: legacyPost?.dateISO ? new Date(legacyPost.dateISO) : now,
+    };
+  });
 
   const allRoutes = [
     ...staticRoutes,

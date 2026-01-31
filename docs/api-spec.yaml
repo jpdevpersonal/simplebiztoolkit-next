@@ -1,0 +1,1134 @@
+openapi: 3.0.3
+info:
+  title: SimpleBizToolkit Blog CMS API
+  description: |
+    REST API for the SimpleBizToolkit blog content management system.
+    This API is designed to be implemented in C# (.NET 8) and deployed as an Azure App Service or Azure Functions.
+    
+    ## Authentication
+    
+    Admin endpoints require a Bearer token in the Authorization header.
+    Authentication is handled via Azure AD (Entra ID) or email/password.
+    
+    ## Rate Limiting
+    
+    Public endpoints: 100 requests per minute
+    Admin endpoints: 300 requests per minute
+    Media uploads: 20 uploads per minute
+  version: 1.0.0
+  contact:
+    name: SimpleBizToolkit
+    url: https://simplebiztoolkit.com
+
+servers:
+  - url: https://api.simplebiztoolkit.com
+    description: Production API
+  - url: http://localhost:5000
+    description: Local development
+
+tags:
+  - name: Posts
+    description: Blog post management
+  - name: Tags
+    description: Tag management
+  - name: Media
+    description: Media/image management
+  - name: Auth
+    description: Authentication endpoints
+  - name: System
+    description: System utilities
+
+paths:
+  # ===========================================
+  # POSTS
+  # ===========================================
+  /api/posts:
+    get:
+      tags: [Posts]
+      summary: List posts
+      description: Get a paginated list of posts. Public users only see published posts.
+      parameters:
+        - $ref: '#/components/parameters/PageParam'
+        - $ref: '#/components/parameters/PageSizeParam'
+        - name: status
+          in: query
+          schema:
+            $ref: '#/components/schemas/PostStatus'
+          description: Filter by status (admin only, public always gets published)
+        - name: tag
+          in: query
+          schema:
+            type: string
+          description: Filter by tag slug
+        - name: search
+          in: query
+          schema:
+            type: string
+          description: Search in title and content
+        - name: sortBy
+          in: query
+          schema:
+            type: string
+            enum: [publishedAt, createdAt, updatedAt, title]
+            default: publishedAt
+        - name: sortOrder
+          in: query
+          schema:
+            type: string
+            enum: [asc, desc]
+            default: desc
+      responses:
+        '200':
+          description: Paginated list of posts
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedPostList'
+
+    post:
+      tags: [Posts]
+      summary: Create a new post
+      description: Create a new blog post. Requires admin authentication.
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreatePostInput'
+      responses:
+        '201':
+          description: Post created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /api/posts/{id}:
+    get:
+      tags: [Posts]
+      summary: Get post by ID
+      description: Get a single post by ID. Admin can access any status, public only published.
+      parameters:
+        - $ref: '#/components/parameters/PostIdParam'
+      responses:
+        '200':
+          description: Post found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+    put:
+      tags: [Posts]
+      summary: Update a post
+      description: Update an existing post. Requires admin authentication.
+      security:
+        - bearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/PostIdParam'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdatePostInput'
+      responses:
+        '200':
+          description: Post updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+    delete:
+      tags: [Posts]
+      summary: Delete a post
+      description: Permanently delete a post. Requires admin authentication.
+      security:
+        - bearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/PostIdParam'
+      responses:
+        '204':
+          description: Post deleted
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /api/posts/slug/{slug}:
+    get:
+      tags: [Posts]
+      summary: Get post by slug
+      description: Get a single post by its URL slug. Public users only see published posts.
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+          example: my-first-blog-post
+      responses:
+        '200':
+          description: Post found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /api/posts/slugs:
+    get:
+      tags: [Posts]
+      summary: Get all post slugs
+      description: Get all published post slugs for sitemap generation.
+      responses:
+        '200':
+          description: List of slugs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    slug:
+                      type: string
+                    updatedAt:
+                      type: string
+                      format: date-time
+
+  /api/posts/validate-slug:
+    get:
+      tags: [Posts]
+      summary: Validate a slug
+      description: Check if a slug is unique and get a suggestion if not.
+      parameters:
+        - name: slug
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: excludeId
+          in: query
+          schema:
+            type: string
+            format: uuid
+          description: Exclude this post ID from uniqueness check
+      responses:
+        '200':
+          description: Validation result
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  valid:
+                    type: boolean
+                  suggestion:
+                    type: string
+                    description: Suggested unique slug if not valid
+
+  /api/posts/{id}/publish:
+    post:
+      tags: [Posts]
+      summary: Publish a post
+      description: Set post status to published and set publishedAt timestamp.
+      security:
+        - bearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/PostIdParam'
+      responses:
+        '200':
+          description: Post published
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /api/posts/{id}/unpublish:
+    post:
+      tags: [Posts]
+      summary: Unpublish a post
+      description: Set post status back to draft.
+      security:
+        - bearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/PostIdParam'
+      responses:
+        '200':
+          description: Post unpublished
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /api/posts/{id}/archive:
+    post:
+      tags: [Posts]
+      summary: Archive a post
+      description: Set post status to archived.
+      security:
+        - bearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/PostIdParam'
+      responses:
+        '200':
+          description: Post archived
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  # ===========================================
+  # TAGS
+  # ===========================================
+  /api/tags:
+    get:
+      tags: [Tags]
+      summary: List all tags
+      responses:
+        '200':
+          description: List of tags
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Tag'
+
+    post:
+      tags: [Tags]
+      summary: Create a tag
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateTagInput'
+      responses:
+        '201':
+          description: Tag created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Tag'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /api/tags/{id}:
+    delete:
+      tags: [Tags]
+      summary: Delete a tag
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '204':
+          description: Tag deleted
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  # ===========================================
+  # MEDIA
+  # ===========================================
+  /api/media:
+    get:
+      tags: [Media]
+      summary: List media
+      security:
+        - bearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/PageParam'
+        - $ref: '#/components/parameters/PageSizeParam'
+        - name: mimeType
+          in: query
+          schema:
+            type: string
+          description: Filter by MIME type prefix (e.g., "image/")
+      responses:
+        '200':
+          description: Paginated list of media
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedMediaList'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+    post:
+      tags: [Media]
+      summary: Upload media
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+                  description: The file to upload (max 10MB)
+                alt:
+                  type: string
+                  description: Alt text for accessibility
+                postId:
+                  type: string
+                  format: uuid
+                  description: Associate with a post
+              required:
+                - file
+      responses:
+        '201':
+          description: Media uploaded
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Media'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '413':
+          description: File too large
+
+  /api/media/{id}:
+    put:
+      tags: [Media]
+      summary: Update media metadata
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                alt:
+                  type: string
+      responses:
+        '200':
+          description: Media updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Media'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+    delete:
+      tags: [Media]
+      summary: Delete media
+      description: Deletes the media record and the file from storage.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '204':
+          description: Media deleted
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  # ===========================================
+  # AUTH
+  # ===========================================
+  /api/auth/session:
+    get:
+      tags: [Auth]
+      summary: Get current session
+      description: Returns the current user session if authenticated.
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Session info
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthSession'
+        '401':
+          description: Not authenticated
+          content:
+            application/json:
+              schema:
+                type: 'null'
+
+  /api/auth/login:
+    post:
+      tags: [Auth]
+      summary: Login with email/password
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  format: email
+                password:
+                  type: string
+                  format: password
+              required:
+                - email
+                - password
+      responses:
+        '200':
+          description: Login successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthSession'
+        '401':
+          description: Invalid credentials
+
+  /api/auth/azure-ad:
+    post:
+      tags: [Auth]
+      summary: Login with Azure AD
+      description: Exchange Azure AD token for API session.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                idToken:
+                  type: string
+                  description: Azure AD ID token
+              required:
+                - idToken
+      responses:
+        '200':
+          description: Login successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthSession'
+        '401':
+          description: Invalid token
+
+  /api/auth/logout:
+    post:
+      tags: [Auth]
+      summary: Logout
+      security:
+        - bearerAuth: []
+      responses:
+        '204':
+          description: Logged out
+
+  # ===========================================
+  # SYSTEM
+  # ===========================================
+  /api/revalidate:
+    post:
+      tags: [System]
+      summary: Trigger revalidation
+      description: Trigger Next.js on-demand revalidation for a path.
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                path:
+                  type: string
+                  description: Path to revalidate (e.g., /blog/my-post)
+              required:
+                - path
+      responses:
+        '200':
+          description: Revalidation triggered
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /api/health:
+    get:
+      tags: [System]
+      summary: Health check
+      responses:
+        '200':
+          description: API is healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: healthy
+                  version:
+                    type: string
+                    example: 1.0.0
+                  timestamp:
+                    type: string
+                    format: date-time
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: JWT token from login endpoint
+
+  parameters:
+    PageParam:
+      name: page
+      in: query
+      schema:
+        type: integer
+        minimum: 1
+        default: 1
+
+    PageSizeParam:
+      name: pageSize
+      in: query
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 20
+
+    PostIdParam:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+
+  responses:
+    BadRequest:
+      description: Invalid request data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ApiError'
+
+    Unauthorized:
+      description: Authentication required
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ApiError'
+
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ApiError'
+
+  schemas:
+    # -----------------------------------------
+    # Core Entities
+    # -----------------------------------------
+    Post:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        title:
+          type: string
+          maxLength: 200
+        slug:
+          type: string
+          pattern: '^[a-z0-9-]+$'
+        excerpt:
+          type: string
+          maxLength: 300
+        content:
+          $ref: '#/components/schemas/TipTapDocument'
+        coverImageUrl:
+          type: string
+          format: uri
+          nullable: true
+        status:
+          $ref: '#/components/schemas/PostStatus'
+        publishedAt:
+          type: string
+          format: date-time
+          nullable: true
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        author:
+          $ref: '#/components/schemas/User'
+        tags:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tag'
+        seoTitle:
+          type: string
+          maxLength: 70
+          nullable: true
+        seoDescription:
+          type: string
+          maxLength: 160
+          nullable: true
+      required:
+        - id
+        - title
+        - slug
+        - content
+        - status
+        - createdAt
+        - updatedAt
+        - author
+        - tags
+
+    PostListItem:
+      type: object
+      description: Abbreviated post for list views
+      properties:
+        id:
+          type: string
+          format: uuid
+        title:
+          type: string
+        slug:
+          type: string
+        excerpt:
+          type: string
+          nullable: true
+        coverImageUrl:
+          type: string
+          format: uri
+          nullable: true
+        status:
+          $ref: '#/components/schemas/PostStatus'
+        publishedAt:
+          type: string
+          format: date-time
+          nullable: true
+        author:
+          type: object
+          properties:
+            id:
+              type: string
+            name:
+              type: string
+        tags:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+              slug:
+                type: string
+      required:
+        - id
+        - title
+        - slug
+        - status
+        - author
+        - tags
+
+    PostStatus:
+      type: string
+      enum:
+        - draft
+        - published
+        - archived
+
+    Tag:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        slug:
+          type: string
+        postCount:
+          type: integer
+          description: Number of published posts with this tag
+      required:
+        - id
+        - name
+        - slug
+
+    Media:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        url:
+          type: string
+          format: uri
+        alt:
+          type: string
+          nullable: true
+        originalName:
+          type: string
+        mimeType:
+          type: string
+        size:
+          type: integer
+          description: Size in bytes
+        width:
+          type: integer
+          nullable: true
+        height:
+          type: integer
+          nullable: true
+        createdAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - url
+        - originalName
+        - mimeType
+        - size
+        - createdAt
+
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        email:
+          type: string
+          format: email
+        avatarUrl:
+          type: string
+          format: uri
+          nullable: true
+        role:
+          type: string
+          enum:
+            - admin
+            - editor
+      required:
+        - id
+        - name
+        - email
+
+    AuthSession:
+      type: object
+      properties:
+        token:
+          type: string
+          description: JWT access token
+        expiresAt:
+          type: string
+          format: date-time
+        user:
+          $ref: '#/components/schemas/User'
+      required:
+        - token
+        - expiresAt
+        - user
+
+    # -----------------------------------------
+    # Input Schemas
+    # -----------------------------------------
+    CreatePostInput:
+      type: object
+      properties:
+        title:
+          type: string
+          maxLength: 200
+        slug:
+          type: string
+          pattern: '^[a-z0-9-]+$'
+          description: If not provided, generated from title
+        excerpt:
+          type: string
+          maxLength: 300
+        content:
+          $ref: '#/components/schemas/TipTapDocument'
+        coverImageUrl:
+          type: string
+          format: uri
+          nullable: true
+        tagIds:
+          type: array
+          items:
+            type: string
+            format: uuid
+        seoTitle:
+          type: string
+          maxLength: 70
+        seoDescription:
+          type: string
+          maxLength: 160
+      required:
+        - title
+        - content
+
+    UpdatePostInput:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        title:
+          type: string
+          maxLength: 200
+        slug:
+          type: string
+          pattern: '^[a-z0-9-]+$'
+        excerpt:
+          type: string
+          maxLength: 300
+        content:
+          $ref: '#/components/schemas/TipTapDocument'
+        coverImageUrl:
+          type: string
+          format: uri
+          nullable: true
+        tagIds:
+          type: array
+          items:
+            type: string
+            format: uuid
+        seoTitle:
+          type: string
+          maxLength: 70
+        seoDescription:
+          type: string
+          maxLength: 160
+      required:
+        - id
+
+    CreateTagInput:
+      type: object
+      properties:
+        name:
+          type: string
+          maxLength: 50
+        slug:
+          type: string
+          pattern: '^[a-z0-9-]+$'
+          description: If not provided, generated from name
+      required:
+        - name
+
+    # -----------------------------------------
+    # TipTap Document Schema
+    # -----------------------------------------
+    TipTapDocument:
+      type: object
+      description: ProseMirror/TipTap JSON document
+      properties:
+        type:
+          type: string
+          const: doc
+        content:
+          type: array
+          items:
+            $ref: '#/components/schemas/TipTapNode'
+      required:
+        - type
+        - content
+
+    TipTapNode:
+      type: object
+      description: A node in the TipTap document tree
+      properties:
+        type:
+          type: string
+          enum:
+            - paragraph
+            - heading
+            - bulletList
+            - orderedList
+            - listItem
+            - blockquote
+            - codeBlock
+            - image
+            - hardBreak
+            - horizontalRule
+            - callout
+            - text
+        attrs:
+          type: object
+          description: Node-specific attributes
+          additionalProperties: true
+        content:
+          type: array
+          items:
+            $ref: '#/components/schemas/TipTapNode'
+        marks:
+          type: array
+          items:
+            $ref: '#/components/schemas/TipTapMark'
+        text:
+          type: string
+          description: Text content (for text nodes)
+      required:
+        - type
+
+    TipTapMark:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+            - bold
+            - italic
+            - underline
+            - strike
+            - code
+            - link
+        attrs:
+          type: object
+          additionalProperties: true
+      required:
+        - type
+
+    # -----------------------------------------
+    # Pagination
+    # -----------------------------------------
+    PaginatedPostList:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/PostListItem'
+        page:
+          type: integer
+        pageSize:
+          type: integer
+        totalCount:
+          type: integer
+        totalPages:
+          type: integer
+      required:
+        - items
+        - page
+        - pageSize
+        - totalCount
+        - totalPages
+
+    PaginatedMediaList:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Media'
+        page:
+          type: integer
+        pageSize:
+          type: integer
+        totalCount:
+          type: integer
+        totalPages:
+          type: integer
+      required:
+        - items
+        - page
+        - pageSize
+        - totalCount
+        - totalPages
+
+    # -----------------------------------------
+    # Error Schema
+    # -----------------------------------------
+    ApiError:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Machine-readable error code
+          example: VALIDATION_ERROR
+        message:
+          type: string
+          description: Human-readable error message
+        details:
+          type: object
+          additionalProperties: true
+          description: Additional error details
+      required:
+        - code
+        - message

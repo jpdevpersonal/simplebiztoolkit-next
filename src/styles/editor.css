@@ -1,0 +1,268 @@
+/**
+ * Editor Styles
+ * Styling for the TipTap rich text editor
+ */
+
+/* ==============================================
+   Editor Wrapper
+   ============================================== */
+
+.editor-wrapper {
+  border: 1px solid var(--sb-border);
+  border-radius: var(--sb-radius);
+  background: #fff;
+  overflow: hidden;
+}
+
+.editor-loading {
+  padding: 2rem;
+  text-align: center;
+  color: var(--sb-muted);
+}
+
+/* ==============================================
+   Toolbar
+   ============================================== */
+
+.editor-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--sb-border);
+  background: var(--sb-soft);
+}
+
+.editor-toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+}
+
+.editor-toolbar-divider {
+  width: 1px;
+  height: 24px;
+  background: var(--sb-border);
+  margin: 0 0.375rem;
+}
+
+.editor-toolbar-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--sb-ink);
+  cursor: pointer;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.editor-toolbar-btn:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.editor-toolbar-btn.active {
+  background: var(--sb-green);
+  color: #fff;
+}
+
+.editor-toolbar-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.editor-toolbar-select {
+  padding: 0.375rem 0.5rem;
+  border: 1px solid var(--sb-border);
+  border-radius: 4px;
+  background: #fff;
+  font-size: 0.8125rem;
+  cursor: pointer;
+}
+
+/* ==============================================
+   Editor Body
+   ============================================== */
+
+.editor-body {
+  min-height: 400px;
+}
+
+.editor-content {
+  padding: 1.25rem;
+  min-height: 400px;
+  outline: none;
+}
+
+.editor-content:focus {
+  outline: none;
+}
+
+/* Placeholder */
+.editor-content p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: var(--sb-muted);
+  pointer-events: none;
+  height: 0;
+}
+
+/* ==============================================
+   Editor Content Styles
+   ============================================== */
+
+.editor-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 1.5rem 0 0.75rem;
+  color: var(--sb-brand-blue);
+}
+
+.editor-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1.25rem 0 0.625rem;
+  color: var(--sb-brand-blue);
+}
+
+.editor-content h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem;
+  color: var(--sb-brand-blue);
+}
+
+.editor-content p {
+  margin: 0.75rem 0;
+}
+
+.editor-content ul,
+.editor-content ol {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+}
+
+.editor-content li {
+  margin: 0.25rem 0;
+}
+
+.editor-content blockquote {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid var(--sb-green);
+  background: var(--sb-soft);
+  border-radius: 0 var(--sb-radius-sm) var(--sb-radius-sm) 0;
+  font-style: italic;
+}
+
+.editor-content pre {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: var(--sb-ink);
+  color: #f8f8f2;
+  border-radius: var(--sb-radius-sm);
+  font-family: ui-monospace, monospace;
+  font-size: 0.875rem;
+  overflow-x: auto;
+}
+
+.editor-content code {
+  font-family: ui-monospace, monospace;
+  font-size: 0.875em;
+  padding: 0.15em 0.35em;
+  background: var(--sb-soft);
+  border: 1px solid var(--sb-border);
+  border-radius: 4px;
+}
+
+.editor-content pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.editor-content a {
+  color: var(--sb-green);
+  text-decoration: underline;
+}
+
+.editor-content hr {
+  margin: 1.5rem 0;
+  border: none;
+  border-top: 1px solid var(--sb-border);
+}
+
+/* Images in editor */
+.editor-content .editor-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--sb-radius-sm);
+  margin: 1rem 0;
+}
+
+.editor-content img.ProseMirror-selectednode {
+  outline: 2px solid var(--sb-green);
+  outline-offset: 2px;
+}
+
+/* Callouts in editor */
+.editor-content aside[data-callout] {
+  margin: 1rem 0;
+  padding: 0.875rem 1rem;
+  border-radius: var(--sb-radius-sm);
+  border: 1px solid var(--sb-border);
+  background: var(--sb-soft);
+}
+
+.editor-content aside[data-callout-type="info"] {
+  border-left: 4px solid #3b82f6;
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.editor-content aside[data-callout-type="warning"] {
+  border-left: 4px solid #f59e0b;
+  background: rgba(245, 158, 11, 0.05);
+}
+
+.editor-content aside[data-callout-type="success"] {
+  border-left: 4px solid var(--sb-green);
+  background: rgba(26, 127, 90, 0.05);
+}
+
+.editor-content aside[data-callout-type="error"] {
+  border-left: 4px solid #ef4444;
+  background: rgba(239, 68, 68, 0.05);
+}
+
+/* Selection */
+.editor-content ::selection {
+  background: rgba(26, 127, 90, 0.2);
+}
+
+/* ==============================================
+   Mobile Adjustments
+   ============================================== */
+
+@media (max-width: 768px) {
+  .editor-toolbar {
+    padding: 0.375rem;
+  }
+
+  .editor-toolbar-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .editor-content {
+    padding: 1rem;
+    min-height: 300px;
+  }
+}
