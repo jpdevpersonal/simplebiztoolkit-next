@@ -38,9 +38,9 @@ jobs:
       - name: Build application
         run: npm run build
         env:
-          NEXT_PUBLIC_API_URL: ${{ vars.NEXT_PUBLIC_API_URL }}
-          NEXT_PUBLIC_USE_CMS: ${{ vars.NEXT_PUBLIC_USE_CMS }}
-          NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL }}
+          NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
+          NEXT_PUBLIC_USE_CMS: ${{ secrets.NEXT_PUBLIC_USE_CMS }}
+          NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL }}
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
@@ -59,9 +59,7 @@ jobs:
     needs: build
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
 
-    environment:
-      name: production
-      url: ${{ steps.deploy.outputs.webapp-url }}
+    environment: production
 
     steps:
       - name: Download build artifact

@@ -15,6 +15,13 @@ export default function AdminLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
+  const isLoginPage = pathname === "/admin/login";
+
+  if (isLoginPage) {
+    return <AuthProvider>{children}</AuthProvider>;
+  }
+
   return (
     <AuthProvider>
       <RequireAuth>
