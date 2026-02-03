@@ -25,22 +25,35 @@ export default function ProductGrid({ products }: { products: Product[] }) {
                   href={p.productPageUrl}
                   className="product-thumbnail-clickable"
                   style={{
-                    aspectRatio: "10/7",
+                    aspectRatio: "3/2",
                     width: "100%",
                     position: "relative",
                     overflow: "hidden",
                     display: "block",
                   }}
                 >
-                  <picture>
+                  <picture
+                    style={{
+                      position: "relative",
+                      width: "95%",
+                      height: "100%",
+                      display: "block",
+                      margin: "0 auto",
+                    }}
+                  >
                     <Image
                       src={p.image || "/images/placeholder-preview.png"}
                       alt={p.title}
                       className="img-fluid ledger-thumb"
                       fill
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                      style={{ objectFit: "contain" }}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      quality={100}
                       loading="lazy"
+                      style={{
+                        marginTop: "5px",
+                        filter:
+                          "drop-shadow(rgba(0, 0, 0, 0.325) 0.5px 2px 3px)",
+                      }}
                     />
                   </picture>
                 </Link>

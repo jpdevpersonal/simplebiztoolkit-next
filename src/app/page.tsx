@@ -62,7 +62,7 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <div className="d-flex gap-2 flex-wrap mt-3">
+              <div className="d-flex gap-2 flex-wrap mt-3 sb-hero-actions">
                 <Link href="/products" className="btn sb-btn-primary">
                   Browse All Products
                   <svg
@@ -255,19 +255,27 @@ export default function HomePage() {
 
       <section className="sb-section">
         <div className="container">
-          <div className="d-flex align-items-end justify-content-between flex-wrap gap-2 mb-3">
+          <div className="d-flex align-items-end justify-content-between flex-wrap gap-2 mb-3 sb-testimonial-header">
             <div>
               <h2 style={{ fontWeight: 700 }}>What customers say</h2>
               <p className="sb-muted mb-0">Real feedback from Etsy buyers.</p>
             </div>
-            <Link className="btn sb-btn-ghost" href="/testimonials">
+            <Link
+              className="btn sb-btn-ghost sb-see-more-desktop"
+              href="/testimonials"
+            >
               See more reviews
             </Link>
           </div>
           <TestimonialGrid count={3} />
+          <div className="text-center mt-3 sb-see-more-mobile">
+            <Link className="btn sb-btn-ghost" href="/testimonials">
+              See more reviews
+            </Link>
+          </div>
 
           <div className="text-center mt-4">
-            <EtsyCtaButton label="Browse the full shop on Etsy" />
+            <EtsyCtaButton label="Browse the full shop" />
           </div>
         </div>
       </section>
