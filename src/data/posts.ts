@@ -55,4 +55,19 @@ export const posts: BlogPost[] = [
     featuredImage: "/images/articles/images/adobe-helps.webp",
     headerImage: "/images/articles/images/adobe-helps.webp",
   },
+  {
+    slug: "rent-payment-ledger",
+    title:
+      "Rent Payment Ledger, a simple shared record for landlords and tenants",
+    subtitle:
+      "A printable and digital-friendly ledger that makes rent tracking calm and clear for both landlords and tenants.",
+    description:
+      "A simple, printable (and digital-friendly) tool that gives landlords and tenants a shared record of rent payments no subscriptions or complex software.",
+    dateISO: "2026-02-03",
+    category: "Bookkeeping",
+    readingMinutes: 5,
+    badges: ["Templates", "Rent"],
+    featuredImage: "/images/articles/images/rent-ledger.webp",
+    headerImage: "/images/articles/images/rent-ledger.webp",
+  },
 ];
