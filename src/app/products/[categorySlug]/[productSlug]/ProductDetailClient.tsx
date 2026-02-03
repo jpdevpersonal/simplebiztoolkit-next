@@ -51,8 +51,8 @@ export default function ProductDetailClient({ product }: Props) {
             <Image
               src={product.image || "/images/placeholder-preview.png"}
               alt={product.title}
-              width={800}
-              height={560}
+              width={1200}
+              height={840}
               className="product-detail-image"
               sizes="(max-width: 768px) 100vw, 50vw"
               priority

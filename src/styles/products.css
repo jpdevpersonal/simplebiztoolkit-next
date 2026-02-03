@@ -23,6 +23,7 @@
   object-fit: cover;
   object-position: top;
   transition: transform 0.3s ease;
+  background-color: var(--sb-soft);
 }
 
 /* =============================================
@@ -148,6 +149,8 @@
 .product-thumbnail-clickable {
   cursor: pointer;
 }
+
+/* product thumbnail shadows removed */
 
 /* =============================================
    Products Page - Category Grid
@@ -313,6 +316,8 @@
 /* =============================================
    Product Detail Page
    ============================================= */
+
+/* category hero shadow removed */
 
 .product-detail-layout {
   display: grid;

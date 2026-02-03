@@ -10,12 +10,11 @@ export const categories: ProductCategory[] = [
     heroImage: "",
     items: [
       {
-        title:
-          "AI for Small Business Owners Guide – Save Time & Grow Smarter with AI Tools (PDF)",
+        title: "AI for Small Business Owners Guide – Practical AI Tools PDF",
         problem:
           "Take advantage of AI for your business.  this guide teaches you where to start.",
         description:
-          "In this easy-to-follow guide, you will learn how to use Artificial Intelligence to lighten the load, cut costs, and compete with bigger players.",
+          "A clear, plain-English starter guide showing small business owners how to use AI to save time, reduce workload, and make smarter decisions. Step-by-step examples help you apply tools immediately without technical knowledge. Ideal for entrepreneurs who want faster workflows and better productivity with a simple downloadable PDF.",
         bullets: [
           "Plain-English walkthrough",
           "Practical examples",
@@ -39,12 +38,11 @@ export const categories: ProductCategory[] = [
     heroImage: "",
     items: [
       {
-        title:
-          "Printable monthly Accounting Ledger with start and end balance.",
+        title: "Printable Monthly Accounting Ledger with Start & End Balance",
         problem:
           "You need a clean way to track income/expenses without a complicated system.",
         description:
-          "This accounts ledger sheet is simple in design, and easy to use. It is ideal for small business owners looking for a more minimalist and convenient alternative to the typical 2 or 3 column accounting forms.",
+          "A clean, minimalist bookkeeping sheet designed for small business income and expense tracking. See balances at a glance without complex systems or software. Print as many copies as needed and keep finances organised for budgeting, tax preparation, and day-to-day clarity.",
         bullets: ["General ledger layout", "Print anytime", "A4 + US Letter"],
         image:
           "/images/products/accounting-ledger/accounting-ledger-stat-balance-month-al02.webp",
@@ -55,11 +53,11 @@ export const categories: ProductCategory[] = [
           "/products/accounting-ledger/printable-monthly-accounting-ledger-start-end-balance",
       },
       {
-        title: "Fillable and Printable Accounting Ledger (PDF)",
+        title: "Fillable & Printable Accounting Ledger PDF – Auto Balance",
         problem:
           "A reusable ledger you can type into and auto-calculates your balance and totals.",
         description:
-          "This fillable and printable Accounting Ledger sheet is designed to be simple and convenient, whilst still making life easier. It will auto calculate your new balance on every entry. It is an ideal general ledger sheet for your small business bookkeeping needs.",
+          "Type directly into this reusable fillable ledger and let balances update automatically. Perfect for small business bookkeeping where accuracy and speed matter. Use digitally or print anytime for organised financial records without spreadsheets or costly software.",
         bullets: [
           "Fillable PDF",
           "Printable",
@@ -74,10 +72,10 @@ export const categories: ProductCategory[] = [
           "/products/accounting-ledger/fillable-printable-accounting-ledger-pdf",
       },
       {
-        title: "Fillable and Printable Accounting Ledger with Alternating Rows",
+        title: "Fillable Accounting Ledger PDF with Alternating Rows",
         problem: "A ledger that's easier to read line-by-line.",
         description:
-          "This fillable and printable Accounting Ledger sheet will calculate your new balance on every entry. Ideal for your small business bookkeeping needs. You can enter all your incoming and outgoing transactions on this simple money tracker. You can see the balance updating each time you hit enter",
+          "An easy-to-read ledger with alternating rows to reduce scanning errors and speed up entry. Enter transactions digitally and watch balances update as you go. Ideal for small businesses that want tidy records without complicated bookkeeping tools.",
         bullets: [
           "Alternating row styling",
           "Fillable PDF",
@@ -92,11 +90,10 @@ export const categories: ProductCategory[] = [
           "/products/accounting-ledger/fillable-printable-accounting-ledger-alternating-rows",
       },
       {
-        title:
-          "Accounting Ledger Template – Yearly Accounts + General Ledger Sheet (Columnar Paper)",
+        title: "Yearly Accounting Ledger Template – General Ledger Sheet",
         problem: "You need a ledger that works across any financial period.",
         description:
-          "This printable yearly accounting ledger sheet is simple and easy to use.  It is ideal for small business owners looking for a more minimalist and convenient alternative to the typical 2 or 3 column accounting forms. Designed for both personal and professional use, this essential small business form ensures accurate record-keeping, balancing, and analysis.",
+          "A versatile yearly ledger for tracking income and expenses across any financial period. Designed for clarity and consistency, so your records are easier to review, file, and summarise. Great for small business owners who want a simple paper-based bookkeeping workflow that stays tax-ready.",
         bullets: ["Fillable PDF", "Simple layout", "Alternating Rows"],
         image:
           "/images/products/accounting-ledger/accounting-ledger-al-year-02.webp",
@@ -107,11 +104,10 @@ export const categories: ProductCategory[] = [
           "/products/accounting-ledger/accounting-ledger-template-yearly-general-ledger-sheet",
       },
       {
-        title:
-          "Accounting Ledger – General Ledger Sheets (6 Colors, Wide Margins)",
+        title: "General Ledger Sheets – 6 Colour Printable Set",
         problem: "Six color options and binder-friendly margins.",
         description:
-          "These easy to use general ledger templates feature 6 different colours to help you keep track of different types of transactions and accounts. They are a simple and convenient alternative to an account ledger book or columnar paper.",
+          "Six colour-coded general ledger templates to separate accounts and transaction types quickly. Wide margins make filing easy in binders and folders. A simple alternative to bulky ledger books or columnar pads—print whenever you need a fresh sheet.",
         bullets: ["6 color set", "Wide margins", "Printable columnar paper"],
         image:
           "/images/products/accounting-ledger/accounting-ledger-six-colour-bundle.webp",
@@ -122,11 +118,10 @@ export const categories: ProductCategory[] = [
           "/products/accounting-ledger/accounting-ledger-general-ledger-sheets-6-colors",
       },
       {
-        title:
-          "Accounting Ledger and Money Tracker – Auto Calculating Balance (Fillable PDF)",
+        title: "Accounting Ledger & Money Tracker – Auto Calculating PDF",
         problem: "Your balance calculated automatically (less manual math).",
         description:
-          "This fillable and printable Accounting Ledger PDF form, will calculate your updated balance automatically on every row. This saves you time and effort, and it is ideal to simplify your small business bookkeeping needs.",
+          "A fillable accounting ledger that updates your balance automatically on every row, helping reduce mistakes and save time. Ideal for small business bookkeeping, side hustles, and online sellers who want clean, consistent records without spreadsheets or software.",
         bullets: [
           "Auto-calculating balance",
           "Fillable + printable",
@@ -141,11 +136,10 @@ export const categories: ProductCategory[] = [
           "/products/accounting-ledger/accounting-ledger-money-tracker-auto-calculating",
       },
       {
-        title:
-          "Printable Accounting Ledger Money Tracker and General Ledger Sheets (Accounts Receivable)",
+        title: "Printable Accounting Ledger – Accounts Receivable Tracker",
         problem: "You need a ledger that supports receivables-style tracking.",
         description:
-          "This printable accounting ledger sheet will help you stay on top of your small business bookkeeping. Ideal as a general ledger sheet, this printable PDF template is designed to help you to record income and expense transactions by month. Ideal for any financial period.",
+          "A simple printable accounting ledger designed for receivables-style tracking and monthly transaction logging. Keep income and expenses organised in one place so you can review totals, spot gaps, and stay on top of bookkeeping without complex forms.",
         bullets: [
           "Accounts receivable friendly",
           "Printable",
@@ -170,12 +164,11 @@ export const categories: ProductCategory[] = [
     heroImage: "",
     items: [
       {
-        title:
-          "Payment Tracker – Simple Printable Fee Payment Tracker and Client Payment Log",
+        title: "Simple Payment Tracker – Printable Client Fee Payment Log",
         problem:
           "You're losing track of who paid, who hasn't, and what's outstanding.",
         description:
-          "Effortlessly manage client payments and stay on top of your business finances, with this simple and affordable Client Payment Tracker. This printable payment tracker is designed with simplicity in mind.",
+          "Track due, paid, and outstanding amounts on one clean sheet, plus a clear client payment history. Designed for small businesses and freelancers who want better cash-flow visibility without complicated tools. Download, print, and keep payment status obvious at a glance.",
         bullets: ["Track due vs paid", "Client history", "Printable PDF"],
         image: "/images/products/payment-tracker/payment-tracker-pay-02.webp",
         etsyUrl:
@@ -185,11 +178,10 @@ export const categories: ProductCategory[] = [
           "/products/payment-tracker/simple-printable-fee-payment-tracker-client-log",
       },
       {
-        title:
-          "Payment Tracker and Client Payment History Log – Simple Fee Tracker",
+        title: "Client Payment History Tracker – Simple Fee Tracker PDF",
         problem: "You need a lightweight way to track ongoing client payments.",
         description:
-          "Stay on top of your business finances and effortlessly manage client payments with this simple and affordable Client Payment Tracker. Ideal for small business bookkeeping and entrepreneurs tracking payments.",
+          "A lightweight client payment tracker that keeps ongoing payments, outstanding amounts, and history in one place. Ideal for small business bookkeeping and online sellers who need quick clarity before chasing payments. Print copies as needed and keep records consistent.",
         bullets: [
           "Client payment history",
           "Outstanding amounts",
@@ -204,11 +196,10 @@ export const categories: ProductCategory[] = [
           "/products/payment-tracker/payment-tracker-client-payment-history-log",
       },
       {
-        title:
-          "Payment Tracker – Client Payment History and Fee Payment Tracker (A4 + US Letter)",
+        title: "Payment Tracker A4 & US Letter – Client Fee History Log",
         problem: "You need a clear fee tracker you can file per client.",
         description:
-          "This Printable Payment Tracker helps you organise and keep track of your client payment history. You can log all transactions for any month.  Designed to be a simple, easy to use and affordable alternative to any other system.",
+          "Keep a clear client-by-client fee and payment history you can file and reference quickly. Designed for simple monthly logging, so you always know what’s paid and what needs follow-up. Printable in A4 and US Letter for easy day-to-day use.",
         bullets: ["Client-based tracking", "A4 + US Letter", "Printable PDF"],
         image:
           "/images/products/payment-tracker/payment-ledger-a4-monthly.webp",
@@ -230,11 +221,11 @@ export const categories: ProductCategory[] = [
     heroImage: "",
     items: [
       {
-        title: "Fillable and Printable Rent Payment Ledger",
+        title: "Fillable Rent Payment Ledger – Auto Calculating Tenant Log",
         problem:
           "Helps you keep reliable record of rent payments and missed payments.",
         description:
-          "This fillable and printable Rent Payment Ledger helps landlords keep track of tenant payments and easily log rent transactions each month. This is a simple, easy to use and affordable alternative to any other system.",
+          "A fillable rent payment ledger for landlords who want reliable tenant records and fewer disputes. Log payments monthly and keep a clear trail of what’s due and what’s paid. Designed as a simple, affordable alternative to rent books—use digitally or print anytime.",
         bullets: [
           "Fillable PDF",
           "Auto-calculating balance",
@@ -249,11 +240,11 @@ export const categories: ProductCategory[] = [
           "/products/rent-payment-ledger/fillable-printable-rent-payment-ledger",
       },
       {
-        title: "Printable Rent Payment Ledger",
+        title: "Printable Rent Payment Ledger – Monthly Tenant Payment Log",
         problem:
           "A convenient printable monthlyrent log that's easy to maintain.",
         description:
-          "This is a simple, easy to use and affordable alternative to any other system. No need to purchase an entire rent ledger book any more. As a printable rent payment tracker, you can easily download and print as many copies as you like.",
+          "A simple printable rent payment ledger that replaces bulky rent books. Download once and print as many copies as you like to track monthly rent payments and missed payments. Ideal for landlords who want clean records and quick visibility without complicated systems.",
         bullets: [
           "Printable PDF",
           "Landlord-friendly layout",
@@ -279,12 +270,11 @@ export const categories: ProductCategory[] = [
     heroImage: "",
     items: [
       {
-        title:
-          "Printable Employee Time Sheet Template – Hours Worked Log + Weekly Time Tracker",
+        title: "Printable Employee Time Sheet – Weekly Hours Worked Tracker",
         problem:
           "You need a simple way to record hours without messy spreadsheets.",
         description:
-          "This printable Employee Time Sheet is simple and easy to use. If you are a small business owner looking for a simple, convenient and efficient way to track your employees' time, then this printable time log is the perfect solution for you",
+          "A simple weekly employee time sheet for recording hours worked without messy spreadsheets. Keeps time records consistent so payroll prep is faster and disputes are less likely. Designed for small business owners who want a clear, printable workflow that staff can follow easily.",
         bullets: [
           "Printable time sheet",
           "Weekly tracking",
@@ -299,12 +289,11 @@ export const categories: ProductCategory[] = [
           "/products/time-sheet/printable-employee-time-sheet-hours-worked-weekly",
       },
       {
-        title:
-          "Printable Employee Time Sheet Template and Hours Worked + Weekly Tracker",
+        title: "Weekly Employee Time Sheet with Break Hours – Printable",
         problem:
           "A version of a classic weekly time sheet layout that records break time.",
         description:
-          "A simple Employee Time Sheet with Break Time Hours column. If you are a small business owner looking for a simple, convenient and efficient way to track your employees' time, then this printable time log is the perfect solution for you.",
+          "A weekly employee time sheet that includes a break hours column for more accurate totals. Great for small teams, contractors, and shift work. Simple layout keeps time capture consistent, making payroll and invoicing easier to double-check and file.",
         bullets: ["Printable", "Weekly structure", "Quick to fill in"],
         image:
           "/images/products/employee-timesheet/employee-weekly-timesheet-a4-3.webp",
@@ -316,11 +305,11 @@ export const categories: ProductCategory[] = [
       },
       {
         title:
-          "Weekly Employee Time Sheet – Editable Excel Spreadsheet (Printable)",
+          "Editable Weekly Time Sheet – Employee Excel Tracker (Printable)",
         problem:
           "Edit totals quickly and keep digital copies. Use the full power of a spreadsheet",
         description:
-          "This weekly freelancer and employee time sheet is a simple and easy to use Excel spreadsheet designed to take the hassle out of colleting hours worked from employees or contractors. Fullly editable and printable.",
+          "An editable Excel weekly time sheet designed to make collecting hours faster and cleaner. Update totals quickly, keep digital records, and print when needed. Ideal for payroll prep, contractors, and small businesses that want spreadsheet flexibility without building a template from scratch.",
         bullets: ["Editable Excel", "Printable", "Great for payroll prep"],
         image: "/images/products/employee-timesheet/timesheet-excel.webp",
         etsyUrl:
@@ -330,12 +319,11 @@ export const categories: ProductCategory[] = [
           "/products/time-sheet/weekly-employee-time-sheet-editable-excel",
       },
       {
-        title:
-          "Printable Employee Time Sheet – Weekly Work Tracker / Contractor Time Sheet",
+        title: "Printable Weekly Contractor Time Sheet – 6 Colour Set",
         problem:
           "You need a simple weekly tracker for contractors or short-term staff.",
         description:
-          "This printable weekly time tracker pack is the ideal template for small business owners or HR departments looking to efficiently track and monitor employee hours. Available in Six different colours, you can use these forms to record hours worked by your employees on client or internal work.",
+          "A printable weekly time tracker pack for contractors, short-term staff, or busy teams. Six colour options help organise roles, clients, or departments. Simple structure makes it easy to record hours consistently and review totals without confusion.",
         bullets: ["Weekly tracker", "Printable PDF", "Contractor-friendly"],
         image:
           "/images/products/employee-timesheet/weekly-employee-timeshet-6-colours.webp",
@@ -346,11 +334,10 @@ export const categories: ProductCategory[] = [
           "/products/time-sheet/printable-employee-time-sheet-contractor",
       },
       {
-        title:
-          "Printable Freelancer Time Tracker – Work Time Sheet / Daily Hours Tracker",
+        title: "Printable Freelancer Daily Time Tracker – Hours Worked Log",
         problem: "You need to track billable hours without overthinking it.",
         description:
-          "This printable time sheet helps you and your employees record all time worked every day. If you are a small business owner looking for a simple, convenient and efficient way to log employee time, then this printable time tracker is the ideal solution.",
+          "A daily time tracker for freelancers and small businesses who need a quick way to capture hours worked. Simple layout reduces overthinking and helps protect billable time. Print as needed and keep a consistent record you can reference for invoices and planning.",
         bullets: ["Daily hours tracking", "Freelancer-friendly", "Printable"],
         image:
           "/images/products/employee-timesheet/employee-timesheet-a4-2.webp",
@@ -372,11 +359,10 @@ export const categories: ProductCategory[] = [
     heroImage: "",
     items: [
       {
-        title:
-          "School Attendance Record Sheet – Class Attendance Register (Monthly) (A4 Landscape)",
+        title: "Monthly School Attendance Register Sheet – A4 Landscape",
         problem: "You need a clear monthly register that's easy to review.",
         description:
-          "This printable School Attendance Register sheet is ideal to help you record the daily attendance of your pupils, at home or in class. This sheet is designed to help you keep track of the attendance students in school, university, college or even a home school.",
+          "A clear monthly school attendance register designed for quick daily marking and easy review. Ideal for classrooms, home schooling, colleges, or training groups. The landscape A4 layout keeps names and days visible at a glance, helping you maintain tidy attendance records.",
         bullets: ["Monthly register", "A4 landscape", "Printable"],
         image:
           "/images/products/attendance/school-attendance-register-school-att-01.webp",
@@ -387,12 +373,11 @@ export const categories: ProductCategory[] = [
           "/products/attendance-record/school-attendance-record-sheet-monthly",
       },
       {
-        title:
-          "Attendance Sheet – Printable Attendance Tracker (School/Employees/Students)",
+        title: "Printable Attendance Sheet – School, Staff, Students & Events",
         problem:
           "You need a general-purpose attendance log that works anywhere.",
         description:
-          "This Printable Attendance Tracker is designed to be flexible enough to be used to record the attendance of home school pupils, employees, students or keeping an attendance log of any individual in a class or a conference. It's format is laid out to support monthly and yearly attendance recording by day.",
+          "A flexible printable attendance tracker that works for employees, students, clubs, home schooling, or conferences. Simple grid format supports monthly and yearly attendance by day, making it easy to keep consistent records without buying attendance books.",
         bullets: ["Simple grid format", "Printable", "Multi-use"],
         image:
           "/images/products/attendance/attendance-record-person-att-person-01.webp",
@@ -403,11 +388,10 @@ export const categories: ProductCategory[] = [
           "/products/attendance-record/attendance-sheet-printable-tracker-school-employees",
       },
       {
-        title:
-          "Attendance Tracker – Printable Attendance Sheet for Conference and Events)",
+        title: "Event Attendance Tracker – Printable Attendance Log Sheet",
         problem: "Ideal attendance log for events and sessions.",
         description:
-          "Printable Attendance Record sheets. Printable Attendance Log sheets to help you keep track of the attendance of visitors at events and conferences. Now there is no more need for a new attendance book, simply download and print this template as many times as you like.",
+          "Printable attendance record sheets designed for events, conferences, workshops, and visitor sessions. Download once and print unlimited copies to keep check-ins organised and professional. A simple alternative to buying new attendance books each time.",
         bullets: ["Event-friendly", "Printable", "Easy check-off"],
         image:
           "/images/products/attendance/attendance-register-club-attend-club-event.webp",
@@ -418,11 +402,10 @@ export const categories: ProductCategory[] = [
           "/products/attendance-record/attendance-tracker-conference-events",
       },
       {
-        title:
-          "Attendance Tracker – Printable Attendance Record Sheet (Monthly Format)",
+        title: "Monthly Attendance Tracker – Printable Attendance Record Sheet",
         problem: "A simple monthly-format tracker you can file by month.",
         description:
-          "These printable Attendance Record sheets are formatted for monthly attendance tracking. They are designed to help you keep track of the attendance of visitors at events, or the attendance of students in school, university or college.",
+          "A simple monthly-format attendance tracker you can file by month for clean record keeping. Useful for schools, universities, events, and training sessions. Designed for fast marking and quick review so nothing slips through the cracks.",
         bullets: ["Monthly format", "Printable PDF", "Simple layout"],
         image:
           "/images/products/attendance/attendance-register-horizontal-monthly-att-monthly.webp",
@@ -444,11 +427,10 @@ export const categories: ProductCategory[] = [
     heroImage: "",
     items: [
       {
-        title:
-          "Petty Cash Log – Printable Cash Flow Sheet (Small Business Bookkeeping)",
+        title: "Printable Petty Cash Log – Small Business Cash In/Out Sheet",
         problem: "Small cash purchases pile up and you lose track of them.",
         description:
-          "These Printable Petty Cash sheets are ideal for your small business accounting ledger needs. No need to purchase an entire petty cash book, with these simple and affordable petty cash templates, you can instantly download and print them as many times as you like from where you like.",
+          "A simple printable petty cash log that keeps small cash purchases organised and totals clear. Designed for small business bookkeeping without bulky cash books. Download once and print as many copies as you need to maintain a clean audit trail and reduce ‘mystery’ cash leakage.",
         bullets: ["Cash in/out tracking", "Printable PDF", "Simple totals"],
         image: "/images/products/petty-cash/petty-cash-log-a4-single.webp",
         etsyUrl:
@@ -458,11 +440,10 @@ export const categories: ProductCategory[] = [
           "/products/petty-cash/petty-cash-log-printable-small-business",
       },
       {
-        title:
-          "Petty Cash Log – Fillable Printable Cash Flow Sheet (Auto Calcultating Balance)",
+        title: "Fillable Petty Cash Log – Auto Calculating Balance PDF",
         problem: "Fillable and printable so you can easily track cash flow.",
         description:
-          "This fillable and printable Petty Cash Log will calculate your new balance on every entry.  Ideal for your small business bookkeeping and accounting ledger needs. You can enter all your small business incoming and outgoing petty cash transactions on this one simple fillable ledger sheet.  You can see the new balance updating each time you hit enter.  This fillable acrobat pdf file, is designed to simplify your accounting by giving you only what you need.",
+          "A fillable petty cash log that updates the balance automatically on every entry. Track incoming and outgoing cash quickly, reduce manual maths, and keep totals accurate. Ideal for small business bookkeeping when you want a simple, no-fuss system you can type into or print anytime.",
         bullets: ["Cash in/out tracking", "Printable PDF", "Simple totals"],
         image:
           "/images/products/petty-cash/fillable-petty-cash-log-sheet-image.webp",
@@ -484,12 +465,11 @@ export const categories: ProductCategory[] = [
     heroImage: "",
     items: [
       {
-        title:
-          "Expense Tracker – Income and Expense Sheet (GoodNotes Template)",
+        title: "Expense Tracker – Income & Expense Sheet for GoodNotes",
         problem:
           "You need a simple way to track money in/out (especially on tablet).",
         description:
-          "This Printable Expense Tracker is designed to help you take control and keep track of all your daily and monthly small business transactions. It is a simple printable money tracker sheet also works in GoodNotes. It offers you an easy and convenient way to log and record your income and expenses on one simple form. It is ideal for small business owners or self employed people, and can be used for any financial period",
+          "A clean income and expense tracker designed for simple daily and monthly transaction logging. Works as a printable sheet and can be used in GoodNotes for tablet-friendly bookkeeping. Ideal for small business owners who want financial clarity without complicated spreadsheets or accounting software.",
         bullets: [
           "Income + expense tracking",
           "GoodNotes-friendly",
@@ -504,12 +484,11 @@ export const categories: ProductCategory[] = [
           "/products/expense-and-spending/expense-tracker-income-expense-sheet-goodnotes",
       },
       {
-        title:
-          "Spending Tracker – Printable Income and Expense Tracker and Finance Planner",
+        title: "Printable Spending Tracker – Income & Expense Planner Sheet",
         problem:
           "You need a straightforward spending log to stop leaks in your budget.",
         description:
-          "This Printable Expense Tracker is designed to help you take control and keep track of all your daily and monthly account transactions. As a money tracker, this printable ledger sheet offers you an easy and convenient way to log and record your cash flow on one simple form. It is ideal for small business owners or self employed people, and can be used for any financial period.",
+          "A straightforward spending tracker that keeps income and expenses visible on one simple sheet. Helps you spot overspending early, protect profit, and make smarter budgeting choices. Designed for entrepreneurs and self-employed people who want a clean printable money log for any period.",
         bullets: ["Spending-focused", "Income + expense", "Printable PDF"],
         image:
           "/images/products/expense-tracker/expenses-tracker-month-start-bal.webp",
@@ -520,11 +499,10 @@ export const categories: ProductCategory[] = [
           "/products/expense-and-spending/spending-tracker-printable-income-expense-planner",
       },
       {
-        title:
-          "Bill Payment Tracker – Editable Yearly, Monthly and Quarterly Bills Tracker",
+        title: "Editable Bill Payment Tracker – Yearly, Monthly & Quarterly",
         problem: "Bills slip through the cracks and you miss payments.",
         description:
-          "With this easy-to-use bill payment tracker, you can effortlessly manage all your bills on one sheet. It helps you see at a glance which bills are outstanding and which are paid.",
+          "An easy-to-use bill payment tracker that keeps all bills on one sheet so you can see what’s paid, due, and outstanding at a glance. Includes yearly, monthly, and quarterly options for flexible planning. Ideal for small business owners who want fewer missed payments and cleaner records.",
         bullets: [
           "Yearly/monthly/quarterly options",
           "Editable",
@@ -549,10 +527,10 @@ export const categories: ProductCategory[] = [
     heroImage: "",
     items: [
       {
-        title: "Printabke Receipt Template A5 + Half Letter",
+        title: "Printable Receipt Template – A5 & Half Letter Customer Receipt",
         problem: "A compact receipt form for quick sales/order handoffs.",
         description:
-          "This Customer Order Receipt form is designed to efficiently capture all necessary details, ensuring smooth transactions with your customers. With both A5 and Half Letter sizes available, this simple template allows you to easily print professional business receipts, saving you time and effort.",
+          "A compact customer receipt template designed to capture essential order details quickly and professionally. Available in A5 and Half Letter sizes for convenient printing. Ideal for small businesses that want clean paperwork, smoother handoffs, and better record keeping without buying receipt books.",
         bullets: ["Small sizes", "Simple layout", "Printable"],
         image: "/images/products/receipt/receipt-a5.webp",
         etsyUrl:
@@ -562,11 +540,10 @@ export const categories: ProductCategory[] = [
           "/products/receipts/printable-receipt-template-a5-half-letter",
       },
       {
-        title:
-          "Printable Receipt Template Pack – Customer Receipt + Sales Receipt Forms (Six Colors) (PDF)",
+        title: "Printable Receipt Template Pack – 6 Colour Customer Receipts",
         problem: "Professional-looking receipts without buying receipt books.",
         description:
-          "This Customer Order Receipt is designed to efficiently capture all necessary details, ensuring smooth transactions with your valued customers. With both A4 and US Letter sizes available, this versatile form allows you to easily print professional receipts, saving you time and effort.",
+          "A versatile receipt template pack with six colour options to keep paperwork organised and professional. Designed for A4 and US Letter printing and quick completion during sales. Ideal for small businesses and online sellers who want consistent receipts and cleaner bookkeeping records.",
         bullets: ["Six colors", "Printable pack", "Instant download"],
         image: "/images/products/receipt/receipt-pack.webp",
         etsyUrl:
@@ -576,10 +553,10 @@ export const categories: ProductCategory[] = [
           "/products/receipts/printable-receipt-template-pack-six-colors",
       },
       {
-        title: "Printabke Receipt Template A4 + US Letter",
+        title: "Printable Receipt Template – A4 & US Letter Minimal Receipt",
         problem: "A clean receipt you can print on standard paper sizes.",
         description:
-          "Printable Receipt Template. Instantly downloadable and a must have for any small business owner. The form includes space for you to add your business name and address at the top.",
+          "A minimalist printable receipt template for standard A4 and US Letter paper. Includes space for your business details at the top for a more professional customer experience. Download instantly, print anytime, and keep records consistent without expensive systems.",
         bullets: ["A4 + US Letter", "Printable PDF", "Minimalist style"],
         image: "/images/products/receipt/receipt-a4.webp",
         etsyUrl:
@@ -600,10 +577,10 @@ export const categories: ProductCategory[] = [
     heroImage: "",
     items: [
       {
-        title: "Printable Sign In Sheet – Reception Check In Form ",
+        title: "Printable Sign-In Sheet – Reception Visitor Check-In Form",
         problem: "A simple front-desk sign-in record.",
         description:
-          "This simple printable sign in sheet is designed to enhance your visitor and guest management by ensuring you have a smooth welcoming experience for all your visitors. Easy to fill in, with a simple layout, it is ideal for any busy reception or front of house desk.",
+          "A simple reception sign-in sheet designed to speed up visitor check-ins while keeping records tidy and professional. Easy layout helps guests fill in details quickly, making it ideal for front desks, studios, clinics, workshops, and small offices that need reliable visitor logs.",
         bullets: ["Simple Design", "A4 + US Letter", "Printable"],
         image: "/images/products/sign-in-sheet/sign-in-simple.webp",
         etsyUrl:
@@ -613,11 +590,10 @@ export const categories: ProductCategory[] = [
           "/products/sign-in-sheets/printable-sign-in-sheet-reception-check-in",
       },
       {
-        title:
-          "Printable Sign In Sheet With Welcome Title– Reception Check In/Out Form",
+        title: "Printable Welcome Sign-In Sheet – Reception Check In/Out Log",
         problem: "Daily Sign In Sheet with Welcome Message.",
         description:
-          "This printable sign in sheet is designed to simplify your visitor and guest management by ensuring you have a smooth welcoming experience for all your visitors. With its simple and efficient layout, it is perfect for any busy front of house or reception desk.",
+          "A printable sign-in sheet with a welcome title that creates a smoother, more professional check-in experience. Simple and efficient layout suits busy reception areas and front-of-house desks. Keeps visitor details organised for basic security, attendance, and daily records.",
         bullets: ["Daily Sign In", "A4 + US Letter", "Printable"],
         image: "/images/products/sign-in-sheet/sign-in-welcome.webp",
         etsyUrl:
@@ -639,10 +615,11 @@ export const categories: ProductCategory[] = [
     items: [
       {
         title:
-          "Meeting Notes Template – Agenda Planner (Printable Word Document A4/US Letter)",
+          "Meeting Notes Template – Editable Agenda Planner (Word) A4/Letter",
         problem:
           "A Meeting notes template that works in Word for easy editing.",
-        description: "",
+        description:
+          "An editable meeting notes and agenda planner in Word format for fast customisation. Capture key points, decisions, action items, and next steps in one consistent layout. Ideal for client meetings and internal notes when you want clearer follow-ups and fewer missed tasks.",
         bullets: ["Printable and Editable", "Word format", "A4 + US Letter"],
         image: "/images/products/meeting-notes/meeting-notes-word.webp",
         etsyUrl:
@@ -653,10 +630,10 @@ export const categories: ProductCategory[] = [
       },
       {
         title:
-          "Meeting Notes Template Printable – Simple Meeting Notes Form (A4/A5/Letter/Half Letter)",
+          "Printable Meeting Notes Template – Simple Agenda & Minutes Form",
         problem: "A simple, printable notes sheet to capture key points.",
         description:
-          "This printable meeting notes template is designed to help you organize and stay on top of all your meetings. As a meeting minutes and agenda aid this planner can assist you in organizing and conducting more effective meetings, either in person or online.",
+          "A clean printable meeting notes template designed to keep agendas, minutes, and actions organised in one place. Helps meetings stay focused and makes follow-ups faster because decisions and next steps are clearly captured. Available in multiple sizes for flexible printing.",
         bullets: ["Multiple sizes", "Printable", "Clean layout"],
         image: "/images/products/meeting-notes/meeting-notes.webp",
         etsyUrl:
@@ -676,12 +653,11 @@ export const categories: ProductCategory[] = [
     heroImage: "",
     items: [
       {
-        title:
-          "Estimate and Quote Template – Fillable and Printable Simple Estimate Form (Fillable PDF)",
+        title: "Fillable Estimate & Quote Template – Printable Simple PDF Form",
         problem:
           "You need quotes you can send fast without rebuilding a doc each time.",
         description:
-          "This fillable and printable simple estimate form is designed for small business owners and online sellers who need to provide a simple estimate or quote for work or products that have been requested by customers. This form is really simple and easy to use, and can save a lot of time.",
+          "A fillable estimate and quote template designed for small business owners and online sellers who need to send quotes fast. Simple structure reduces back-and-forth and helps customers understand pricing clearly. Fill in digitally, print when needed, and keep your quoting process consistent and professional.",
         bullets: ["Fillable PDF", "Professional layout", "Simnple to use"],
         image: "/images/products/job-estimate/a4-estimate-fillable.webp",
         etsyUrl:
@@ -691,11 +667,11 @@ export const categories: ProductCategory[] = [
           "/products/estimates/estimate-quote-template-fillable-printable",
       },
       {
-        title: "Estimate and Quote Template – Simple Estimate Form (Printable)",
+        title: "Printable Estimate & Quote Template – Simple Professional Form",
         problem:
           "A simple printable estimate and quote sheet you can use on demand.",
         description:
-          "Transform your business proposals with this printable estimate and quote template, designed for professionals and small business owners like you. This simple estimate template helps you deliverer quotes and job estimates to your clients in a clear and professional format.",
+          "A printable estimate and quote template that presents pricing in a clear, professional format. Helps set expectations early and reduces follow-up questions. Ideal for trades, freelancers, and online sellers who want a simple quoting workflow that looks professional without extra design work.",
         bullets: ["Printable", "Clean estimate layout", "Fast to complete"],
         image: "/images/products/job-estimate/a4-estimate.webp",
         etsyUrl:
@@ -715,10 +691,11 @@ export const categories: ProductCategory[] = [
     heroImage: "",
     items: [
       {
-        title: "Invoice Template – Printable Minimalist Invoice",
+        title:
+          "Printable Minimalist Invoice Template – Simple Small Business PDF",
         problem: "A clean invoice format without design work.",
         description:
-          "This printable invoice template gives you a simple and convenient way of managing your customer order finances quickly, and without any expensive computer systems.",
+          "A clean printable invoice template designed for fast billing without expensive systems. Simple layout keeps customer details, items, and totals clear, reducing errors and speeding up payment follow-ups. Ideal for small business owners who want consistent, professional paperwork they can print anytime.",
         bullets: ["Minimalist layout", "Printable PDF", "Small business ready"],
         image: "/images/products/invoice/invoice.webp",
         etsyUrl:
@@ -739,11 +716,10 @@ export const categories: ProductCategory[] = [
     heroImage: "",
     items: [
       {
-        title:
-          "Order Form Template – Purchase Order Form + Simple Printable Customer Order (GoodNotes Template)",
+        title: "Printable Order Form Template – Purchase Order + GoodNotes",
         problem: "One consistent order form to keep organised.",
         description:
-          "This simple printable purchase order form is designed to give you, as a small business owner, the simplicity and convenience of managing your customer orders quickly and without any expensive computer systems",
+          "A simple purchase order form designed to keep customer orders consistent and organised. Use as a printable form or upload to GoodNotes for digital workflows. Ideal for small business owners who want a clear order process without complicated systems or messy notes.",
         bullets: ["Order form", "GoodNotes-friendly", "Printable"],
         image: "/images/products/order-form/order-form.webp",
         etsyUrl:
@@ -753,11 +729,10 @@ export const categories: ProductCategory[] = [
           "/products/order-forms-and-trackers/order-form-template-purchase-order-goodnotes",
       },
       {
-        title:
-          "Printable Order Tracker – Customer Order History and Sales (PDF)",
+        title: "Printable Order Tracker – Customer Order History & Sales Log",
         problem: "Easily track what's ordered, shipped, and completed.",
         description:
-          "This printable order tracker template will help you boost your small business efficiency. Keep track of all your orders, in one organized place. With this easy to use template, you can simply print it out or upload it to GoodNotes as a template.",
+          "A printable order tracker that keeps customer orders, status, and history in one organised place. Helps reduce fulfilment mistakes and makes it easier to review sales at a glance. Print as needed or use digitally in GoodNotes for a simple, repeatable workflow.",
         bullets: ["Order history", "Printable tracker", "Simple workflow"],
         image: "/images/products/order-tracker/order-tracker.webp",
         etsyUrl:
@@ -778,11 +753,11 @@ export const categories: ProductCategory[] = [
     items: [
       {
         title:
-          "Tips Tracker – Printable Server Tips Tracker (Excel Spreadsheet Template)",
+          "Server Tips Tracker – Excel Spreadsheet with Totals (Printable)",
         problem:
           "Helps you consistently track tips without losing cash or miscalculating.",
         description:
-          "This server tips tracker is a simple Excel spreadsheet. It is simple and easy to use. Designed for recording the tips received on a daily basis. As a spreadsheet, tips tracker will calculate the totals for all your tips, and give you an accurate display of each type of tip and the total for any given period.",
+          "A simple Excel server tips tracker that calculates totals for accurate tip reporting. Record tips by type and see clear totals for any period, helping reduce mistakes and improve visibility on earnings. Ideal for restaurants, bars, and service workers who want a tidy, repeatable system.",
         bullets: ["Excel-based tracking", "Printable", "Daily/shift friendly"],
         image: "/images/products/tips-tracker/tips-tracker-spreadsheet.webp",
         etsyUrl:
@@ -792,11 +767,11 @@ export const categories: ProductCategory[] = [
           "/products/tips-and-service/tips-tracker-printable-server-excel",
       },
       {
-        title: "Server Tips Tracker – Simple Tips Record (Printable PDF)",
+        title: "Printable Server Tips Tracker – Simple Daily Tips Record PDF",
         problem:
           "A simple paper log for tips that's quick to fill out after each shift.",
         description:
-          "This printable tips tracker is simple and easy to use. Designed for recording the tips received on a daily basis by staff serving customers. This tips tracker is ideal for restaurants, bars, or anyone who serves customers. You can easily record tips received in cash, credit or by any other means.",
+          "A printable tips tracker designed for quick daily logging after each shift. Record tips in cash, card, or other methods in a clean layout that’s easy to total and review. Great for service workers who want simple, consistent records for budgeting and reporting.",
         bullets: ["Printable PDF", "Quick daily entry", "Simple totals"],
         image: "/images/products/tips-tracker/tips-tracker-print.webp",
         etsyUrl:
@@ -818,10 +793,10 @@ export const categories: ProductCategory[] = [
     items: [
       {
         title:
-          "Business Ledger Templates Bundle – Accounting, Invoice, Petty Cash, Order Tracker, Estimate and Time Sheet",
+          "Business Ledger Bundle – 8 Essential Templates for Small Business",
         problem: "All the essentials in one pack instead of buying separately.",
         description:
-          "This business ledger template bundle is a collection of 8 of the most essential business and finance templates and planners. It is designed to help business professionals and online sellers stay organized and simplify their lives.",
+          "A complete bundle of essential finance and admin templates designed to keep small business paperwork consistent and organised. Includes core forms like accounting, invoices, petty cash, orders, estimates, and time sheets—so you can run a smoother workflow without buying items individually. Instant download for quick setup.",
         bullets: [
           "8 essential forms",
           "Instant download",

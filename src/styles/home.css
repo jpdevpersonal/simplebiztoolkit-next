@@ -42,6 +42,36 @@
   } /* space for sticky CTA bar */
 }
 
+@media (max-width: 767.98px) {
+  .sb-hero-actions {
+    justify-content: center;
+  }
+
+  .sb-testimonial-header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .sb-testimonial-header > div {
+    width: 100%;
+  }
+  /* Show mobile-only 'See more reviews' button and hide desktop header button */
+  .sb-see-more-mobile {
+    display: block;
+  }
+
+  .sb-see-more-desktop {
+    display: none !important;
+  }
+}
+
+/* Hide the mobile-only button on larger screens */
+@media (min-width: 768px) {
+  .sb-see-more-mobile {
+    display: none;
+  }
+}
+
 /* Hero image sizing */
 .sb-hero .hero-image {
   display: block;
