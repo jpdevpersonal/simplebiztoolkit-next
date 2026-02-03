@@ -24,6 +24,9 @@
   object-position: top;
   transition: transform 0.3s ease;
   background-color: var(--sb-soft);
+  /* Fix image shimmer/jitter on resize/hover */
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 /* =============================================
@@ -80,7 +83,7 @@
 }
 
 .product-card:hover .ledger-thumb {
-  transform: scale(1.02);
+  transform: scale(1.02) translateZ(0);
 }
 
 .product-card-content {
