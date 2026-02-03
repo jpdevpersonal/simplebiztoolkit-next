@@ -35,9 +35,10 @@ export default function ProductGrid({ products }: { products: Product[] }) {
                   <picture
                     style={{
                       position: "relative",
-                      width: "100%",
+                      width: "95%",
                       height: "100%",
                       display: "block",
+                      margin: "0 auto",
                     }}
                   >
                     <Image
@@ -46,8 +47,13 @@ export default function ProductGrid({ products }: { products: Product[] }) {
                       className="img-fluid ledger-thumb"
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      quality={90}
+                      quality={100}
                       loading="lazy"
+                      style={{
+                        marginTop: "5px",
+                        filter:
+                          "drop-shadow(rgba(0, 0, 0, 0.325) 0.5px 2px 3px)",
+                      }}
                     />
                   </picture>
                 </Link>

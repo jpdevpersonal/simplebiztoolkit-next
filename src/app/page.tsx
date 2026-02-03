@@ -275,7 +275,7 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-4">
-            <EtsyCtaButton label="Browse the full shop on Etsy" />
+            <EtsyCtaButton label="Browse the full shop" />
           </div>
         </div>
       </section>

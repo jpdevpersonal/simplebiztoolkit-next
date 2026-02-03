@@ -41,7 +41,12 @@ export default function ProductDetailClient({ product }: Props) {
         </h1>
 
         {/* Left Column - Image */}
-        <div className="product-detail-image-container">
+        <div
+          className="product-detail-image-container"
+          style={{
+            filter: "drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5))",
+          }}
+        >
           <div
             className="product-detail-image-wrapper"
             onMouseEnter={() =>
@@ -68,7 +73,15 @@ export default function ProductDetailClient({ product }: Props) {
             {/* Price and Primary CTA Row (mobile optimized) */}
             <div className="product-detail-price-cta-row">
               <div className="product-detail-price-wrapper">
-                <span className="product-detail-price">{product.price}</span>
+                <span className="product-detail-price">
+                  <a
+                    href={product.etsyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    See our shop for pricing
+                  </a>
+                </span>
               </div>
               <a
                 href={product.etsyUrl}
@@ -208,12 +221,12 @@ export default function ProductDetailClient({ product }: Props) {
       </div>
 
       {/* Sticky Mobile CTA */}
-      <div className="product-detail-sticky-cta">
+      {/* <div className="product-detail-sticky-cta">
         <div className="product-detail-sticky-cta-content">
           <div className="product-detail-sticky-price">
             <span className="product-detail-sticky-price-label">Price:</span>
             <span className="product-detail-sticky-price-value">
-              {product.price}
+              See our shop for pricing
             </span>
           </div>
           <a
@@ -225,7 +238,7 @@ export default function ProductDetailClient({ product }: Props) {
             Get It Now
           </a>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

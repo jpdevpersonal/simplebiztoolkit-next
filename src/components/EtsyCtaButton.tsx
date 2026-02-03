@@ -15,7 +15,7 @@ interface EtsyCtaButtonProps extends Omit<
 }
 
 export default function EtsyCtaButton({
-  label = "Shop on Etsy",
+  label = "Visit our Etsy Shop",
   href = links.etsyShopUrl,
   className,
   hideOnHome = true,

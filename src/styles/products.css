@@ -346,8 +346,6 @@
 .product-detail-image-wrapper {
   position: relative;
   width: 100%;
-  cursor: default;
-  border-radius: var(--sb-radius);
   overflow: hidden;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
   transition:
@@ -410,7 +408,11 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  align-items: stretch;
+}
+
+.product-detail-price-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 @media (min-width: 576px) {
@@ -418,26 +420,30 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 1.25rem;
+  }
+
+  .product-detail-price-wrapper {
+    justify-content: flex-start;
   }
 }
 
-.product-detail-price-wrapper {
-  display: flex;
-  align-items: center;
+.product-detail-price-link {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--sb-muted);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: all 0.2s ease;
 }
 
-.product-detail-price {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--sb-green);
-  margin: 0;
-  line-height: 1;
+.product-detail-price-link:hover {
+  color: var(--sb-brand-blue);
 }
 
 @media (min-width: 576px) {
-  .product-detail-price {
-    font-size: 2.25rem;
+  .product-detail-price-link {
+    font-size: 1rem;
   }
 }
 
@@ -569,8 +575,31 @@
 }
 
 /* Secondary CTA Section - Desktop Only */
-.product-detail-cta--secondary {
-  display: none;
+/* Keep desktop behavior but make the secondary CTA full-width on small screens */
+
+@media (max-width: 767px) {
+  .product-detail-cta--secondary {
+    display: block;
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+    border-top: none;
+  }
+
+  .product-detail-cta--secondary .product-detail-cta {
+    text-align: center;
+  }
+
+  .product-detail-cta--secondary .product-detail-cta-btn {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    padding: 1rem 1.25rem;
+    box-shadow: 0 4px 12px rgba(26, 127, 90, 0.25);
+  }
+
+  .product-detail-cta--secondary .product-detail-cta-note {
+    text-align: center;
+  }
 }
 
 @media (min-width: 992px) {
@@ -579,6 +608,20 @@
     margin-top: 1rem;
     padding-top: 1.5rem;
     border-top: 1px solid var(--sb-border);
+  }
+}
+
+/* For screens larger than 768px: make secondary CTA match primary size and left-align */
+@media (min-width: 769px) {
+  .product-detail-cta--secondary .product-detail-cta {
+    text-align: left;
+  }
+
+  .product-detail-cta--secondary .product-detail-cta-btn {
+    width: auto;
+    font-size: 1.125rem;
+    padding: 1.125rem 2rem;
+    box-shadow: 0 4px 14px rgba(26, 127, 90, 0.25);
   }
 }
 
@@ -636,6 +679,8 @@
   }
 }
 
+/* (removed Nest Hub Max sticky CTA override) */
+
 .product-detail-sticky-cta-content {
   display: flex;
   align-items: center;
@@ -692,5 +737,41 @@
 
   .product-detail-sticky-price-value {
     font-size: 1.75rem;
+  }
+}
+
+/* Tablet: center the sticky CTA button and hide the price value to center the button */
+@media (min-width: 576px) and (max-width: 991px) {
+  .product-detail-sticky-cta-content {
+    justify-content: center;
+  }
+
+  .product-detail-sticky-price {
+    display: none;
+  }
+
+  .product-detail-sticky-cta-btn {
+    width: 100%;
+    max-width: 520px;
+    justify-content: center;
+  }
+}
+
+/* Ensure secondary CTA button is centered and full-width across narrow tablets (576–767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .product-detail-cta--secondary .product-detail-cta {
+    text-align: center;
+  }
+
+  .product-detail-cta--secondary .product-detail-cta-btn {
+    width: 100% !important;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  .product-detail-cta--secondary .product-detail-cta-note {
+    text-align: center;
   }
 }
