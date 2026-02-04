@@ -1,5 +1,3 @@
-import "@/styles/articleStyle.css";
-
 export function Badge({ children }: { children: React.ReactNode }) {
   return <span className="article-badge">{children}</span>;
 }

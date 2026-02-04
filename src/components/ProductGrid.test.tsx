@@ -1,11 +1,8 @@
 /// <reference types="@testing-library/jest-dom" />
 
-import { describe, it, expect, vi } from "vitest";
+import { describe, it, expect } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
 import ProductGrid from "./ProductGrid";
-
-// Mock CSS import
-vi.mock("../styles/products.css", () => ({}));
 
 const mockProducts = [
   {
