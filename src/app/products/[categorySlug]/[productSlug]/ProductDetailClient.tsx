@@ -74,13 +74,7 @@ export default function ProductDetailClient({ product }: Props) {
             <div className="product-detail-price-cta-row">
               <div className="product-detail-price-wrapper">
                 <span className="product-detail-price">
-                  <a
-                    href={product.etsyUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    See our shop for pricing
-                  </a>
+                  {product.price || "See our shop for pricing"}
                 </span>
               </div>
               <a
