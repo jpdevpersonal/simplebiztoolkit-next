@@ -136,6 +136,10 @@
   font-weight: 700;
 }
 
+.article-cta-btn-primary:hover {
+  color: white;
+}
+
 .article-cta-btn-primary {
   background: rgba(0, 0, 0, 0.92);
   color: white;

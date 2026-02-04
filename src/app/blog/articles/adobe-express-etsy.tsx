@@ -171,7 +171,7 @@ export default function AdobeExpressEtsyContent() {
         primaryLabel="Explore Adobe Express"
         primaryHref={AFFILIATE_URL}
         showHomeLink={true}
-        showEtsyLink={true}
+        showEtsyLink={false}
       />
 
       <ArticleFooter>

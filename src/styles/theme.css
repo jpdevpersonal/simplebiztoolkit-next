@@ -238,6 +238,7 @@ h5 {
 }
 
 .ctaButton:hover {
+  color: white;
   background: var(--cta-bg-hover);
   transform: translateY(-1px);
   box-shadow:
