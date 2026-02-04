@@ -270,38 +270,53 @@ export default function SiteNavigation() {
         onKeyDown={(e) => {
           if (e.key === "Enter" || e.key === " ") setIsOpen(true);
         }}
+        aria-expanded={isOpen}
         style={{
           border: "none",
-          background: "transparent",
+          background: "rgba(0,0,0,0.04)",
           color: "var(--sb-ink)",
-          padding: "0.5rem",
+          padding: 0,
+          width: "48px",
+          height: "48px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          borderRadius: "10px",
           cursor: "pointer",
+          boxShadow: "0 2px 8px rgba(16,24,40,0.06)",
+          transition: "background-color 0.15s ease, transform 0.12s ease",
         }}
         aria-label="Open menu"
       >
-        <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
           <div
             style={{
-              width: "22px",
-              height: "2px",
+              width: "28px",
+              height: "3px",
               backgroundColor: "currentColor",
-              borderRadius: "1px",
+              borderRadius: "2px",
+              boxShadow: "0 1px 0 rgba(255,255,255,0.05) inset",
+              transition: "transform 150ms ease, opacity 150ms ease",
             }}
           />
           <div
             style={{
-              width: "22px",
-              height: "2px",
+              width: "28px",
+              height: "3px",
               backgroundColor: "currentColor",
-              borderRadius: "1px",
+              borderRadius: "2px",
+              boxShadow: "0 1px 0 rgba(255,255,255,0.05) inset",
+              transition: "transform 150ms ease, opacity 150ms ease",
             }}
           />
           <div
             style={{
-              width: "22px",
-              height: "2px",
+              width: "28px",
+              height: "3px",
               backgroundColor: "currentColor",
-              borderRadius: "1px",
+              borderRadius: "2px",
+              boxShadow: "0 1px 0 rgba(255,255,255,0.05) inset",
+              transition: "transform 150ms ease, opacity 150ms ease",
             }}
           />
         </div>
