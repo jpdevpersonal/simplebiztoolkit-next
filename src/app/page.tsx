@@ -17,7 +17,7 @@ import { featureFlags } from "@/config/featureFlags";
 export const metadata: Metadata = {
   title: "Essential Templates & Tools for Small Business Owners",
   description:
-    "Trust-first templates and toolkits that save time and reduce admin. Run your business smarter, with this free guide, then shop securely on Etsy.",
+    "Trusted printable templates and tools that save time and reduce admin for your small business. Run your business smarter with our guides, then shop securely on Etsy.",
   alternates: { canonical: "/" },
   openGraph: {
     title:
