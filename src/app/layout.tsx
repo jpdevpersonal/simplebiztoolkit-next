@@ -3,10 +3,6 @@ import { site } from "@/config/site";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@/styles/theme.css";
-import "@/index.css";
-import "@/styles/home.css";
-import "@/styles/products.css";
-import "@/styles/blog.css";
 
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";

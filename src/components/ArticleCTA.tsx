@@ -1,5 +1,4 @@
 import Link from "next/link";
-import "@/styles/articleStyle.css";
 import EtsyCtaButton from "@/components/EtsyCtaButton";
 
 interface ArticleCTAProps {

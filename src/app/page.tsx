@@ -5,6 +5,8 @@ import Image from "next/image";
 import JsonLd from "@/components/JsonLd";
 import TrustBar from "@/components/TrustBar";
 import EmailCaptureForm from "@/components/EmailCaptureForm";
+import "@/styles/home.css";
+import "@/styles/products.css";
 import TestimonialGrid from "@/components/TestimonialGrid";
 import ProductGrid from "@/components/ProductGrid";
 import EtsyCtaButton from "@/components/EtsyCtaButton";

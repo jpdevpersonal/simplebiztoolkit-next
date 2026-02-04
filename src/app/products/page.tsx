@@ -4,6 +4,7 @@ import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import { site } from "@/config/site";
 import { categories } from "@/data/products";
+import "@/styles/products.css";
 
 export const metadata: Metadata = {
   title: "Products",

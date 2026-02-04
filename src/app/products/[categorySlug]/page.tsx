@@ -8,6 +8,7 @@ import ProductGrid from "@/components/ProductGrid";
 import { categories } from "@/data/products";
 import { links } from "@/config/links";
 import { site } from "@/config/site";
+import "@/styles/products.css";
 
 type Props = {
   params: Promise<{ categorySlug: string }>;

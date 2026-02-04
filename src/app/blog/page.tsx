@@ -4,6 +4,7 @@ import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import { site } from "@/config/site";
 import { posts } from "@/data/posts";
+import "@/styles/blog.css";
 
 export const metadata: Metadata = {
   title: "Resources",
