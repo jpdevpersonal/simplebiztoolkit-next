@@ -72,18 +72,20 @@ export default function BlogIndexPage() {
                 <div className="sb-card p-3 h-100">
                   {p.featuredImage && (
                     <div className="blog-card-image">
-                      <img
-                        src={p.featuredImage}
-                        alt={p.title}
-                        style={{
-                          width: "100%",
-                          height: "auto",
-                          borderRadius: "8px",
-                          marginBottom: "12px",
-                          objectFit: "contain",
-                          backgroundColor: "#f8f9fa",
-                        }}
-                      />
+                      <Link href={`/blog/${p.slug}`}>
+                        <img
+                          src={p.featuredImage}
+                          alt={p.title}
+                          style={{
+                            width: "100%",
+                            height: "auto",
+                            borderRadius: "8px",
+                            marginBottom: "12px",
+                            objectFit: "contain",
+                            backgroundColor: "#f8f9fa",
+                          }}
+                        />
+                      </Link>
                     </div>
                   )}
                   <div className="d-flex justify-content-between gap-2 flex-wrap">
