@@ -218,7 +218,7 @@ export default function ProductDetailClient({ product }: Props) {
           </div>
 
           <div className="product-detail-problem">
-            <h2>What You'll Get</h2>
+            <h2 style={{ fontSize: "1.2rem" }}>Description</h2>
             <ProductDescription
               description={product.description || product.problem}
             />
