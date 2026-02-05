@@ -7,6 +7,70 @@ type Props = {
   product: Product;
 };
 
+// Component to render formatted product descriptions
+function ProductDescription({ description }: { description: string }) {
+  if (!description) return null;
+
+  // Split description into paragraphs
+  const paragraphs = description.split("\n\n").filter((p) => p.trim());
+
+  return (
+    <div className="product-description-content">
+      {paragraphs.map((paragraph, index) => {
+        const trimmed = paragraph.trim();
+
+        // Check if paragraph is a list (starts with bullets or numbers)
+        const isList = /^[-•*]\s/.test(trimmed) || /^\d+[.)]\s/.test(trimmed);
+
+        if (isList) {
+          // Parse list items
+          const items = trimmed
+            .split(/\n/)
+            .filter((line) => line.trim())
+            .map((line) =>
+              line.replace(/^[-•*]\s/, "").replace(/^\d+[.)]\s/, ""),
+            );
+
+          return (
+            <ul key={index} className="product-description-list">
+              {items.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
+          );
+        }
+
+        // Check if it's a heading-like paragraph (short, under 60 chars, ends with colon or is all caps)
+        const isHeadingLike =
+          trimmed.length < 60 &&
+          (trimmed.endsWith(":") || trimmed === trimmed.toUpperCase());
+
+        if (isHeadingLike && index > 0) {
+          return (
+            <h3 key={index} className="product-description-subheading">
+              {trimmed.replace(/:$/, "")}
+            </h3>
+          );
+        }
+
+        // Regular paragraph - add emphasis to first paragraph
+        return (
+          <p
+            key={index}
+            className={
+              index === 0
+                ? "product-description-intro"
+                : "product-description-paragraph"
+            }
+          >
+            {trimmed}
+          </p>
+        );
+      })}
+    </div>
+  );
+}
+
 export default function ProductDetailClient({ product }: Props) {
   // Compute medium (resized) image path
   const mediumSrc = (src: string) => {
@@ -155,7 +219,9 @@ export default function ProductDetailClient({ product }: Props) {
 
           <div className="product-detail-problem">
             <h2>What You'll Get</h2>
-            <p>{product.description || product.problem}</p>
+            <ProductDescription
+              description={product.description || product.problem}
+            />
           </div>
 
           <div className="product-detail-features">
