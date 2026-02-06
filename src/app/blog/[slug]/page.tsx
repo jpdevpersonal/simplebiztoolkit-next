@@ -65,49 +65,15 @@ export default async function BlogPostPage({ params }: Props) {
     publisher: {
       "@type": "Organization",
       name: site.name,
-      logo: {
-        "@type": "ImageObject",
-        url: `${site.url}/images/simple-biz-toolkit-logo.png`,
-      },
+      url: site.url,
     },
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `https://simplebiztoolkit.com/blog/${post.slug}`,
-    },
-  };
-
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: site.url,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Resources",
-        item: `${site.url}/blog`,
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: post.title,
-        item: `${site.url}/blog/${post.slug}`,
-      },
-    ],
   };
 
   return (
     <>
       <JsonLd json={articleJsonLd} />
-      <JsonLd json={breadcrumbJsonLd} />
 
       <main className="article-page">
-        {/* Breadcrumb Navigation */}
         <nav className="sb-breadcrumb" aria-label="Breadcrumb">
           <Link href="/blog" className="sb-breadcrumb-link">
             <svg
@@ -130,20 +96,16 @@ export default async function BlogPostPage({ params }: Props) {
           </Link>
         </nav>
 
-        {/* Article Header */}
         <header className="article-header">
-          {post.badges && post.badges.length > 0 && (
-            <div className="article-badges">
-              {post.badges.map((badge) => (
-                <span key={badge} className="article-badge">
-                  {badge}
-                </span>
-              ))}
-            </div>
-          )}
+          <div className="article-badges">
+            {post.badges?.map((b) => (
+              <span key={b} className="article-badge">
+                {b}
+              </span>
+            ))}
+          </div>
 
           <h1 className="article-title">{post.title}</h1>
-
           {post.subtitle && <p className="article-subtitle">{post.subtitle}</p>}
 
           <div className="article-meta">
