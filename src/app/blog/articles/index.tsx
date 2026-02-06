@@ -2,6 +2,7 @@ import BookkeepingBasicsContent from "./bookkeeping-basics-without-an-accountant
 import EtsySellerFinancesContent from "./etsy-seller-finances-in-one-place";
 import AdobeExpressEtsyContent from "./adobe-express-etsy";
 import RentPaymentLedgerContent from "./rent-payment-ledger";
+import BusinessLedgerBundleContent from "./business-ledger-bundle-essential-templates";
 
 interface ArticleContentProps {
   slug: string;
@@ -17,6 +18,8 @@ export function ArticleContent({ slug }: ArticleContentProps) {
       return <AdobeExpressEtsyContent />;
     case "rent-payment-ledger":
       return <RentPaymentLedgerContent />;
+    case "business-ledger-bundle-essential-templates":
+      return <BusinessLedgerBundleContent />;
     default:
       return null;
   }
@@ -28,5 +31,6 @@ export function hasArticleContent(slug: string): boolean {
     "etsy-seller-finances-in-one-place",
     "adobe-express-etsy",
     "rent-payment-ledger",
+    "business-ledger-bundle-essential-templates",
   ].includes(slug);
 }

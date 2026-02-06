@@ -35,3 +35,13 @@
     padding: 16px !important;
   }
 }
+
+/* Ensure blog listing uses the same max-width as other site sections */
+.sb-section .container {
+  max-width: 1200px;
+}
+
+/* Slightly reduce internal card padding to match other pages visually */
+.sb-card {
+  padding: 20px;
+}

@@ -70,4 +70,19 @@ export const posts: BlogPost[] = [
     featuredImage: "/images/articles/images/rent-ledger.webp",
     headerImage: "/images/articles/images/rent-ledger.webp",
   },
+  {
+    slug: "business-ledger-bundle-essential-templates",
+    title:
+      "The Simple Business Ledger System: 8 Essential Templates Every Small Business Needs",
+    subtitle:
+      "A simple, no-nonsense admin system that keeps your numbers clear and your head uncluttered",
+    description:
+      "A calm, practical bundle of templates that covers the financial basics every small business actually needs, no fluff, no subscriptions, no learning curve.",
+    dateISO: "2026-02-05",
+    category: "Bookkeeping",
+    readingMinutes: 8,
+    badges: ["Templates", "Bookkeeping", "Small Business"],
+    featuredImage: "/images/articles/images/ledger-bundle.png",
+    headerImage: "/images/articles/images/ledger-bundle.png",
+  },
 ];
