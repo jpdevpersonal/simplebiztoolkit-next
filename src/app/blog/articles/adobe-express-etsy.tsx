@@ -174,12 +174,7 @@ export default function AdobeExpressEtsyContent() {
         showEtsyLink={false}
       />
 
-      <ArticleFooter>
-        <p>
-          Notes: This article is intended as practical guidance for small
-          business owners and Etsy sellers.
-        </p>
-      </ArticleFooter>
+      <ArticleFooter />
     </>
   );
 }

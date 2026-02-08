@@ -21,6 +21,15 @@ export function Section({ children }: { children: React.ReactNode }) {
   return <section className="article-section">{children}</section>;
 }
 
-export function ArticleFooter({ children }: { children: React.ReactNode }) {
-  return <footer className="article-footer">{children}</footer>;
+export function ArticleFooter() {
+  return (
+    <footer className="article-footer">
+      <p>
+        About SimpleBizToolkit: We focus on low-friction tools for small
+        business owners, entrepreneurs, and online sellers. Our products are
+        designed to reduce admin, save time, and restore clarity. This article
+        is practical guidance and not professional legal or accounting advice.
+      </p>
+    </footer>
+  );
 }

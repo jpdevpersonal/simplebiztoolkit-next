@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   Section,
   Callout,
@@ -12,179 +13,169 @@ export default function RentPaymentLedgerContent() {
   return (
     <>
       <Section>
-        <h2>Why rent tracking becomes a problem so quickly</h2>
         <p>
-          Rent is repetitive by nature. Same amount, same due date, month after
-          month. Ironically, that's why people assume they don't need a proper
-          system. Until something goes wrong.
+          Managing rent payments should be routine, not stressful. Yet for
+          landlords, tenants, and small business owners alike, rent tracking
+          often becomes fragmented across bank statements, emails, screenshots,
+          and memory. When questions arise — Was rent paid? Was it late? Was it
+          short? — the lack of a clear record creates unnecessary friction.
         </p>
         <p>
-          A late payment. A partial payment. A bank transfer made on the wrong
-          day. A tenant who swears they paid. A landlord who can't immediately
-          verify it.
+          A Rent Payment Ledger solves this problem by providing one clear,
+          consistent record of rent activity. No subscriptions. No dashboards.
+          No complexity. Just a reliable paper trail that protects everyone
+          involved.
         </p>
         <p>
-          Without a simple ledger, resolving these situations means digging
-          through bank apps, scrolling emails, or piecing together screenshots.
-          It's inefficient, and it creates tension where there doesn't need to
-          be any.
+          This article explains why rent tracking fails, who benefits from a
+          ledger, and why simple systems outperform expensive
+          software—especially for small-scale property management and business
+          use.
+        </p>
+      </Section>
+
+      <Section>
+        <h2>Why rent tracking breaks down so easily</h2>
+        <p>
+          Rent is predictable. The same amount, due on the same date, every
+          month. Ironically, that predictability is why many people skip setting
+          up a proper system.
         </p>
 
-        <Callout title="The real problem: fragmented records">
-          Payments are scattered across bank statements, emails, screenshots,
-          and half-remembered conversations. A rent payment ledger fixes this by
-          doing one thing extremely well: it creates a single source of truth.
+        <p>Problems usually surface when something deviates from the norm:</p>
+        <ul>
+          <li>A late or partial payment</li>
+          <li>A bank transfer made on the wrong date</li>
+          <li>A disputed month</li>
+          <li>A change in rent amount</li>
+          <li>A tenant or landlord relying on memory instead of records</li>
+        </ul>
+
+        <p>
+          At that point, resolving the issue means scrolling through banking
+          apps, searching emails, or reconstructing timelines from fragments.
+          This is inefficient and avoidable.
+        </p>
+
+        <Callout title="Single source of truth">
+          A rent payment ledger prevents confusion by creating a clear, shared
+          reference that removes ambiguity for everyone involved.
         </Callout>
       </Section>
 
       <Section>
-        <h2>How landlords benefit from a rent payment ledger</h2>
+        <h2>How landlords benefit</h2>
         <p>
-          For landlords, clarity is everything. Whether you manage one property
-          or several, you need clean records that are easy to understand at a
-          glance.
+          For landlords, clarity is not optional. Whether managing one property
+          or several, you need records that are easy to review, explain, and
+          defend.
         </p>
-        <p>A rent payment ledger lets you:</p>
+
         <ul>
-          <li>Log each payment by date, amount, and method</li>
-          <li>Instantly see missed, late, or partial payments</li>
-          <li>Track payment history month-by-month without mental effort</li>
-          <li>Keep records ready for tax time or accountant reviews</li>
+          <li>Record each payment by date, amount, and method</li>
+          <li>Instantly identify late, missed, or partial payments</li>
+          <li>Maintain a month-by-month payment history</li>
+          <li>Prepare clean records for tax reporting or accountants</li>
+          <li>Handle disputes calmly with documented facts</li>
         </ul>
+
         <p>
-          There's no learning curve. You don't need accounting knowledge. You
-          simply record what matters, when it happens.
-        </p>
-        <p>
-          Unlike property management software that charges monthly fees and
-          bundles in features you'll never use, this ledger stays focused. It
-          respects your time. It works even if you prefer paper, spreadsheets,
-          or a tablet.
-        </p>
-        <p>
-          Most importantly, it helps you stay professional. When questions
-          arise, you're not relying on memory — you're relying on written
-          records.
+          Unlike full property-management software, a ledger stays focused on
+          what actually matters: no learning curve, no monthly fee, and no
+          reliance on third-party platforms.
         </p>
       </Section>
 
       <Section>
-        <h2>How tenants benefit just as much</h2>
+        <h2>Why tenants should keep their own records</h2>
         <p>
-          This tool isn't only for landlords. Tenants benefit enormously from
-          having their own clear payment history.
+          Tenants benefit just as much from maintaining a clear payment history.
+          A ledger helps tenants prove rent was paid on time, avoid disputes,
+          build a documented rental history, and support future applications.
         </p>
-        <p>With a rent payment ledger, tenants can:</p>
         <ul>
           <li>Prove payments were made, on time and in full</li>
-          <li>Keep personal records for budgeting and planning</li>
-          <li>Avoid disputes caused by missing or unclear information</li>
-          <li>Build a documented rental history</li>
+          <li>Avoid disputes caused by unclear records</li>
+          <li>Build a documented rental history for references</li>
+          <li>Stay organised for budgeting and planning</li>
         </ul>
+      </Section>
+
+      <Section>
+        <h2>Small business owners: this helps you too</h2>
         <p>
-          If you've ever needed proof of payment for a dispute, a reference, or
-          even a future rental application, you already know how valuable this
-          is.
+          Small business owners often wear multiple hats, including property
+          manager. Whether you rent office space, sublet rooms, or manage shared
+          facilities, rent tracking still matters and a ledger fits naturally
+          into a wider admin system.
         </p>
+        <ul>
+          <li>Clear outgoing expense tracking</li>
+          <li>Support for cash flow planning</li>
+          <li>Documentation for accountants or audits</li>
+          <li>Reduced admin time</li>
+        </ul>
+
         <p>
-          Instead of trusting that "the bank transfer should be enough," you
-          have a clean, organized log that shows responsibility and consistency.
+          Recommended pairing:
+          <br />
+          <Link href="#" className="article-cta-btn article-cta-btn-secondary">
+            Monthly Business Ledger
+          </Link>
+          <span style={{ marginLeft: 8 }} />
+          <Link href="#" className="article-cta-btn article-cta-btn-secondary">
+            Expense &amp; Cash Flow Tracker
+          </Link>
         </p>
       </Section>
 
       <Section>
-        <h2>A tool that reduces friction and stress</h2>
+        <h2>Why simple systems outperform expensive software</h2>
         <p>
-          Money conversations are emotionally charged. Anything that reduces
-          ambiguity reduces conflict.
-        </p>
-        <p>
-          When both parties know that payments are being logged clearly and
-          consistently, trust improves. Conversations stay factual instead of
-          emotional. Small issues don't turn into big ones.
+          There is a persistent belief that organisation requires software
+          subscriptions. In reality, most people do not need dashboards or
+          automation — they need clarity. A rent payment ledger offers a
+          one-time purchase, works on paper or digitally, and gives you full
+          control of your data.
         </p>
 
-        <Callout title="Simple beats expensive every time">
-          There's a common assumption that good organization requires paid
-          software. Monthly subscriptions. Dashboards. Apps that try to do
-          everything. In reality, most people don't need complexity. They need
-          clarity. This rent payment ledger strips the process back to what
-          actually matters: no accounts to manage, no data locked behind
-          platforms, no recurring costs.
+        <Callout title="No subscriptions required">
+          You buy it once and use it for years. Immediate usability, no
+          accounts, and no recurring fees.
         </Callout>
       </Section>
 
       <Section>
-        <h2>Why this particular rent payment ledger works</h2>
+        <h2>What makes a good rent payment ledger</h2>
         <p>
-          This isn't a generic spreadsheet thrown together as an afterthought.
-          It's been designed specifically for real-world use: clear layout,
-          sensible spacing, and no unnecessary clutter.
+          A useful ledger must be clearly laid out, easy to read at a glance,
+          spacious enough for notes, and free of unnecessary clutter. A
+          well-designed ledger becomes part of your routine — you stop thinking
+          about it because it simply works.
         </p>
-        <ul>
-          <li>
-            <strong>Practical:</strong> Designed for how rent tracking actually
-            happens.
-          </li>
-          <li>
-            <strong>Readable:</strong> Easy to understand at a glance, for both
-            landlords and tenants.
-          </li>
-          <li>
-            <strong>Flexible:</strong> Works on paper, tablet, or as a digital
-            fill-in sheet.
-          </li>
-          <li>
-            <strong>Durable:</strong> Buy once, use for years without
-            subscriptions or updates.
-          </li>
-        </ul>
-        <p>
-          Once you start using it, it quickly becomes part of your routine — the
-          kind of tool you don't think about anymore because it just works.
-        </p>
-      </Section>
 
-      <Section>
-        <h2>A simple workflow landlords and tenants can copy</h2>
-        <ol>
-          <li>
-            Print or download the rent payment ledger (or grab the digital
-            version).
-          </li>
-          <li>
-            Share a copy with your tenant or landlord so you're both on the same
-            page.
-          </li>
-          <li>Log each payment as it's made (date, amount, method).</li>
-          <li>Review month-by-month to catch issues early.</li>
-          <li>
-            Keep copies for your records — they become invaluable at tax time or
-            for disputes.
-          </li>
-        </ol>
-
-        <p>
-          That's it. No complex setup. No technical skills required. Just
-          clarity and peace of mind.
-        </p>
+        <div>
+          See an example:
+          <div style={{ margin: "1rem 0" }}>
+            <Link
+              href="/products/rent-payment-ledger"
+              className="article-cta-btn article-cta-btn-primary"
+            >
+              Printable Rent Payment Ledger
+            </Link>
+          </div>
+        </div>
       </Section>
 
       <ArticleCTA
         title="Ready to make rent tracking effortless?"
-        description="If you're tired of digging through bank statements, second-guessing payments, or dealing with avoidable misunderstandings, this rent payment ledger is a small change that makes a big difference. It's affordable, easy to use, and immediately useful from day one."
+        description="If you're tired of searching bank statements, second-guessing payment dates, or managing avoidable misunderstandings, this rent payment ledger is an affordable, practical improvement you can use from day one."
         primaryLabel="Get Your Rent Payment Ledger"
         primaryHref={AFFILIATE_URL}
-        showHomeLink={true}
+        showHomeLink={false}
       />
 
-      <ArticleFooter>
-        <p>
-          Notes: This article is intended as practical guidance for landlords
-          and tenants seeking simple, effective rent payment tracking solutions.
-          This is not professional legal or accounting advice.
-        </p>
-      </ArticleFooter>
+      <ArticleFooter />
     </>
   );
 }

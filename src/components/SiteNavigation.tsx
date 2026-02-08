@@ -285,6 +285,7 @@ export default function SiteNavigation() {
           cursor: "pointer",
           boxShadow: "0 2px 8px rgba(16,24,40,0.06)",
           transition: "background-color 0.15s ease, transform 0.12s ease",
+          paddingRight: "10px",
         }}
         aria-label="Open menu"
       >

@@ -1,4 +1,4 @@
-import BookkeepingBasicsContent from "./bookkeeping-basics-without-an-accountant";
+import BookkeepingBasicsContent from "./bookkeeping-made-simple";
 import EtsySellerFinancesContent from "./etsy-seller-finances-in-one-place";
 import AdobeExpressEtsyContent from "./adobe-express-etsy";
 import RentPaymentLedgerContent from "./rent-payment-ledger";
@@ -10,7 +10,7 @@ interface ArticleContentProps {
 
 export function ArticleContent({ slug }: ArticleContentProps) {
   switch (slug) {
-    case "bookkeeping-basics-without-an-accountant":
+    case "bookkeeping-made-simple":
       return <BookkeepingBasicsContent />;
     case "etsy-seller-finances-in-one-place":
       return <EtsySellerFinancesContent />;
@@ -27,7 +27,7 @@ export function ArticleContent({ slug }: ArticleContentProps) {
 
 export function hasArticleContent(slug: string): boolean {
   return [
-    "bookkeeping-basics-without-an-accountant",
+    "bookkeeping-made-simple",
     "etsy-seller-finances-in-one-place",
     "adobe-express-etsy",
     "rent-payment-ledger",
