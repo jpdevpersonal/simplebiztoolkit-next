@@ -172,7 +172,7 @@ export default function RentPaymentLedgerContent() {
         description="If you're tired of searching bank statements, second-guessing payment dates, or managing avoidable misunderstandings, this rent payment ledger is an affordable, practical improvement you can use from day one."
         primaryLabel="Get Your Rent Payment Ledger"
         primaryHref={AFFILIATE_URL}
-        showHomeLink={true}
+        showHomeLink={false}
       />
 
       <ArticleFooter />
