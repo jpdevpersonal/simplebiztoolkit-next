@@ -54,75 +54,66 @@ export default function HomePage() {
         <div className="container">
           <div className="row align-items-center g-4">
             <div className="col-lg-6">
-              <h1 className="sb-hero-title">
-                Essential templates & tools for small business owners
-              </h1>
-              <div className="row">
-                <p className="sb-muted fs-5">
+              <div className="sb-hero-content">
+                <span className="sb-hero-badge">
+                  Trusted by 3,500+ small business owners
+                </span>
+
+                <h1 className="sb-hero-title">
+                  Essential templates & tools for small business owners
+                </h1>
+
+                <p className="sb-hero-subtitle">
                   Simple, ready-to-use downloads that reduce admin, keep you
                   organised, and don’t require tech skills.
                 </p>
-              </div>
 
-              <div className="d-flex gap-2 flex-wrap mt-3 sb-hero-actions">
-                <Link href="/products" className="btn sb-btn-primary">
-                  Browse All Products
-                  <svg
-                    className="sb-btn-arrow"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M3 8h10M9 4l4 4-4 4"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </Link>
-              </div>
-
-              <div className="mt-4">
-                <TrustBar items={trust} />
-              </div>
-
-              <blockquote
-                className="sb-card p-3 mt-4"
-                style={{ borderLeft: "3px solid var(--sb-brand-blue)" }}
-              >
-                <div
-                  className="mb-1"
-                  style={{ fontWeight: 600, fontStyle: "italic" }}
-                >
-                  <p style={{ padding: 0, margin: 0 }}>
-                    "Just what I was looking for and could not find. So glad I
-                    found these,
-                  </p>
-                  <p style={{ padding: 0, margin: 0 }}>
-                    They print out great!"
-                  </p>
+                <div className="d-flex gap-2 flex-wrap sb-hero-actions">
+                  <Link href="/products" className="btn sb-btn-primary">
+                    Browse All Products
+                    <svg
+                      className="sb-btn-arrow"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M3 8h10M9 4l4 4-4 4"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </Link>
                 </div>
-                <cite
-                  className="sb-muted"
-                  style={{ fontSize: "0.8125rem", fontStyle: "normal" }}
-                >
-                  — Becky, Etsy buyer
-                </cite>
-              </blockquote>
+
+                <div className="sb-hero-trust">
+                  <TrustBar items={trust} />
+                </div>
+
+                <blockquote className="sb-hero-quote">
+                  <div className="sb-hero-quote-text">
+                    “Just what I was looking for and could not find. So glad I
+                    found these — they print out great!”
+                  </div>
+                  <cite className="sb-hero-quote-cite">
+                    — Becky, Etsy buyer
+                  </cite>
+                </blockquote>
+              </div>
             </div>
 
             <div className="col-lg-6">
-              <div className="hero-image-wrapper d-flex justify-content-center">
+              <div className="hero-image-wrapper d-flex justify-content-center align-items-center">
                 <Image
                   src="/images/hero-image-desk.webp"
                   alt="Tools for your small business"
                   className="img-fluid hero-image"
-                  width={720}
-                  height={480}
+                  width={820}
+                  height={547}
                   priority
                   loading="eager"
                 />
