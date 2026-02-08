@@ -105,13 +105,7 @@ export default function EtsySellerFinancesContent() {
         description="Get a access to time saving templates designed specifically for Etsy sellers to track fees, sales, and real profit."
       />
 
-      <ArticleFooter>
-        <p>
-          Notes: This article is intended as practical guidance for Etsy
-          sellers. Fee structures may change — always check Etsy's current fee
-          schedule.
-        </p>
-      </ArticleFooter>
+      <ArticleFooter />
     </>
   );
 }

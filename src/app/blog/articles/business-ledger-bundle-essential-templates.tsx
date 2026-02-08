@@ -206,13 +206,7 @@ export default function BusinessLedgerBundleContent() {
         showHomeLink={true}
       />
 
-      <ArticleFooter>
-        <p>
-          Notes: This article is intended as practical guidance for small
-          business owners. For complex tax situations or financial planning,
-          consult a qualified accountant or bookkeeper.
-        </p>
-      </ArticleFooter>
+      <ArticleFooter />
     </>
   );
 }

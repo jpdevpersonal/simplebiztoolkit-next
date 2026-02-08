@@ -13,8 +13,8 @@ export type BlogPost = {
 
 export const posts: BlogPost[] = [
   {
-    slug: "bookkeeping-basics-without-an-accountant",
-    title: "Bookkeeping basics (without hiring an accountant)",
+    slug: "bookkeeping-made-simple",
+    title: "Bookkeeping made simple (without hiring an accountant)",
     subtitle:
       "A simple workflow for tracking income and expenses — plus the easiest way to stay consistent.",
     description:
