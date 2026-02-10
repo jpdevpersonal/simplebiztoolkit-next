@@ -116,7 +116,6 @@ export default function HomePage() {
                   width={820}
                   height={547}
                   priority
-                  loading="eager"
                 />
               </div>
             </div>
