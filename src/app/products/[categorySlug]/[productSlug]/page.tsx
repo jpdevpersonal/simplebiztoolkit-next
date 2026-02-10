@@ -83,10 +83,8 @@ export default async function ProductDetailPage({ params }: Props) {
     "@type": "Product",
     name: product.title,
     description: product.problem,
-    image: product.image
-      ? `https://simplebiztoolkit.com${product.image}`
-      : undefined,
-    url: `https://simplebiztoolkit.com${product.productPageUrl}`,
+    image: product.image ? `${site.url}${product.image}` : undefined,
+    url: `${site.url}${product.productPageUrl}`,
     brand: {
       "@type": "Organization",
       name: site.name,

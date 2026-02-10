@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import JsonLd from "@/components/JsonLd";
+import { site } from "@/config/site";
 import TrustBar from "@/components/TrustBar";
 import EmailCaptureForm from "@/components/EmailCaptureForm";
 import "@/styles/home.css";
@@ -41,8 +42,8 @@ export default function HomePage() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Simple Biz Toolkit",
-    url: "https://simplebiztoolkit.com",
-    logo: "https://simplebiztoolkit.com/images/simple-biz-toolkit-logo.png",
+    url: site.url,
+    logo: `${site.url}/images/simple-biz-toolkit-logo.png`,
     sameAs: [links.etsyShopUrl],
   };
 
