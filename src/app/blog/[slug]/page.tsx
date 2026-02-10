@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import JsonLd from "@/components/JsonLd";
+import Image from "next/image";
 import { posts } from "@/data/posts";
 import { ArticleContent, hasArticleContent } from "../articles";
 import "@/styles/articleStyle.css";
@@ -116,7 +117,25 @@ export default async function BlogPostPage({ params }: Props) {
         {/* Header Image */}
         {post.headerImage && (
           <div className="article-header-image">
-            <img src={post.headerImage} alt={post.title} />
+            <div
+              style={{
+                position: "relative",
+                width: "100%",
+                aspectRatio: "16/9",
+                overflow: "hidden",
+                borderRadius: 8,
+                marginBottom: "1rem",
+                backgroundColor: "#f8f9fa",
+              }}
+            >
+              <Image
+                src={post.headerImage}
+                alt={post.title}
+                fill
+                sizes="(max-width: 768px) 100vw, 1200px"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
           </div>
         )}
 

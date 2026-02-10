@@ -8,7 +8,8 @@ import EtsyCtaButton from "@/components/EtsyCtaButton";
 
 export default function SiteHeader() {
   const headerRef = useRef<HTMLElement | null>(null);
-  const [headerHeight, setHeaderHeight] = useState(0);
+  // Start with a sensible default to avoid layout shift before JS measures
+  const [headerHeight, setHeaderHeight] = useState(88);
 
   useEffect(() => {
     function updateHeight() {

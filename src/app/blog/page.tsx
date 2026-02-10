@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import JsonLd from "@/components/JsonLd";
+import Image from "next/image";
 import { site } from "@/config/site";
 import { posts } from "@/data/posts";
 import "@/styles/blog.css";
@@ -71,20 +72,29 @@ export default function BlogIndexPage() {
               <div className="col-lg-6" key={p.slug}>
                 <div className="sb-card p-3 h-100">
                   {p.featuredImage && (
-                    <div className="blog-card-image">
+                    <div
+                      className="blog-card-image"
+                      style={{ marginBottom: 12 }}
+                    >
                       <Link href={`/blog/${p.slug}`}>
-                        <img
-                          src={p.featuredImage}
-                          alt={p.title}
+                        <div
                           style={{
+                            position: "relative",
                             width: "100%",
-                            height: "auto",
-                            borderRadius: "8px",
-                            marginBottom: "12px",
-                            objectFit: "contain",
+                            aspectRatio: "16/9",
+                            borderRadius: 8,
+                            overflow: "hidden",
                             backgroundColor: "#f8f9fa",
                           }}
-                        />
+                        >
+                          <Image
+                            src={p.featuredImage}
+                            alt={p.title}
+                            fill
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            style={{ objectFit: "contain" }}
+                          />
+                        </div>
                       </Link>
                     </div>
                   )}
